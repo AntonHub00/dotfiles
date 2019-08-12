@@ -1,0 +1,19 @@
+[core]
+	editor = nvim
+[user]
+	email = antonhub00@gmail.com
+	name = Antonio Ochoa
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d -u ~/.config/nvim/init.vim \"$LOCAL\" \"$REMOTE\""
+[merge]
+	tool = nvimdiff
+	conflictstyle = diff3
+[mergetool "nvimdiff"]
+    ;cmd = "nvim -d -u ~/.config/nvim/init.vim \"$LOCAL\" \"$MERGED\" \"$REMOTE\""
+    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
