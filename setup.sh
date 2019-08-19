@@ -1,7 +1,6 @@
 #!/bin/sh
 
-arg=$1
-old_files_dir="$HOME/.old_config_files"
+old_files_dir="$HOME/.old_config_files/"
 dotfiles=".gitconfig .vimrc .zshrc .tmux.conf .scripts .fonts/FiraCode-Regular.ttf \
     .fonts/FiraCode-Regular-Symbol.otf .emacs.d/fira-code-mode .emacs.d/init.el \
     .emacs.d/myinit.org .config/alacritty/alacritty.yml .config/nvim/init.vim \
@@ -12,19 +11,21 @@ move_old_files()
 {
     echo "Moving current dotfiles to ~/.old_config_files...\n"
 
-    mkdir -p $old_files_dir
+    if [ -e $old_files_dir ]; then
+        echo "$old_files_dir already exists (could contain old config files)."
+        echo "Check the files, remove the directory and run this again if you want to setup the dotfiles"
+        exit 1
+    else
+        mkdir $old_files_dir
+    fi
 
     #Check if there are old files to back them up before restore dotfiles
     for file in $dotfiles; do
         local_file="$HOME/$file"
 
-        if [ -L $local_file ]; then
-            # rm $local_file
-            echo "$local_file was a symlink"
-            continue
-        elif [ -e $local_file ]; then
-            mv $local_file $old_files_dir
-            echo "$local_file was move to $old_config_files"
+        if [ -e $local_file ]; then
+            mv -v $local_file $old_files_dir
+            # echo "$local_file was move to $old_files_dir"
         fi
     done
 }
@@ -34,12 +35,9 @@ do_symlink()
 {
     echo "\nSymlinking..."
 
-    for file in $dotfiles; do
-        remote_file="$HOME/.dotfiles/$file"
-        target="$HOME/$file"
+    cp -rs $HOME/.dotfiles/files/. $HOME/
 
-        #ln -s $remote_file $target
-    done
+    echo "\nDone"
 }
 
 
