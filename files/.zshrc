@@ -100,8 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-# My settings
+# My settings------------------------------------------------------------------
 DEFAULT_USER prompt_context(){}
+
+#neovim as default editor
+export EDITOR=nvim
 
 #Aliases-----------------------------------------------------------------------
 
@@ -120,13 +123,22 @@ alias vimrc='nvim ~/.vimrc'
 #Alias for .zshrc file
 alias zshrc='nvim ~/.zshrc'
 
-#neovim as default editor
-export EDITOR=nvim
-
 #PATH-----------------------------------------------------------------------
 
+#Set JAVA_HOME variable
+export JAVA_HOME=$HOME/Software/jdk1.8.0_221/bin/java
+
+#Set JRE_HOME variable
+export JRE_HOME=$HOME/Software/jdk1.8.0_221/jre/bin/java
+
 #Add my scripts to the path
-export PATH=$PATH:~/Scripts
+export PATH=$PATH:$HOME/Scripts
+
+#Add Java bins to PATH variable
+export PATH=$PATH:$HOME/Software/jdk1.8.0_221/bin
+
+#Add Javacc bins to PATH variable
+export PATH=$PATH:$HOME/Software/javacc-6.0/bin
 
 #Set TERM to xterm-256color if tmux is not running (Some terminal emulators haven't
 # this config as defautl). This for correct colors in neovim inside tmux
