@@ -140,7 +140,7 @@ colorscheme vividchalk
 inore jj <Esc>
 
 "Stop highlighting search
-noremap <CR> :noh<CR>
+noremap <leader><leader> :noh<CR>
 
 "Resize windows horizontally
 nnoremap <silent> <Leader>+ <C-W>10>
