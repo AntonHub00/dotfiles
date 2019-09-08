@@ -4,7 +4,7 @@ old_files_dir="$HOME/.old_config_files/"
 dotfiles=".gitconfig .vimrc .zshrc .tmux.conf .scripts .fonts/FiraCode-Regular.ttf \
     .fonts/FiraCode-Regular-Symbol.otf .emacs.d/fira-code-mode .emacs.d/init.el \
     .emacs.d/myinit.org .config/alacritty/alacritty.yml .config/nvim/init.vim \
-    .config/i3/config .config/i3/i3blocks.conf"
+    .config/i3/config .config/i3/i3blocks.conf .config/Code/User/settings.json"
 
 
 move_old_files()

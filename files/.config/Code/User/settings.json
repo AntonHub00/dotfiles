@@ -1,0 +1,75 @@
+{
+    "breadcrumbs.enabled": true,
+    "editor.fontSize": 15,
+    "editor.fontFamily": "Fira Code",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.fontLigatures": true,
+    "editor.renderLineHighlight": "gutter",
+    "editor.smoothScrolling": true,
+    "explorer.openEditors.visible": 1,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "path-intellisense.autoSlashAfterDirectory": true,
+    "path-intellisense.showHiddenFiles": true,
+    "terminal.integrated.cursorBlinking": true,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Overflow Contrast (rainglow)",
+    "workbench.iconTheme": "material-icon-theme",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "app/**": true
+    },
+    "extensions.ignoreRecommendations": false,
+    "editor.occurrencesHighlight": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "vim.highlightedyank.enable": true,
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<ESC>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "<leader>"
+            ],
+            "commands": [
+                ":noh"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        }
+    ],
+    "vim.leader": "<SPACE>",
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#ffffff"
+    },
+    "editor.rulers": [
+        80
+    ]
+}
