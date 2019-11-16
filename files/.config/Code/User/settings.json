@@ -14,9 +14,9 @@
     "path-intellisense.autoSlashAfterDirectory": true,
     "path-intellisense.showHiddenFiles": true,
     "terminal.integrated.cursorBlinking": true,
-    "window.zoomLevel": 1,
-    "workbench.colorTheme": "Overflow Contrast (rainglow)",
-    "workbench.iconTheme": "material-icon-theme",
+    "window.zoomLevel": 0,
+    // "workbench.colorTheme": "Quiet Light",
+    "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
     "liveServer.settings.donotShowInfoMsg": true,
     "files.exclude": {
         "**/.git": true,
@@ -24,7 +24,15 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "app/**": true
+        "app/**": true,
+        "node_modules/**": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "files.watcherExclude": {
+        "**/venv/**": true
     },
     "extensions.ignoreRecommendations": false,
     "editor.occurrencesHighlight": false,
@@ -71,5 +79,10 @@
     },
     "editor.rulers": [
         80
-    ]
+    ],
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "workbench.colorTheme": "Dark+ Material",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }

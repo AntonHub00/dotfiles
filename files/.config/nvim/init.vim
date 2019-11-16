@@ -35,7 +35,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'lilydjwg/colorizer'
 Plug 'valloric/MatchTagAlways'
 Plug 'mhinz/vim-signify'
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'sheerun/vim-polyglot' "??????
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
@@ -44,17 +44,13 @@ Plug 'junegunn/fzf.vim'
 "Themes:
 Plug 'chriskempson/base16-vim'
 Plug 'iCyMind/NeoSolarized'
-Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
-Plug 'sickill/vim-monokai'
 Plug 'ajmwagar/vim-deus'
-Plug 'whatyouhide/vim-gotham'
 Plug 'nanotech/jellybeans.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
-Plug 'mhartington/oceanic-next'
 Plug 'tpope/vim-vividchalk'
-"Plug 'rainglow/vim' Still in  Alpha :c (The best)
+" Plug 'rainglow/vim' "Still in Beta :c (The best)
 
 call plug#end()
 
@@ -78,9 +74,9 @@ let g:colorizer_maxlines = 1000 "Deactivates if buffers gets more than 1000 line
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 au Syntax * RainbowParentheses
 
-"Gutentags configuration:
-set statusline+=%{gutentags#statusline()}
-let g:gutentags_ctags_exclude= ['env', '.git']
+""Gutentags configuration:
+"set statusline+=%{gutentags#statusline()}
+"let g:gutentags_ctags_exclude= ['env', '.git']
 
 "End of Plugins configuration-------------------------------------------------
 
@@ -89,9 +85,9 @@ let g:gutentags_ctags_exclude= ['env', '.git']
 
 filetype plugin indent on "Detection, general rules and indentation rules for filetypes
 set number relativenumber "Enable both line numbers and relative numbers
-set cursorline "Highlights the current line
+" set cursorline "Highlights the current line
 set termguicolors "Enable true colors (Just with terminal emulator compatible)
-set colorcolumn=80 "Add vertica line at line 80
+set colorcolumn=80 "Add vertical line at line 80
 set path+=** "Suggest recursive files when tab completion in command mode
 let mapleader=" "
 set winwidth=85 "Minimun window size
@@ -99,37 +95,34 @@ set ignorecase smartcase "Case insensitive search unless type a capital letter
 set tabstop=4 "Size of tabs in spaces (visually)
 set softtabstop=4 "Amount of spaces inserted in insert mode
 set shiftwidth=4 "Size of tabs in spaces when indent with '<', '>' or '='
-set expandtab "Insert tabs instead of spaces
+set expandtab "Insert spaces instead of tabs
 set autoindent "Auto indent in new lines
 set splitbelow "Split below as default when horizontal split
 set splitright "Split right as default when vertical split
 set matchpairs+=<:>
 set inccommand=nosplit
 set undofile
+set mouse=a
 
 "Themes configuration:
 "colorscheme base16-grayscale-dark
 "colorscheme base16-grayscale-light
 "colorscheme base16-nord
-"colorscheme base16-spacemacs "*****
-"colorscheme base16-solarflare
+" colorscheme base16-spacemacs "*****
+colorscheme base16-solarflare
 "colorscheme base16-seti
 "colorscheme base16-icy
-"colorscheme base16-material-vivid
-" colorscheme base16-brewer
-"colorscheme base16-harmonic-dark
+"colorscheme base16-darktooth "(easy on eyes)
+"colorscheme base16-brewer
 "colorscheme base16-cupertino "Good light theme
 "colorscheme NeoSolarized
-"colorscheme onedark "*****
-"colorscheme gruvbox "*****
+"colorscheme gruvbox "***** (easy on eyes)
+"colorscheme deus "***** (easy on eyes)
 "colorscheme monokai
-"colorscheme deus
-"colorscheme gotham "*****
-"colorscheme jellybeans "*****
 "colorscheme ayu
 "colorscheme nord
-"colorscheme OceanicNext "*****
-colorscheme vividchalk
+"colorscheme base16-google-dark "*****
+"colorscheme vividchalk
 
 " End of My configurations-----------------------------------------------------
 
@@ -165,6 +158,7 @@ nmap <Leader>L :Lines<CR>
 nmap <Leader>a :Ag<CR>
 nmap <Leader>t :BTags<CR>
 nmap <Leader>T :Tags<CR>
+nmap <Leader>c :Colors<CR>
 
 "Easy move through windows
 nnoremap <C-h> <C-w>h

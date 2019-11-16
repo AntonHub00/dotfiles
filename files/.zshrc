@@ -126,10 +126,14 @@ alias zshrc='nvim ~/.zshrc'
 #PATH-----------------------------------------------------------------------
 
 #Set JAVA_HOME variable
-export JAVA_HOME=$HOME/Software/jdk1.8.0_221/bin/java
+# export JAVA_HOME=$HOME/Software/jdk1.8.0_221/bin/java
+export JAVA_HOME=$HOME/Software/jdk1.8.0_221 # VSCode needs it
 
 #Set JRE_HOME variable
 export JRE_HOME=$HOME/Software/jdk1.8.0_221/jre/bin/java
+
+#Add my composer packages to the path
+export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
 #Add my scripts to the path
 export PATH=$PATH:$HOME/Scripts
@@ -139,6 +143,9 @@ export PATH=$PATH:$HOME/Software/jdk1.8.0_221/bin
 
 #Add Javacc bins to PATH variable
 export PATH=$PATH:$HOME/Software/javacc-6.0/bin
+
+#Add NodeJS bins to PATH variable
+export PATH=$PATH:$HOME/Software/node-v10.16.3/bin
 
 #Set TERM to xterm-256color if tmux is not running (Some terminal emulators haven't
 # this config as defautl). This for correct colors in neovim inside tmux
