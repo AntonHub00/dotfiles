@@ -28,6 +28,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -37,7 +38,7 @@ Plug 'valloric/MatchTagAlways'
 Plug 'mhinz/vim-signify'
 " Plug 'ludovicchabant/vim-gutentags'
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'sheerun/vim-polyglot' "??????
+Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
@@ -63,8 +64,8 @@ let g:deoplete#enable_at_startup = 1
 "NERDTree configuration:
 map <C-n> :NERDTreeToggle<CR>
 
-"FZF configuration must be after the leader key binding because there mappings
-"with leader (Search it in 'My mappings')
+"FZF configuration must be after the leader key binding because there are mappings
+"with leader (Search it in 'My mappings' down below)
 
 "Colorizer configuration:
 let g:colorizer_nomap = 1 "No mapping for this plugin
@@ -76,7 +77,7 @@ au Syntax * RainbowParentheses
 
 ""Gutentags configuration:
 "set statusline+=%{gutentags#statusline()}
-"let g:gutentags_ctags_exclude= ['env', '.git']
+"let g:gutentags_ctags_exclude= ['env', '.git', 'venv']
 
 "End of Plugins configuration-------------------------------------------------
 

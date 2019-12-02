@@ -1,7 +1,7 @@
 {
     "breadcrumbs.enabled": true,
     "editor.fontSize": 15,
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "Source Code Pro",
     "editor.autoClosingBrackets": "always",
     "editor.autoClosingQuotes": "always",
     "editor.cursorSmoothCaretAnimation": true,
@@ -29,7 +29,10 @@
         "**/.classpath": true,
         "**/.project": true,
         "**/.settings": true,
-        "**/.factorypath": true
+        "**/.factorypath": true,
+        "**/.gitignore": true,
+        "**/requirements.txt": true,
+        "**/venv": true,
     },
     "files.watcherExclude": {
         "**/venv/**": true
@@ -82,7 +85,10 @@
     ],
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
-    "workbench.colorTheme": "Dark+ Material",
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Overflow Contrast (rainglow)",
+    "python.jediEnabled": false,
+    "java.errors.incompleteClasspath.severity": "ignore"
 }

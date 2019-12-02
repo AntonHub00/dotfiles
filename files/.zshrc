@@ -136,7 +136,7 @@ export JRE_HOME=$HOME/Software/jdk1.8.0_221/jre/bin/java
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
 #Add my scripts to the path
-export PATH=$PATH:$HOME/Scripts
+export PATH=$PATH:$HOME/.scripts
 
 #Add Java bins to PATH variable
 export PATH=$PATH:$HOME/Software/jdk1.8.0_221/bin
