@@ -29,6 +29,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-eunuch'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -39,6 +40,7 @@ Plug 'mhinz/vim-signify'
 " Plug 'ludovicchabant/vim-gutentags'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
@@ -74,6 +76,9 @@ let g:colorizer_maxlines = 1000 "Deactivates if buffers gets more than 1000 line
 "Rainbow Parentheses configuration:
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 au Syntax * RainbowParentheses
+
+""vim-highlightedyank configuration:
+let g:highlightedyank_highlight_duration = 200
 
 ""Gutentags configuration:
 "set statusline+=%{gutentags#statusline()}
@@ -119,7 +124,6 @@ colorscheme base16-solarflare
 "colorscheme NeoSolarized
 "colorscheme gruvbox "***** (easy on eyes)
 "colorscheme deus "***** (easy on eyes)
-"colorscheme monokai
 "colorscheme ayu
 "colorscheme nord
 "colorscheme base16-google-dark "*****
@@ -148,6 +152,9 @@ tnoremap <Esc> <C-\><C-n>
 
 "Use tab to select when autocompletion window is open
 inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<cr>"
+
+"us Y instead y$ to copy to end of line
+nnoremap <silent> Y y$
 
 " FZF configuration
 nmap <Leader>f :Files<CR>
