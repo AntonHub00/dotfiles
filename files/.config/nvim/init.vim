@@ -78,7 +78,7 @@ let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 au Syntax * RainbowParentheses
 
 ""vim-highlightedyank configuration:
-let g:highlightedyank_highlight_duration = 200
+let g:highlightedyank_highlight_duration = 1000
 
 ""Gutentags configuration:
 "set statusline+=%{gutentags#statusline()}
@@ -149,6 +149,9 @@ cmap ;r %s///gc<Left><Left><Left><Left>
 
 "Mapping for easy exit of terminal mode
 tnoremap <Esc> <C-\><C-n>
+
+"Mapping for easy replace all ocurrences under cursor
+nnoremap <Leader>r :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
 "Use tab to select when autocompletion window is open
 inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<cr>"
