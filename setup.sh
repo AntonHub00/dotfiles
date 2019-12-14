@@ -1,11 +1,10 @@
 #!/bin/sh
 
 old_files_dir="$HOME/.old_config_files/"
-dotfiles=".gitconfig .vimrc .zshrc .tmux.conf .scripts .fonts/FiraCode-Regular.ttf \
-    .fonts/FiraCode-Regular-Symbol.otf .emacs.d/fira-code-mode .emacs.d/init.el \
+dotfiles=".gitconfig .vimrc .zshrc .tmux.conf .scripts .emacs.d/init.el \
     .emacs.d/myinit.org .config/alacritty/alacritty.yml .config/nvim/init.vim \
     .config/i3/config .config/i3/i3blocks.conf .config/Code/User/settings.json \
-    .config/fish/config.fish"
+    .config/kitty/kitty.conf"
 
 
 move_old_files()
@@ -14,7 +13,8 @@ move_old_files()
 
     if [ -e $old_files_dir ]; then
         echo "$old_files_dir already exists (could contain old config files)."
-        echo "Check the files, remove the directory and run this again if you want to setup the dotfiles"
+        echo "Check the files, remove the directory and run this again if you \
+            want to setup the dotfiles"
         exit 1
     else
         mkdir $old_files_dir
@@ -26,7 +26,6 @@ move_old_files()
 
         if [ -e $local_file ]; then
             mv -v $local_file $old_files_dir
-            # echo "$local_file was move to $old_files_dir"
         fi
     done
 }

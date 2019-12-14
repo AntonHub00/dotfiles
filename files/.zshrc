@@ -122,14 +122,23 @@ alias xampp='sudo /opt/lampp/xampp'
 #Alias for mysql (XAMPP)
 alias mysql_xampp='/opt/lampp/bin/mysql'
 
-#Alias for .vimrc file
-alias vimrc='nvim ~/.vimrc'
+#Alias for zsh config file
+alias zshconf='nvim ~/.zshrc'
 
-#Alias for .zshrc file
-alias zshrc='nvim ~/.zshrc'
+#Alias for neovim config file
+alias nvimconf='nvim ~/.config/nvim/init.vim'
+#
+#Alias for tmux config file
+alias tmuxconf='nvim ~/.tmux.conf'
 
-#Alias for init.vim file (neovim config file)
-alias nvim_init='nvim ~/.config/nvim/init.vim'
+#Alias for alacritty config file
+alias alacrittyconf='nvim ~/.config/alacritty/alacritty.yml'
+
+#Alias for kitty config file
+alias kittyconf='nvim ~/.config/kitty/kitty.conf'
+
+#Alias for i3 config file
+alias i3conf='nvim ~/.config/i3/config'
 
 #PATH-----------------------------------------------------------------------
 

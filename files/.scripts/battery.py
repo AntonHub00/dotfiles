@@ -25,7 +25,7 @@ def take_action():
         charge = int(read_status())
         if charge <= 15:
             if not notification_sent:
-                subprocess.Popen(["/bin/bash", "-c", f"notify-send 'Battery at {charge}%!!!'"])
+                subprocess.Popen(["/bin/bash", "-c", f"notify-send -u CRITICAL 'Battery at {charge}%!!!'"])
                 notification_sent = True
         else:
             notification_sent = False
