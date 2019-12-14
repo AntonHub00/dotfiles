@@ -87,7 +87,7 @@
     "editor.renderControlCharacters": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "editor.formatOnSave": true,
+    // "editor.formatOnSave": true,
     "workbench.colorTheme": "Overflow Contrast (rainglow)",
     "python.jediEnabled": false,
     "java.errors.incompleteClasspath.severity": "ignore"

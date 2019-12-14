@@ -131,6 +131,28 @@ colorscheme base16-solarflare
 
 " End of My configurations-----------------------------------------------------
 
+" My functions-----------------------------------------------------------------
+
+let s:is_transparent = 1
+
+function! ToggleTransparent()
+    if s:is_transparent
+        hi! Normal guibg=NONE ctermbg=NONE
+        hi! NonText guibg=NONE ctermbg=NONE
+        hi! LineNr guibg=NONE ctermbg=NONE
+        hi! FoldColumn guibg=NONE ctermbg=NONE
+        hi! Folded guibg=NONE ctermbg=NONE
+        hi! SignColumn guibg=NONE ctermbg=NONE
+        let s:is_transparent = 0
+    else
+        set background=dark
+        let s:is_transparent = 1
+    endif
+endfunction
+
+call ToggleTransparent()
+
+" End of My functions----------------------------------------------------------
 
 " My mappings------------------------------------------------------------------
 
