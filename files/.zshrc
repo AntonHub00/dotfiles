@@ -166,4 +166,4 @@ export PATH=$PATH:$HOME/Software/node-v10.16.3/bin
 
 #Set TERM to xterm-256color if tmux is not running (Some terminal emulators haven't
 # this config as defautl). This for correct colors in neovim inside tmux
-[ -z "$TMUX" ] && export TERM=xterm-256color
+# [ -z "$TMUX" ] && export TERM=xterm-256color
