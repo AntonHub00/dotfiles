@@ -44,10 +44,10 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ntilde focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -56,10 +56,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ntilde move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -68,7 +68,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -98,11 +98,11 @@ bindsym $mod+space focus mode_toggle
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
-set $ws4 "4:"
-set $ws5 "5:"
-set $ws6 "6:"
-set $ws7 "7:"
-set $ws8 "8:"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
@@ -145,10 +145,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym ntilde resize grow width 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -177,7 +177,7 @@ bar {
 # My adds ====================================================================
 
 # Set wallpaper (Needed "feh" package installed)
-exec_always feh --bg-scale ~/Scripts/neurons.jpg
+exec_always feh --bg-scale ~/.scripts/neurons.jpg
 
 # Show the Network Manager applet (To configure wifi)
 exec_always --no-startup-id nm-applet
@@ -185,23 +185,19 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
 
 # Scripts and "services"
-exec_always --no-startup-id ~/Scripts/circular_scrolling.sh
-exec_always --no-startup-id ~/Scripts/battery.py
+exec_always --no-startup-id ~/.scripts/circular_scrolling.sh
+exec_always --no-startup-id ~/.scripts/battery.py
 
 # Key bindings
-#bindsym $mod+shift+x exec i3lock --color "#FFFFFF"
-bindsym $mod+shift+x exec ~/Scripts/i3_lock_rm.sh
+# bindsym $mod+shift+x exec i3lock --color "#00FFFF"
+bindsym $mod+shift+x exec ~/.scripts/i3_lock_rm.sh
 
 # Assign workspace 10 for the VGA output
 workspace $ws10 output VGA-1
-#workspace $ws10 output HDMI-1
-#workspace $ws10 output LVDS-1
+# workspace $ws10 output HDMI-1
+# workspace $ws10 output LVDS-1
 
 #Startup programmes in workspaces
-exec --no-startup-id alacritty
-exec --no-startup-id nvim
-exec --no-startup-id chromium-browser
-exec --no-startup-id spotify
 
 #Screenshot
 bindsym Print exec gnome-screenshot -i
@@ -211,9 +207,9 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 # Volume controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id ~/Scripts/volume_control.sh +1%
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/Scripts/volume_control.sh -1%
-bindsym XF86AudioMute exec --no-startup-id ~/Scripts/volume_control.sh M
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.scripts/volume_control.sh +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.scripts/volume_control.sh -5%
+bindsym XF86AudioMute exec --no-startup-id ~/.scripts/volume_control.sh M
 #bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set 'Master' 2%+
 #bindsym XF86AudioLowerVolume exec --no-startup-id amixer set 'Master' 2%-
 
