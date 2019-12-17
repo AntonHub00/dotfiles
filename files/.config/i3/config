@@ -67,11 +67,11 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+b split h
+# split in horizontal orientation (my way)
+bindsym $mod+b split v
 
-# split in vertical orientation
-bindsym $mod+v split v
+# split in vertical orientation (my way)
+bindsym $mod+v split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -176,8 +176,13 @@ bar {
 
 # My adds ====================================================================
 
+# For opacity support
+exec --no-startup-id compton -b
+
+bindsym $mod+p exec pavucontrol
+
 # Set wallpaper (Needed "feh" package installed)
-exec_always feh --bg-scale ~/.scripts/neurons.jpg
+exec_always feh --bg-scale ~/.scripts/mountains.jpg
 
 # Show the Network Manager applet (To configure wifi)
 exec_always --no-startup-id nm-applet
