@@ -167,9 +167,9 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        # status_command i3blocks -c ~/.config/i3/i3blocks.conf
         #Look up for py3status (wraper for i3status)
-        #status_command i3status
+        status_command i3status
         position top
         font pango:Fira Code 9
 }
@@ -195,7 +195,8 @@ exec_always --no-startup-id ~/.scripts/battery.py
 
 # Key bindings
 # bindsym $mod+shift+x exec i3lock --color "#00FFFF"
-bindsym $mod+shift+x exec ~/.scripts/i3_lock_rm.sh
+bindsym $mod+x exec ~/.scripts/i3_lock_rm.sh
+bindsym $mod+shift+x exec ~/.scripts/i3_lock_rm.sh && systemctl suspend
 
 # Assign workspace 10 for the VGA output
 workspace $ws10 output VGA-1
