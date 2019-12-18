@@ -74,8 +74,8 @@ font-2 = siji:pixelsize=10;1
 ;modules-left = menu i3 xwindow
 ;modules-left = menu i3 xwindow
 modules-left = i3
-modules-center = mpd
-modules-right = fsroot fshome memory cpu xbacklight volume wlan eth battery temperature date
+;modules-center = mpd
+modules-right = fsroot fshome memory cpu volume wlan eth battery date
 
 tray-position = right
 tray-padding = 2
@@ -314,11 +314,11 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date =  %a %d-%m-%Y |
-date-alt = " %Y-%m-%d"
+date = " %Y-%m-%d"
+date-alt =  %a %d-%m-%Y |
 
-time =   %I:%M
-time-alt = %I:%M
+time = %I:%M
+time-alt =   %I:%M
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
