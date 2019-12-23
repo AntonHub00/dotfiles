@@ -45,3 +45,4 @@
 - LaTeX
 - Postman
 - neofetch
+- pandoc
