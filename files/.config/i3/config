@@ -34,7 +34,7 @@ floating_modifier $mod
 bindsym $mod+Return exec kitty
 
 # kill focused window
-bindsym $mod+q kill
+bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -193,7 +193,6 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
 
 # Scripts and "services"
-exec_always --no-startup-id ~/.scripts/circular_scrolling.sh
 exec_always --no-startup-id ~/.scripts/battery.py
 
 # Key bindings
