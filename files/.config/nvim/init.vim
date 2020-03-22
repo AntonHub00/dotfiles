@@ -96,7 +96,7 @@ set termguicolors "Enable true colors (Just with terminal emulator compatible)
 set colorcolumn=80 "Add vertical line at line 80
 set path+=** "Suggest recursive files when tab completion in command mode
 let mapleader=" "
-set winwidth=85 "Minimun window size
+" set winwidth=85 "Minimun window size
 set ignorecase smartcase "Case insensitive search unless type a capital letter
 set tabstop=4 "Size of tabs in spaces (visually)
 set softtabstop=4 "Amount of spaces inserted in insert mode
