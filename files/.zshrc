@@ -162,7 +162,12 @@ export PATH=$PATH:$HOME/Software/jdk1.8.0_221/bin
 export PATH=$PATH:$HOME/Software/javacc-6.0/bin
 
 #Add NodeJS bins to PATH variable
-export PATH=$PATH:$HOME/Software/node-v10.16.3/bin
+# export PATH=$PATH:$HOME/Software/node-v10.16.3/bin
+
+export PATH=$PATH:$HOME/Software/other/node-v12.16.1-linux-x64/bin
+
+#Add Golang bins to PATH variable
+export PATH=$PATH:/usr/local/go/bin
 
 #Set TERM to xterm-256color if tmux is not running (Some terminal emulators haven't
 # this config as defautl). This for correct colors in neovim inside tmux
