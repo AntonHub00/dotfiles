@@ -1,7 +1,7 @@
 {
     "breadcrumbs.enabled": true,
     "editor.fontSize": 15,
-    "editor.fontFamily": "Source Code Pro",
+    "editor.fontFamily": "Fira Code",
     "editor.autoClosingBrackets": "always",
     "editor.autoClosingQuotes": "always",
     "editor.cursorSmoothCaretAnimation": true,
@@ -16,7 +16,7 @@
     "terminal.integrated.cursorBlinking": true,
     "window.zoomLevel": 0,
     // "workbench.colorTheme": "Quiet Light",
-    "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
+    "workbench.iconTheme": "vscode-icons",
     "liveServer.settings.donotShowInfoMsg": true,
     "files.exclude": {
         "**/.git": true,
@@ -65,14 +65,6 @@
             ],
             "commands": [
                 ":noh"
-            ]
-        },
-        {
-            "before": [
-                "<C-n>"
-            ],
-            "commands": [
-                "workbench.action.toggleSidebarVisibility"
             ]
         }
     ],
