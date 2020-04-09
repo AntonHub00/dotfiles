@@ -66,6 +66,24 @@
             "commands": [
                 ":noh"
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r"
+            ],
+            "commands": [
+                "editor.action.startFindReplaceAction"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "R"
+            ],
+            "commands": [
+                "workbench.action.replaceInFiles"
+            ]
         }
     ],
     "vim.leader": "<SPACE>",
