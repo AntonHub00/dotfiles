@@ -108,27 +108,27 @@ source $ZSH/oh-my-zsh.sh
 # My settings------------------------------------------------------------------
 DEFAULT_USER prompt_context(){}
 
-#neovim as default editor
+# neovim as default editor
 export EDITOR=nvim
 
-#Aliases-----------------------------------------------------------------------
+# Aliases-----------------------------------------------------------------------
 
-#Alias for ping
+# Alias for ping
 alias pin='ping -c 3 8.8.8.8'
 
-#Alias for XAMPP service
+# Alias for XAMPP service
 alias xampp='sudo /opt/lampp/xampp'
 
-#Alias for mysql (XAMPP)
+# Alias for mysql (XAMPP)
 alias mysql_xampp='/opt/lampp/bin/mysql'
 
-#Alias for zsh config file
+# Alias for zsh config file
 alias zshconf='nvim ~/.zshrc'
 
-#Alias for neovim config file
+# Alias for neovim config file
 alias nvimconf='nvim ~/.config/nvim/init.vim'
-#
-#Alias for tmux config file
+
+# Alias for tmux config file
 alias tmuxconf='nvim ~/.tmux.conf'
 
 #Alias for alacritty config file
@@ -142,36 +142,34 @@ alias i3conf='nvim ~/.config/i3/config'
 
 #PATH-----------------------------------------------------------------------
 
-#Set JAVA_HOME variable
+# Set JAVA_HOME variable
 # export JAVA_HOME=$HOME/Software/jdk1.8.0_221/bin/java
 export JAVA_HOME=$HOME/Software/jdk1.8.0_221 # VSCode needs it
 
-#Set JRE_HOME variable
+# Set JRE_HOME variable
 export JRE_HOME=$HOME/Software/jdk1.8.0_221/jre/bin/java
 
-#Add my composer packages to the path
+# Add my composer packages to the path
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
-#Add my scripts to the path
+# Add my scripts to the path
 export PATH=$PATH:$HOME/.scripts
 
-#Add Java bins to PATH variable
+# Add Java bins to PATH variable
 export PATH=$PATH:$HOME/Software/jdk1.8.0_221/bin
 
-#Add Javacc bins to PATH variable
+# Add Javacc bins to PATH variable
 export PATH=$PATH:$HOME/Software/javacc-6.0/bin
 
-#Add NodeJS bins to PATH variable
-# export PATH=$PATH:$HOME/Software/node-v10.16.3/bin
-
+# Add NodeJS bins to PATH variable
 export PATH=$PATH:$HOME/Software/other/node-v12.16.1-linux-x64/bin
 
-#Add Golang bins to PATH variable
+# Add Golang bins to PATH variable
 export PATH=$PATH:/usr/local/go/bin
 
-#Set TERM to xterm-256color if tmux is not running (Some terminal emulators haven't
+# Set TERM to xterm-256color if tmux is not running (Some terminal emulators haven't
 # this config as defautl). This for correct colors in neovim inside tmux
-# [ -z "$TMUX" ] && export TERM=xterm-256color
+[ -z "$TMUX" ] && export TERM=xterm-256color
 
 if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
