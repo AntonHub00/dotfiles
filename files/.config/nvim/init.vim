@@ -78,7 +78,7 @@ let g:colorizer_maxlines = 1000
 
 " Rainbow Parentheses configuration:
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
-au Syntax * RainbowParentheses
+autocmd FileType * RainbowParentheses
 
 " vim-highlightedyank configuration:
 let g:highlightedyank_highlight_duration = 1000
