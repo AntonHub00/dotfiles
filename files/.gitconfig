@@ -4,13 +4,13 @@
 	email = antonhub00@gmail.com
 	name = Antonio Ochoa
 [diff]
-    tool = nvimdiff
-[difftool "nvimdiff"]
+    tool = vimdiff
+[difftool "vimdiff"]
     cmd = "nvim -d -u ~/.config/nvim/init.vim \"$REMOTE\" \"$LOCAL\""
 [merge]
-	tool = nvimdiff
+	tool = vimdiff
 	conflictstyle = diff3
-[mergetool "nvimdiff"]
+[mergetool "vimdiff"]
     cmd = "nvim -d -u ~/.config/nvim/init.vim \"$REMOTE\" \"$LOCAL\" \"$MERGED\""
     ; cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [difftool]
