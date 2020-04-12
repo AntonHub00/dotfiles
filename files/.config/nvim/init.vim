@@ -43,6 +43,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'ludovicchabant/vim-gutentags'
 
 " Themes:
 Plug 'chriskempson/base16-vim'
@@ -59,6 +60,10 @@ call plug#end()
 
 
 " Plugins configuration--------------------------------------------------------
+
+" Gutentags configuration
+set statusline+=%{gutentags#statusline()}
+let g:gutentags_ctags_exclude = ['venv', 'env']
 
 " Ultisnips configuration:
 let g:UltiSnipsJumpBackwardTrigger="<C-z>"
