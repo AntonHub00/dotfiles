@@ -142,6 +142,8 @@ set clipboard=unnamedplus
 " Disables autocomment
 autocmd FileType * setlocal formatoptions-=cro
 
+set wildmode=longest,list
+
 " Themes configuration:
 " colorscheme base16-grayscale-dark
 " colorscheme base16-grayscale-light
