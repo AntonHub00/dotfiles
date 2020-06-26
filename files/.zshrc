@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # My settings------------------------------------------------------------------
-DEFAULT_USER prompt_context(){}
+# DEFAULT_USER prompt_context(){}
 
 # neovim as default editor
 export EDITOR=nvim
@@ -171,6 +171,6 @@ export PATH=$PATH:/usr/local/go/bin
 # this config as defautl). This for correct colors in neovim inside tmux
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
-if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
-fi
+# if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+#   exec startx
+# fi

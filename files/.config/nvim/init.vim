@@ -43,7 +43,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 
 " Themes:
 Plug 'chriskempson/base16-vim'
@@ -54,6 +54,8 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-vividchalk'
 Plug 'https://github.com/joshdick/onedark.vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'rainglow/vim' "Still in Beta :c (The best)
 
 call plug#end()
@@ -62,8 +64,8 @@ call plug#end()
 " Plugins configuration--------------------------------------------------------
 
 " Gutentags configuration
-set statusline+=%{gutentags#statusline()}
-let g:gutentags_ctags_exclude = ['venv', 'env']
+" set statusline+=%{gutentags#statusline()}
+" let g:gutentags_ctags_exclude = ['venv', 'env']
 
 " Ultisnips configuration:
 let g:UltiSnipsJumpBackwardTrigger="<C-z>"
@@ -144,6 +146,9 @@ autocmd FileType * setlocal formatoptions-=cro
 
 set wildmode=longest,list
 
+" For python support in virtual environments
+let g:python3_host_prog = expand('~/.venvs/venv/bin/python3')
+
 " Themes configuration:
 " colorscheme base16-grayscale-dark
 " colorscheme base16-grayscale-light
@@ -157,14 +162,16 @@ set wildmode=longest,list
 " colorscheme base16-cupertino
 " colorscheme NeoSolarized
 
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'hard'
+" colorscheme gruvbox
 
 " colorscheme deus
 " colorscheme ayu
-" colorscheme nord
 " colorscheme base16-google-dark
 " colorscheme vividchalk
+" colorscheme jellybeans
+colorscheme nord
+" colorscheme dracula
 
 " End of My configurations-----------------------------------------------------
 
