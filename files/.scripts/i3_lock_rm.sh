@@ -12,7 +12,6 @@ xset +dpms dpms 0 0 5
 # gnome-screenshot -d 1 -f /tmp/locking_screen.png
 scrot -d 1 /tmp/locking_screen.png
 convert -blur 0x8 /tmp/locking_screen.png /tmp/screen_blur.png
-convert -composite /tmp/screen_blur.png ~/.scripts/rick_and_morty_ls.png -gravity South -geometry -1x1200 /tmp/screen.png
-#convert -composite /tmp/screen_blur.png /tmp/screen_blur.png -gravity South -geometry -1x1200 /tmp/screen.png
+convert -composite /tmp/screen_blur.png /tmp/screen_blur.png -gravity South -geometry -1x1200 /tmp/screen.png
 i3lock -i /tmp/screen.png
 revert
