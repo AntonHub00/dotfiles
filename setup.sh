@@ -5,7 +5,8 @@ dotfiles=".gitconfig .zshrc .tmux.conf .scripts .emacs.d/init.el \
     .emacs.d/myinit.org .config/alacritty/alacritty.yml .config/nvim/init.vim \
     .config/i3/config .config/i3/i3blocks.conf .config/Code/User/settings.json \
     .config/Code/User/keybindings.json .config/kitty/kitty.conf \
-    .config/polybar/config .config/polybar/launch.sh"
+    .config/polybar/config .config/polybar/launch.sh \
+    .xinitrc .zprofile"
 
 
 move_old_files()
