@@ -6,12 +6,12 @@
 [diff]
     tool = vimdiff
 [difftool "vimdiff"]
-    cmd = "nvim -d -u ~/.config/nvim/init.vim \"$REMOTE\" \"$LOCAL\""
+    cmd = "nvim -d -u ~/.config/nvim/init.vim \"$LOCAL\" \"$REMOTE\""
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
 [mergetool "vimdiff"]
-    cmd = "nvim -d -u ~/.config/nvim/init.vim \"$REMOTE\" \"$LOCAL\" \"$MERGED\""
+    cmd = "nvim -d -u ~/.config/nvim/init.vim \"$LOCAL\" \"$MERGED\" \"$REMOTE\""
     ; cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [difftool]
 	prompt = false

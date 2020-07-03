@@ -56,6 +56,8 @@ Plug 'tpope/vim-vividchalk'
 Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'whatyouhide/vim-gotham'
+Plug 'jnurmine/Zenburn'
 " Plug 'rainglow/vim' "Still in Beta :c (The best)
 
 call plug#end()
@@ -161,17 +163,20 @@ let g:python3_host_prog = expand('~/.venvs/venv/bin/python3')
 " colorscheme base16-brewer
 " colorscheme base16-cupertino
 " colorscheme NeoSolarized
-
-" let g:gruvbox_contrast_dark = 'hard'
-" colorscheme gruvbox
-
 " colorscheme deus
 " colorscheme ayu
 " colorscheme base16-google-dark
 " colorscheme vividchalk
 " colorscheme jellybeans
-colorscheme nord
+" colorscheme nord
 " colorscheme dracula
+" colorscheme zenburn
+
+" let g:gruvbox_contrast_dark = 'hard'
+" colorscheme gruvbox
+
+colorscheme gotham
+let g:gotham_airline_emphasised_insert = 0
 
 " End of My configurations-----------------------------------------------------
 
@@ -179,7 +184,7 @@ colorscheme nord
 " My functions-----------------------------------------------------------------
 
 " Sets inital state for the function
-let s:is_transparent = 0
+let s:is_transparent = 1
 
 " Sets configuration to show correct transparency if terminal allows it and
 " it's enabled
