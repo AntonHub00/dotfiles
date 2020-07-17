@@ -186,4 +186,7 @@ man() {
     command man "$@"
 }
 
+# Nord theme for dircolors
+test -r "$HOME/.dir_colors" && eval $(dircolors $HOME/.dir_colors)
+
 neofetch

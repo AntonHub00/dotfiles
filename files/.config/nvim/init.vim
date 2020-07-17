@@ -104,7 +104,7 @@ filetype plugin indent on
 " Enable both line numbers and relative numbers
 set number relativenumber
 " Highlights the current line
-" set cursorline
+set cursorline
 " Enable true colors (Just with terminal emulator compatible)
 set termguicolors
 "Add vertical line at line 80
@@ -168,15 +168,16 @@ let g:python3_host_prog = expand('~/.venvs/venv/bin/python3')
 " colorscheme base16-google-dark
 " colorscheme vividchalk
 " colorscheme jellybeans
-" colorscheme nord
 " colorscheme dracula
 " colorscheme zenburn
+
+colorscheme nord
 
 " let g:gruvbox_contrast_dark = 'hard'
 " colorscheme gruvbox
 
-colorscheme gotham
-let g:gotham_airline_emphasised_insert = 0
+" colorscheme gotham
+" let g:gotham_airline_emphasised_insert = 0
 
 " End of My configurations-----------------------------------------------------
 
@@ -203,7 +204,7 @@ function! ToggleTransparent()
     endif
 endfunction
 
-call ToggleTransparent()
+" call ToggleTransparent()
 
 " End of My functions----------------------------------------------------------
 
