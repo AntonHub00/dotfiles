@@ -1,12 +1,10 @@
 #!/bin/sh
 
 old_files_dir="$HOME/.old_config_files/"
-dotfiles=".gitconfig .zshrc .tmux.conf .scripts .emacs.d/init.el \
-    .emacs.d/myinit.org .config/alacritty/alacritty.yml .config/nvim/init.vim \
-    .config/i3/config .config/i3/i3blocks.conf .config/Code/User/settings.json \
-    .config/Code/User/keybindings.json .config/kitty/kitty.conf \
-    .config/polybar/config .config/polybar/launch.sh \
-    .xinitrc .zprofile"
+dotfiles=".gitconfig .zshrc .tmux.conf .scripts .xinitrc .zprofile \
+    .config/alacritty/alacritty.yml .config/nvim/init.vim \
+    .config/Code/User/settings.json .config/Code/User/keybindings.json \
+    .config/kitty/kitty.conf"
 
 
 move_old_files()
