@@ -1,17 +1,8 @@
 #!/bin/bash
 
+lock_screen_image="/tmp/lock_screen_image.png"
 
-revert() {
-  rm /tmp/*screen*.png
-  xset dpms 0 0 0
-}
-
-
-trap revert HUP INT TERM
-xset +dpms dpms 0 0 5
-# gnome-screenshot -d 1 -f /tmp/locking_screen.png
-scrot -d 1 /tmp/locking_screen.png
-convert -blur 0x8 /tmp/locking_screen.png /tmp/screen_blur.png
-convert -composite /tmp/screen_blur.png /tmp/screen_blur.png -gravity South -geometry -1x1200 /tmp/screen.png
-i3lock -i /tmp/screen.png
-revert
+gnome-screenshot -f $lock_screen_image > /dev/null 2>&1
+convert -blur 0x5 $lock_screen_image $lock_screen_image
+i3lock -i $lock_screen_image
+rm $lock_screen_image
