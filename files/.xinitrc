@@ -35,6 +35,6 @@ fi
 
 # My configs
 $HOME/.scripts/dwm_xsetroot.sh &
-feh --bg-fill $HOME/.scripts/gotham.jpg &
+feh --bg-fill $HOME/.scripts/gotham_wallpaper.png &
 exec picom &
 exec dwm
