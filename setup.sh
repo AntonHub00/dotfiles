@@ -4,7 +4,7 @@ old_files_dir="$HOME/.old_config_files/"
 dotfiles=".gitconfig .zshrc .tmux.conf .scripts .xinitrc .zprofile \
     .config/alacritty/alacritty.yml .config/nvim/init.vim \
     .config/Code/User/settings.json .config/Code/User/keybindings.json \
-    .config/kitty/kitty.conf"
+    .config/kitty/kitty.conf .config/dunst/dunstrc"
 
 
 move_old_files()
