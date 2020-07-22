@@ -11,9 +11,10 @@
 # ZSH_THEME="af-magic" #option
 # ZSH_THEME="eastwood" #option
 # ZSH_THEME="sunaku" #option
-ZSH_THEME="avit" #option
+# ZSH_THEME="avit" #option
 # ZSH_THEME="agnoster" #option
 # ZSH_THEME="robbyrussell" #option
+ZSH_THEME="spaceship" #option
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -71,6 +72,7 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
+  colored-man-pages
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -168,23 +170,8 @@ export PATH=$PATH:$HOME/Software/other/node-v12.18.1-linux-x64/bin
 export PATH=$PATH:/usr/local/go/bin
 
 # Set TERM to xterm-256color if tmux is not running (Some terminal emulators haven't
-# this config as defautl). This for correct colors in neovim inside tmux
+# this config as default). This for correct colors in neovim inside tmux
 [ -z "$TMUX" ] && export TERM=xterm-256color
-
-# if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-#   exec startx
-# fi
-
-# For color in less (useful for man pages)
-man() {
-    LESS_TERMCAP_md=$'\e[01;31m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;33m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;32m' \
-    command man "$@"
-}
 
 # Nord theme for dircolors
 test -r "$HOME/.dir_colors" && eval $(dircolors $HOME/.dir_colors)
