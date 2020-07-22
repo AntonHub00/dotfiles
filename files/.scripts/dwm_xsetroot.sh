@@ -19,5 +19,5 @@ while true; do
 
     xsetroot -name "$output"
 
-	sleep 1
+    sleep 1
 done
