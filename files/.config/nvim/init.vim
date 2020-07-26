@@ -1,23 +1,3 @@
-" Neovim (requirements in Ubuntu 18.04):
-
-" sudo add-apt-repository ppa:neovim-ppa/stable
-" sudo apt-get update
-" sudo apt-get install neovim
-
-
-" Vim plug installation (plugin manager):
-
-" curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-
-" Some plugins require python (requirements):
-
-" sudo apt-get install python-dev python-pip python3-dev python3-pip
-" python3 -m pip uninstall neovim pynvim
-" python3 -m pip install --user --upgrade pynvim
-
-
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'scrooloose/nerdtree'
@@ -47,23 +27,21 @@ Plug 'honza/vim-snippets'
 
 " Themes:
 Plug 'chriskempson/base16-vim'
-Plug 'iCyMind/NeoSolarized'
 Plug 'morhetz/gruvbox'
-Plug 'ajmwagar/vim-deus'
-Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-vividchalk'
 Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'nanotech/jellybeans.vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'whatyouhide/vim-gotham'
-Plug 'jnurmine/Zenburn'
-" Plug 'rainglow/vim' "Still in Beta :c (The best)
 
 call plug#end()
 
 
 " Plugins configuration--------------------------------------------------------
+
+" Airline configuration
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Gutentags configuration
 " set statusline+=%{gutentags#statusline()}
@@ -145,32 +123,28 @@ set encoding=UTF-8
 set clipboard=unnamedplus
 " Disables autocomment
 autocmd FileType * setlocal formatoptions-=cro
-
+" How to display hidden chars with 'set list'
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+" How to display list of options
 set wildmode=longest,list
-
 " For python support in virtual environments
 let g:python3_host_prog = expand('~/.venvs/venv/bin/python3')
 
 " Themes configuration:
 " colorscheme base16-grayscale-dark
 " colorscheme base16-grayscale-light
-" colorscheme base16-nord
+" colorscheme base16-icy
 " colorscheme base16-spacemacs
 " colorscheme base16-solarflare
 " colorscheme base16-seti
-" colorscheme base16-icy
 " colorscheme base16-darktooth
 " colorscheme base16-brewer
 " colorscheme base16-cupertino
-" colorscheme NeoSolarized
-" colorscheme deus
-" colorscheme ayu
 " colorscheme base16-google-dark
+
 " colorscheme vividchalk
 " colorscheme jellybeans
-" colorscheme dracula
-" colorscheme zenburn
-
+" colorscheme onedark
 colorscheme nord
 
 " let g:gruvbox_contrast_dark = 'hard'
