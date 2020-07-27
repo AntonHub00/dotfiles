@@ -107,12 +107,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-# My settings------------------------------------------------------------------
-# DEFAULT_USER prompt_context(){}
-
-# neovim as default editor
-export EDITOR=nvim
-
 # Aliases-----------------------------------------------------------------------
 
 # Alias for ping
@@ -139,41 +133,24 @@ alias alacrittyconf='nvim ~/.config/alacritty/alacritty.yml'
 #Alias for kitty config file
 alias kittyconf='nvim ~/.config/kitty/kitty.conf'
 
-#Alias for i3 config file
-alias i3conf='nvim ~/.config/i3/config'
-
-#PATH-----------------------------------------------------------------------
-
-# Set JAVA_HOME variable
-# export JAVA_HOME=$HOME/Software/jdk1.8.0_221/bin/java
-export JAVA_HOME=$HOME/Software/jdk1.8.0_221 # VSCode needs it
-
-# Set JRE_HOME variable
-export JRE_HOME=$HOME/Software/jdk1.8.0_221/jre/bin/java
-
-# Add my composer packages to the path
-export PATH=$PATH:$HOME/.config/composer/vendor/bin
+# PATH-------------------------------------------------------------------------
 
 # Add my scripts to the path
 export PATH=$PATH:$HOME/.scripts
 
-# Add Java bins to PATH variable
-export PATH=$PATH:$HOME/Software/jdk1.8.0_221/bin
-
-# Add Javacc bins to PATH variable
-export PATH=$PATH:$HOME/Software/javacc-6.0/bin
-
 # Add NodeJS bins to PATH variable
 export PATH=$PATH:$HOME/Software/other/node-v12.18.1-linux-x64/bin
 
-# Add Golang bins to PATH variable
-export PATH=$PATH:/usr/local/go/bin
+# My settings------------------------------------------------------------------
+
+# neovim as default editor
+export EDITOR=nvim
 
 # Set TERM to xterm-256color if tmux is not running (Some terminal emulators haven't
 # this config as default). This for correct colors in neovim inside tmux
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
 # Nord theme for dircolors
-test -r "$HOME/.dir_colors" && eval $(dircolors $HOME/.dir_colors)
+test -r "$HOME/Software/repos/nord-dircolors/src/dir_colors" && eval $(dircolors $HOME/Software/repos/nord-dircolors/src/dir_colors)
 
-neofetch
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
