@@ -22,6 +22,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'ryanoasis/vim-devicons'
 
 " Themes:
 Plug 'chriskempson/base16-vim'
