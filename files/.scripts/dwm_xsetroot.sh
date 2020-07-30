@@ -1,9 +1,9 @@
 #!/bin/bash
 
 while true; do
-    disk_root=$(df -h | awk '{ if ($6 == "/") print $4 }')"  "
+    disk_root=$(df -h | awk '{ if ($6 == "/") print $4 }')" "
 
-    disk_home=$(df -h | awk '{ if ($6 == "/home") print $4 }')"  "
+    disk_home=$(df -h | awk '{ if ($6 == "/home") print $4 }')" "
 
     temperature=$(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)" "
 
