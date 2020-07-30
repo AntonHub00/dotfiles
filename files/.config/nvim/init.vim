@@ -51,6 +51,7 @@ set splitbelow " Split below as default when horizontal split
 set splitright " Split right as default when vertical split
 set matchpairs+=<:> " Add highlight and jump motion with '%' for '<' and '>'
 set mouse=a " Mouse support
+set hidden " Allows to hide buffer even if is not saved to disk yet
 
 " Visual related
 set number relativenumber " Enables both line numbers and relative numbers
@@ -60,15 +61,17 @@ set colorcolumn=80 " Adds vertical line at line 80
 set ignorecase smartcase " Case insensitive search unless type a capital letter
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:» " How to display hidden chars with 'set list'
 set wildmode=longest,list " How to display list of options
+set signcolumn=yes " Always shows sign column
+set shortmess+=c " Don't pass messages to |ins-completion-menu|
 
 " File related
 set encoding=utf-8 " The encoding displayed
 set fileencoding=utf-8 " The encoding written to file
 set clipboard=unnamedplus " Automatically yanks and pastes from system clipboard
-set formatoptions-=cro " Disables autocomment in new line
+autocmd FileType * setlocal formatoptions-=cro " Disables autocomment in new line
 set updatetime=100 " Delay before vim writes its swap file (good for vim-signify)
 set nobackup " Do not make a backup before overwriting a file
-set nowritebackup " Do not make a backup before overwriting a file.
+set nowritebackup " Do not make a backup before overwriting a file
 set undofile " Allows to undo even if the file has been closed
 let g:python3_host_prog = expand('~/.venvs/venv/bin/python3') " For python support in virtual environments
 
@@ -77,20 +80,63 @@ let g:python3_host_prog = expand('~/.venvs/venv/bin/python3') " For python suppo
 
 " Plugins configuration--------------------------------------------------------
 
-" Airline configuration:
+" Airline configuration:-------------------------------------------------------
 let g:airline_powerline_fonts = 1 "Works well with firacode font (no need for powerline fonts)
 let g:airline#extensions#tabline#enabled = 1
+" End of Airline configuration-------------------------------------------------
 
-" Ultisnips configuration:
-let g:UltiSnipsJumpBackwardTrigger="<C-z>"
-let g:UltiSnipsJumpForwardTrigger="<C-m>"
-
-" Rainbow Parentheses configuration:
+" Rainbow Parentheses configuration:-------------------------------------------
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 autocmd FileType * RainbowParentheses
+" End of Rainbow Parentheses configuration------------------------------------
 
-" nvmim-colorizer configuration:
+" nvmim-colorizer configuration:-----------------------------------------------
 lua require'colorizer'.setup()
+" End of nvmim-colorizer configuration-----------------------------------------
+
+" COC configuration:-----------------------------------------------------------
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" GoTo code navigation.
+nmap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> <leader>gy <Plug>(coc-type-definition)
+nmap <silent> <leader>gi <Plug>(coc-implementation)
+nmap <silent> <leader>gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Mappings for CoCList
+" Show all diagnostics.
+" nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+" " Manage extensions.
+" nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+" " Show commands.
+" nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+" " Find symbol of current document.
+" nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+" " Search workspace symbols.
+" nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+" " Do default action for next item.
+" nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+" " Do default action for previous item.
+" nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+" " Resume latest coc list.
+" nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+" End of COC configuration-----------------------------------------------------
 
 " End of Plugins configuration-------------------------------------------------
 
@@ -166,7 +212,7 @@ tnoremap <Esc> <C-\><C-n>
 " Mapping for easy replace all ocurrences under cursor
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
-" Use Y instead y$ to copy to end of line
+" Copy till the end of the line
 nnoremap <silent> Y y$
 
 " Easy move through windows
