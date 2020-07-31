@@ -20,7 +20,6 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/fzf', { 'dir': '~/Software/repos/fzf', 'do': './install --key-bindings --no-completion --update-rc --no-bash --no-fish' }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ryanoasis/vim-devicons'
 
@@ -119,6 +118,11 @@ endfunction
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand',''])\<CR>" :
+      \ "\<TAB>"
 
 " Mappings for CoCList
 " Show all diagnostics.
