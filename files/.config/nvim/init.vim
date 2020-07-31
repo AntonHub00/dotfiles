@@ -17,7 +17,7 @@ Plug 'mhinz/vim-signify'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'machakann/vim-highlightedyank'
-Plug 'junegunn/fzf', { 'dir': '~/Software/repos/fzf', 'do': './install --key-bindings --no-completion --update-rc --no-bash --no-fish' }
+Plug '~/Software/repos/fzf' " Manually installed because I also use it outside Neovim
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
