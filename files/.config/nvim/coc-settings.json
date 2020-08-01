@@ -1,4 +1,12 @@
 {
     "python.jediEnabled": false,
+
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": "~/.venvs/neovim_globals/bin/pylint",
+
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Path": "~/.venvs/neovim_globals/bin/autopep8",
+
     "snippets.userSnippetsDirectory": "~/.config/nvim/my_snippets"
 }
