@@ -146,11 +146,4 @@ export PATH=$PATH:$HOME/Software/other/node-v12.18.1-linux-x64/bin
 # neovim as default editor
 export EDITOR=nvim
 
-# Set TERM to xterm-256color if tmux is not running (Some terminal emulators haven't
-# this config as default). This for correct colors in neovim inside tmux
-[ -z "$TMUX" ] && export TERM=xterm-256color
-
-# Nord theme for dircolors
-test -r "$HOME/Software/repos/nord-dircolors/src/dir_colors" && eval $(dircolors $HOME/Software/repos/nord-dircolors/src/dir_colors)
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
