@@ -35,7 +35,7 @@ Plug 'whatyouhide/vim-gotham'
 call plug#end()
 
 
-" My configurations------------------------------------------------------------
+" General settings-------------------------------------------------------------
 
 " Function related
 syntax enable " Syntax highlighting for different languages
@@ -49,18 +49,19 @@ set autoindent " Auto indent in new lines
 set smartindent " Better indentation rules for c-like languages (C, C++, C#, Java, JS, etc.)
 set splitbelow " Split below as default when horizontal split
 set splitright " Split right as default when vertical split
-set matchpairs+=<:> " Add highlight and jump motion with '%' for '<' and '>'
+set matchpairs+=<:> " Add highlight and jump motion with '%'
 set mouse=a " Mouse support
 set hidden " Allows to hide buffer even if is not saved to disk yet
+set nowrap " Long lines are scrollable
 
 " Visual related
 set number relativenumber " Enables both line numbers and relative numbers
-set cursorline " Highlights the current line
+" set cursorline " Highlights the current line
 set termguicolors " Enables true colors (Just with terminal emulator compatible)
 set colorcolumn=80 " Adds vertical line at line 80
-set ignorecase smartcase " Case insensitive search unless type a capital letter
+set ignorecase smartcase " Search case insensitive search unless type a capital letter
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:» " How to display hidden chars with 'set list'
-set wildmode=longest,list " How to display list of options
+set wildmode=longest:full,full " How to display list of options
 set signcolumn=yes " Always shows sign column
 set shortmess+=c " Don't pass messages to |ins-completion-menu|
 
@@ -72,16 +73,16 @@ autocmd FileType * setlocal formatoptions-=cro " Disables autocomment in new lin
 set updatetime=100 " Delay before vim writes its swap file (good for vim-signify)
 set nobackup " Do not make a backup before overwriting a file
 set nowritebackup " Do not make a backup before overwriting a file
-set undofile " Allows to undo even if the file has been closed
+set undofile " Persistent undo
 let g:python3_host_prog = expand('~/.venvs/neovim_globals/bin/python3') " For python support in virtual environments
 
-" End of My configurations-----------------------------------------------------
+" End of General settings-------------------------------------------------------
 
 
 " Plugins configuration--------------------------------------------------------
 
 " Airline configuration:-------------------------------------------------------
-let g:airline_powerline_fonts = 1 "Works well with firacode font (no need for powerline fonts)
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 " End of Airline configuration-------------------------------------------------
 
@@ -96,18 +97,6 @@ lua require'colorizer'.setup()
 
 " COC configuration:-----------------------------------------------------------
 
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" GoTo code navigation.
-nmap <silent> <leader>gd <Plug>(coc-definition)
-nmap <silent> <leader>gy <Plug>(coc-type-definition)
-nmap <silent> <leader>gi <Plug>(coc-implementation)
-nmap <silent> <leader>gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -119,28 +108,26 @@ endfunction
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
 
+" Confirm selection, expand snippet or just tab
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand',''])\<CR>" :
       \ "\<TAB>"
 
-" Mappings for CoCList
-" Show all diagnostics.
-" nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-" " Manage extensions.
-" nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
-" " Show commands.
-" nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
-" " Find symbol of current document.
-" nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-" " Search workspace symbols.
-" nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-" " Do default action for next item.
-" nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
-" " Do default action for previous item.
-" nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
-" " Resume latest coc list.
-" nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <leader>cld :<C-u>CocList diagnostics<cr> " Show all diagnostics
+nnoremap <silent><nowait> <leader>cle :<C-u>CocList extensions<cr> " Manage extensions
+nnoremap <silent><nowait> <leader>clc :<C-u>CocList commands<cr> " Show commands
+nnoremap <silent><nowait> <leader>cls :<C-u>CocList outline<cr> " Find symbol of current document
+nnoremap <silent><nowait> <leader>clS :<C-u>CocList -I symbols<cr> " Search workspace symbols
+
+nmap <silent> <leader>cgd <Plug>(coc-definition)
+nmap <silent> <leader>cgt <Plug>(coc-type-definition)
+nmap <silent> <leader>cgi <Plug>(coc-implementation)
+nmap <silent> <leader>cgr <Plug>(coc-references)
+
+inoremap <silent><expr> <c-space> coc#refresh() " Trigger completion
+nnoremap <silent> K :call <SID>show_documentation()<CR> " Show documentation in preview window
+
 " End of COC configuration-----------------------------------------------------
 
 " End of Plugins configuration-------------------------------------------------
@@ -161,10 +148,12 @@ inoremap <silent><expr> <TAB>
 " colorscheme vividchalk
 " colorscheme jellybeans
 " colorscheme onedark
-colorscheme nord
+" colorscheme nord
 
-" let g:gruvbox_contrast_dark = 'hard'
-" colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_light = 'hard'
+let g:gruvbox_invert_selection = 0
+colorscheme gruvbox
 
 " colorscheme gotham
 " let g:gotham_airline_emphasised_insert = 0
@@ -201,21 +190,23 @@ endfunction
 
 " My mappings------------------------------------------------------------------
 
-" Exit from insert mode
+" Easy exit from insert mode
 inore jj <Esc>
 
 " Stop highlighting search
 noremap <leader><leader> :noh<CR>
 
 " Resize windows horizontally
-nnoremap <silent> <Leader>+ <C-W>10>
-nnoremap <silent> <Leader>- <C-W>10<
+nnoremap <silent> <Leader>rl 10<C-W>>
+nnoremap <silent> <Leader>rh 10<C-W><
+nnoremap <silent> <Leader>rk 5<C-W>+
+nnoremap <silent> <Leader>rj 5<C-W>-
 
 " Mapping for easy exit of terminal mode
 tnoremap <Esc> <C-\><C-n>
 
 " Mapping for easy replace all ocurrences under cursor
-nnoremap <Leader>r :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
 " Copy till the end of the line
 nnoremap <silent> Y y$
@@ -227,16 +218,19 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " fzf plugin
-nmap <Leader>f :Files<CR>
-nmap <Leader>F :GFiles<CR>
-nmap <Leader>b :Buffers<CR>
-nmap <Leader>h :History<CR>
-nmap <Leader>l :BLines<CR>
-nmap <Leader>L :Lines<CR>
-nmap <Leader>a :Ag<CR>
-nmap <Leader>t :BTags<CR>
-nmap <Leader>T :Tags<CR>
-nmap <Leader>c :Colors<CR>
+nmap <Leader>ff :Files<CR>
+nmap <Leader>fF :GFiles<CR>
+nmap <Leader>fb :Buffers<CR>
+nmap <Leader>fh :History<CR>
+nmap <Leader>fH :History:<CR>
+nmap <Leader>fl :BLines<CR>
+nmap <Leader>fL :Lines<CR>
+nmap <Leader>fa :Ag<Space>
+nmap <Leader>fr :Rg<Space>
+nmap <Leader>fc :Commands<CR>
+nmap <Leader>fC :Colors<CR>
+nmap <Leader>fm :Maps<CR>
+nmap <Leader>ft :Filetypes<CR>
 
 " nerdtree plugin
 map <C-n> :NERDTreeToggle<CR>
