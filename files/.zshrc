@@ -138,9 +138,6 @@ alias kittyconf='nvim ~/.config/kitty/kitty.conf'
 # Add my scripts to the path
 export PATH=$PATH:$HOME/.scripts
 
-# Add NodeJS bins to PATH variable
-export PATH=$PATH:$HOME/Software/other/node-v12.18.1-linux-x64/bin
-
 # My settings------------------------------------------------------------------
 
 # neovim as default editor
