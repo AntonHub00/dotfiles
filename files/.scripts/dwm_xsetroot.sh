@@ -11,11 +11,13 @@ while true; do
 
     memory=$(free -h | awk '(NR==2){ print $3"/"$2 }')" "
 
-    battery=$(cat /sys/class/power_supply/BAT0/capacity)"% "
+    battery_status=$(cat /sys/class/power_supply/BAT0/status)"% "
+
+    battery_capacity=$(cat /sys/class/power_supply/BAT0/capacity)"% "
 
     date=$(date +"%m-%d-%Y   %H:%M ")
 
-    output=$(printf "[ %s ] [ %s ] [ %s ] [ %s ] [ %s ] [ %s ] [ %s ]" "$disk_root" "$disk_home" "$temperature" "$volume" "$memory" "$battery" "$date")
+    output=$(printf "[ %s ] [ %s ] [ %s ] [ %s ] [ %s ] [ %s %s ] [ %s ]" "$disk_root" "$disk_home" "$temperature" "$volume" "$memory" "$battery_status" "$battery_capacity" "$date")
 
     xsetroot -name "$output"
 
