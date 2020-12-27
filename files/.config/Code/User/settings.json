@@ -1,7 +1,7 @@
 {
     "breadcrumbs.enabled": true,
     "editor.fontSize": 15,
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "JetBrains Mono",
     "editor.autoClosingBrackets": "always",
     "editor.autoClosingQuotes": "always",
     "editor.cursorSmoothCaretAnimation": true,
