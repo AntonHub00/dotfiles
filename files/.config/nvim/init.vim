@@ -80,6 +80,7 @@ let g:python3_host_prog = expand('~/.venvs/neovim_globals/bin/python3') " For py
 
 
 " Plugins configuration--------------------------------------------------------
+let g:NERDTreeGitStatusUseNerdFonts = 1
 
 " Airline configuration:-------------------------------------------------------
 let g:airline_powerline_fonts = 1
@@ -148,12 +149,12 @@ nnoremap <silent> K :call <SID>show_documentation()<CR> " Show documentation in 
 " colorscheme vividchalk
 " colorscheme jellybeans
 " colorscheme onedark
-" colorscheme nord
+colorscheme nord
 
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_contrast_light = 'hard'
-let g:gruvbox_invert_selection = 0
-colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'hard'
+" let g:gruvbox_contrast_light = 'hard'
+" let g:gruvbox_invert_selection = 0
+" colorscheme gruvbox
 
 " colorscheme gotham
 " let g:gotham_airline_emphasised_insert = 0
