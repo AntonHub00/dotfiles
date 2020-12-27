@@ -22,6 +22,6 @@ exec xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Profile Enabled" 
 # Keyboard config (Generic 105 keys keyboard model, US layout and use both
 # shift keys to toggle US international with dead keys)
 # See https://jlk.fjfi.cvut.cz/arch/manpages/man/xkeyboard-config.7
-exec setxkbmap -model pc105 -layout us,us -variant ,intl -option grp:shifts_toggle
+exec setxkbmap -model pc105 -layout us,us -variant ,intl -option grp:shifts_toggle &
 
 exec dwm
