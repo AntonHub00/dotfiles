@@ -1,0 +1,15 @@
+# %I is the user defined in the file name (hybrid-sleep@USER.service)
+# This should be copied to /etc/systemd/system/ (at least in Arch Linux)
+
+[Unit]
+Description=Suspend actions for antonhub user
+Before=hybrid-sleep.target
+
+[Service]
+User=%I
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/home/%I/.scripts/i3_lock_rm.sh
+
+[Install]
+WantedBy=hybrid-sleep.target
