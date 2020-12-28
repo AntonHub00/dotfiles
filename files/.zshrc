@@ -127,11 +127,17 @@ alias nvimconf='nvim ~/.config/nvim/init.vim'
 # Alias for tmux config file
 alias tmuxconf='nvim ~/.tmux.conf'
 
-#Alias for alacritty config file
+# Alias for alacritty config file
 alias alacrittyconf='nvim ~/.config/alacritty/alacritty.yml'
 
-#Alias for kitty config file
+# Alias for kitty config file
 alias kittyconf='nvim ~/.config/kitty/kitty.conf'
+
+# Alias to set "home" screenlayout and wallpaper with "feh"
+# scripts inside "$HOME/.screenlayout/" are generated with "arandr"
+alias set_home='$HOME/.screenlayout/home.sh  && $HOME/.scripts/set_wallpaper.sh'
+alias set_laptop_only='$HOME/.screenlayout/laptop_only.sh  && $HOME/.scripts/set_wallpaper.sh'
+
 
 # PATH-------------------------------------------------------------------------
 
