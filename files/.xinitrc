@@ -1,7 +1,7 @@
 #!/bin/sh
 
 exec $HOME/.scripts/dwm_xsetroot.sh &
-exec feh --bg-fill $HOME/.scripts/nord_mountains_wallpaper.jpg &
+exec $HOME/.scripts/set_wallpaper.sh &
 exec dunst &
 exec nm-applet &
 exec blueman-applet &
