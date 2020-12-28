@@ -1,0 +1,18 @@
+# This should be copied to /etc/systemd/system/ (at least in Arch Linux)
+# %I is the user defined when the service is enabled (suspend_and_hybrid-sleep@USER.service)
+# To activate this service just type "sudo systemctl enable suspend_and_hybrid-sleep@USER.service"
+
+[Unit]
+Description=Suspend and hybrid-sleep actions for antonhub user
+Before=sleep.target
+Before=hybrid-sleep.target
+
+[Service]
+User=%I
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/home/%I/.scripts/i3_lock_rm.sh
+
+[Install]
+WantedBy=sleep.target
+WantedBy=hybrid-sleep.target
