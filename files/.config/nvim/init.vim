@@ -75,7 +75,7 @@ set updatetime=100 " Delay before vim writes its swap file (good for vim-signify
 set nobackup " Do not make a backup before overwriting a file
 set nowritebackup " Do not make a backup before overwriting a file
 set undofile " Persistent undo
-let g:python3_host_prog = expand('~/.venvs/neovim_globals/bin/python3') " For python support in virtual environments
+let g:python3_host_prog = expand('~/.venvs/general/neovim/bin/python3') " For python support in virtual environments
 
 " End of General settings-------------------------------------------------------
 
@@ -154,6 +154,11 @@ nnoremap <silent> K :call <SID>show_documentation()<CR> " Show documentation in 
 
 " let g:gruvbox_contrast_dark = 'hard'
 " let g:gruvbox_contrast_light = 'hard'
+" let g:gruvbox_bold = 1
+" let g:gruvbox_italic = 1
+" let g:gruvbox_underline = 1
+" let g:gruvbox_undercurl = 1
+" let g:gruvbox_italicize_comments = 1
 " let g:gruvbox_invert_selection = 0
 " colorscheme gruvbox
 
