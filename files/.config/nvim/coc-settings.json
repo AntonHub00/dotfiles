@@ -1,12 +1,13 @@
 {
-    "python.jediEnabled": false,
+    "python.pythonPath": "~/.venvs/general/neovim/bin/python",
+    "python.venvPath": "~/.venvs/my_venvs/",
+
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Path": "~/.venvs/general/neovim/bin/autopep8",
 
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "python.linting.pylintPath": "~/.venvs/neovim_globals/bin/pylint",
-
-    "python.formatting.provider": "autopep8",
-    "python.formatting.autopep8Path": "~/.venvs/neovim_globals/bin/autopep8",
+    "python.linting.pylintPath": "~/.venvs/general/neovim/bin/pylint",
 
     "snippets.userSnippetsDirectory": "~/.config/nvim/my_snippets"
 }
