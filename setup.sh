@@ -1,12 +1,21 @@
 #!/bin/sh
 
 old_files_dir="$HOME/.old_config_files/"
-dotfiles=".gitconfig .zshrc .tmux.conf .scripts .xinitrc .zprofile \
-    .config/alacritty/alacritty.yml .config/nvim/init.vim \
-    .config/Code/User/settings.json .config/Code/User/keybindings.json \
-    .config/kitty/kitty.conf .config/dunst/dunstrc \
-    .config/nvim/my_snippets/python.snippets .config/nvim/coc-settings.json"
-
+dotfiles="
+    .gitconfig \
+    .tmux.conf \
+    .xinitrc \
+    .zprofile \
+    .zshrc \
+    .scripts/ \
+    .config/alacritty/alacritty.yml \
+    .config/Code/User/keybindings.json \
+    .config/Code/User/settings.json \
+    .config/dunst/dunstrc
+    .config/kitty/kitty.conf \
+    .config/nvim/my_snippets/ \
+    .config/nvim/coc-settings.json \
+    .config/nvim/init.vim"
 
 move_old_files()
 {
