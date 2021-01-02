@@ -9,13 +9,14 @@ dotfiles="
     .zshrc \
     .scripts/ \
     .config/alacritty/alacritty.yml \
-    .config/Code/User/keybindings.json \
-    .config/Code/User/settings.json \
     .config/dunst/dunstrc
     .config/kitty/kitty.conf \
     .config/nvim/my_snippets/ \
     .config/nvim/coc-settings.json \
     .config/nvim/init.vim"
+
+# .config/Code/User/keybindings.json \
+# .config/Code/User/settings.json \
 
 move_old_files()
 {
