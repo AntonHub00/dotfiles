@@ -1,19 +1,35 @@
-[core]
-	editor = nvim
 [user]
 	email = antonhub00@gmail.com
 	name = Antonio Ochoa
-[diff]
-    tool = vimdiff
-[difftool "vimdiff"]
-    cmd = "nvim -d -u ~/.config/nvim/init.vim \"$LOCAL\" \"$REMOTE\""
-[merge]
-	tool = vimdiff
-	conflictstyle = diff3
-[mergetool "vimdiff"]
-    cmd = "nvim -d -u ~/.config/nvim/init.vim \"$LOCAL\" \"$MERGED\" \"$REMOTE\""
-    ; cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [difftool]
 	prompt = false
 [mergetool]
 	prompt = false
+
+
+; ; Neovim as editor
+; [core]
+; 	editor = nvim
+; [diff]
+;     tool = vimdiff
+; [difftool "vimdiff"]
+;     cmd = "nvim -d -u ~/.config/nvim/init.vim \"$LOCAL\" \"$REMOTE\""
+; [merge]
+; 	tool = vimdiff
+; 	conflictstyle = diff3
+; [mergetool "vimdiff"]
+;     cmd = "nvim -d -u ~/.config/nvim/init.vim \"$LOCAL\" \"$MERGED\" \"$REMOTE\""
+;     ; cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+
+; VSCode as editor
+[core]
+	editor = "code --wait"
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = "code --wait --diff $LOCAL $REMOTE"
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+    cmd = "code --wait $MERGED"
