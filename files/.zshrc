@@ -146,7 +146,7 @@ export PATH=$PATH:$HOME/.scripts
 
 # My settings------------------------------------------------------------------
 
-# neovim as default editor
+# Default editor
 export EDITOR=nvim
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
