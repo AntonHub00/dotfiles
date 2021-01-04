@@ -81,6 +81,8 @@ let g:python3_host_prog = expand('~/.venvs/general/neovim/bin/python3') " For py
 
 
 " Plugins configuration--------------------------------------------------------
+
+" nerdtree-git-plugin configuration:-------------------------------------------
 let g:NERDTreeGitStatusUseNerdFonts = 1
 
 " Airline configuration:-------------------------------------------------------
@@ -152,22 +154,22 @@ nnoremap <silent> K :call <SID>show_documentation()<CR> " Show documentation in 
 " colorscheme onedark
 " colorscheme nord
 
-" let g:gruvbox_contrast_dark = 'hard'
-" let g:gruvbox_contrast_light = 'hard'
-" let g:gruvbox_bold = 1
-" let g:gruvbox_italic = 1
-" let g:gruvbox_underline = 1
-" let g:gruvbox_undercurl = 1
-" let g:gruvbox_italicize_comments = 1
-" let g:gruvbox_invert_selection = 0
-" colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_light = 'hard'
+let g:gruvbox_bold = 1
+let g:gruvbox_italic = 1
+let g:gruvbox_underline = 1
+let g:gruvbox_undercurl = 1
+let g:gruvbox_italicize_comments = 1
+let g:gruvbox_invert_selection = 0
+colorscheme gruvbox
 
 " colorscheme gotham
 " let g:gotham_airline_emphasised_insert = 0
 
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
-colorscheme OceanicNext
+" let g:oceanic_next_terminal_bold = 1
+" let g:oceanic_next_terminal_italic = 1
+" colorscheme OceanicNext
 
 " End of My themes-------------------------------------------------------------
 
