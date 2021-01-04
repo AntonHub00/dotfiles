@@ -147,6 +147,6 @@ export PATH=$PATH:$HOME/.scripts
 # My settings------------------------------------------------------------------
 
 # Default editor
-export EDITOR=code
+export EDITOR=nvim
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
