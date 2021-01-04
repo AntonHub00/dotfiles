@@ -30,3 +30,9 @@ xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Profile Enabled" 0, 1
 # (US "classic" and US international with dead keys).
 # See https://jlk.fjfi.cvut.cz/arch/manpages/man/xkeyboard-config.7
 setxkbmap -model pc105 -layout us,us -variant ,intl -option grp:shifts_toggle
+
+# Set key repeat rate
+# xset r rate DELAY CPS
+# DELAY is time in miliseconds to start to repeat key while holding down.
+# CPS (Click Per Second). I usually set the default value.
+xset r rate 200 25
