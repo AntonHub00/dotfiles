@@ -76,7 +76,7 @@ set updatetime=100 " Delay before vim writes its swap file (good for vim-signify
 set nobackup " Do not make a backup before overwriting a file
 set nowritebackup " Do not make a backup before overwriting a file
 set undofile " Persistent undo
-let g:python3_host_prog = expand('~/.venvs/general/neovim/bin/python3') " For python support in virtual environments ##################################################################################
+let g:python3_host_prog = expand('~/.venvs/general/neovim/bin/python3') " For python support in virtual environments
 
 " End of General settings-------------------------------------------------------
 
