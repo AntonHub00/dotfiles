@@ -22,6 +22,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 Plug 'ryanoasis/vim-devicons'
+Plug 'unblevable/quick-scope'
 
 " Themes:
 Plug 'chriskempson/base16-vim'
@@ -75,12 +76,20 @@ set updatetime=100 " Delay before vim writes its swap file (good for vim-signify
 set nobackup " Do not make a backup before overwriting a file
 set nowritebackup " Do not make a backup before overwriting a file
 set undofile " Persistent undo
-let g:python3_host_prog = expand('~/.venvs/general/neovim/bin/python3') " For python support in virtual environments
+let g:python3_host_prog = expand('~/.venvs/general/neovim/bin/python3') " For python support in virtual environments ##################################################################################
 
 " End of General settings-------------------------------------------------------
 
 
 " Plugins configuration--------------------------------------------------------
+
+" quick-scope configuration:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#00ff00' gui=underline ctermfg=155 cterm=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#ffff00' gui=underline ctermfg=81 cterm=underline
+augroup END
 
 " nerdtree-git-plugin configuration:-------------------------------------------
 let g:NERDTreeGitStatusUseNerdFonts = 1
