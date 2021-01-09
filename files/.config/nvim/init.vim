@@ -180,17 +180,17 @@ nnoremap <silent> K :call <SID>show_documentation()<CR> " Show documentation in 
 " colorscheme vividchalk
 " colorscheme jellybeans
 " colorscheme onedark
-" colorscheme nord
+colorscheme nord
 
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_contrast_light = 'hard'
-let g:gruvbox_bold = 1
-let g:gruvbox_italic = 1
-let g:gruvbox_underline = 1
-let g:gruvbox_undercurl = 1
-let g:gruvbox_italicize_comments = 1
-let g:gruvbox_invert_selection = 0
-colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'hard'
+" let g:gruvbox_contrast_light = 'hard'
+" let g:gruvbox_bold = 1
+" let g:gruvbox_italic = 1
+" let g:gruvbox_underline = 1
+" let g:gruvbox_undercurl = 1
+" let g:gruvbox_italicize_comments = 1
+" let g:gruvbox_invert_selection = 0
+" colorscheme gruvbox
 
 " colorscheme gotham
 " let g:gotham_airline_emphasised_insert = 0
