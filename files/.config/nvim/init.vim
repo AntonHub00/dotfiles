@@ -281,8 +281,8 @@ nmap <Leader>fH :History:<CR>
 nmap <Leader>fl :BLines<CR>
 nmap <Leader>fL :Lines<CR>
 nmap <Leader>fr :Rg<Space>
-nmap <Leader>fc :Commands<CR>
-nmap <Leader>fC :Colors<CR>
+nmap <Leader>fC :Commands<CR>
+nmap <Leader>fc :Colors<CR>
 nmap <Leader>fm :Maps<CR>
 nmap <Leader>ft :Filetypes<CR>
 
