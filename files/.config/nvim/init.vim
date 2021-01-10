@@ -280,7 +280,6 @@ nmap <Leader>fh :History<CR>
 nmap <Leader>fH :History:<CR>
 nmap <Leader>fl :BLines<CR>
 nmap <Leader>fL :Lines<CR>
-nmap <Leader>fa :Ag<Space>
 nmap <Leader>fr :Rg<Space>
 nmap <Leader>fc :Commands<CR>
 nmap <Leader>fC :Colors<CR>
