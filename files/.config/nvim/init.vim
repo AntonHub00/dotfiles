@@ -53,7 +53,7 @@ set splitbelow " Split below as default when horizontal split
 set splitright " Split right as default when vertical split
 set matchpairs+=<:> " Add highlight and jump motion with '%'
 set mouse=a " Mouse support
-set hidden " Allows to hide buffer even if is not saved to disk yet
+set hidden " Allows to hide buffer even if is not saved to disk yet (also CoC requiement)
 set nowrap " Long lines are scrollable
 
 " Visual related
@@ -64,17 +64,17 @@ set colorcolumn=80 " Adds vertical line at line 80
 set ignorecase smartcase " Search case insensitive search unless type a capital letter
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:» " How to display hidden chars with 'set list'
 set wildmode=longest:full,full " How to display list of options
-set signcolumn=yes " Always shows sign column
-set shortmess+=c " Don't pass messages to |ins-completion-menu|
+set signcolumn=yes " Always shows sign column (also CoC requiement)
+set shortmess+=c " Don't pass messages to ins-completion-menu (also CoC requiement)
 
 " File related
 set encoding=utf-8 " The encoding displayed
 set fileencoding=utf-8 " The encoding written to file
 set clipboard=unnamedplus " Automatically yanks and pastes from system clipboard
 autocmd FileType * setlocal formatoptions-=cro " Disables autocomment in new line
-set updatetime=100 " Delay before vim writes its swap file (good for vim-signify)
-set nobackup " Do not make a backup before overwriting a file
-set nowritebackup " Do not make a backup before overwriting a file
+set updatetime=100 " Delay before vim writes its swap file (good for vim-signify) (also CoC requiement)
+set nobackup " Do not make a backup before overwriting a file (also CoC requiement)
+set nowritebackup " Do not make a backup before overwriting a file (also CoC requiement)
 set undofile " Persistent undo
 let g:python3_host_prog = expand('~/.venvs/general/neovim/bin/python3') " For python support in virtual environments
 
@@ -132,13 +132,12 @@ lua require'colorizer'.setup()
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
   else
-    call CocAction('doHover')
+    execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
-
-" Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
 
 " Confirm selection, expand snippet or just tab
 inoremap <silent><expr> <TAB>
@@ -146,19 +145,33 @@ inoremap <silent><expr> <TAB>
       \ coc#expandable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand',''])\<CR>" :
       \ "\<TAB>"
 
+" Add :Format command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+" Add :OrganizeImports command for organize imports of the current buffer.
+command! -nargs=0 OrganizeImports :call CocAction('runCommand', 'editor.action.organizeImport')
+
+" Mappings for CoCList
 nnoremap <silent><nowait> <leader>cld :<C-u>CocList diagnostics<cr> " Show all diagnostics
 nnoremap <silent><nowait> <leader>cle :<C-u>CocList extensions<cr> " Manage extensions
 nnoremap <silent><nowait> <leader>clc :<C-u>CocList commands<cr> " Show commands
-nnoremap <silent><nowait> <leader>cls :<C-u>CocList outline<cr> " Find symbol of current document
-nnoremap <silent><nowait> <leader>clS :<C-u>CocList -I symbols<cr> " Search workspace symbols
+nnoremap <silent><nowait> <leader>clo :<C-u>CocList outline<cr> " Find symbol of current document
+nnoremap <silent><nowait> <leader>cls :<C-u>CocList -I symbols<cr> " Search workspace symbols
 
+" Other useful mappings
 nmap <silent> <leader>cgd <Plug>(coc-definition)
 nmap <silent> <leader>cgt <Plug>(coc-type-definition)
 nmap <silent> <leader>cgi <Plug>(coc-implementation)
 nmap <silent> <leader>cgr <Plug>(coc-references)
+nmap <leader>cf :Format<cr>
+nmap <leader>co :OrganizeImports<cr>
+nmap <leader>cr <Plug>(coc-rename)
 
+" Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh() " Trigger completion
-nnoremap <silent> K :call <SID>show_documentation()<CR> " Show documentation in preview window
+" Use K to show documentation in preview windows (if available).
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " End of COC configuration-----------------------------------------------------
 
