@@ -260,7 +260,8 @@ nnoremap <silent> <Leader>rj 5<C-W>-
 " tnoremap <Esc> <C-\><C-n>
 
 " Mapping for easy replace all ocurrences under cursor
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+nnoremap <Leader>s :%s///gc<Left><Left><Left><Left>
+xnoremap <Leader>s :s///gc<Left><Left><Left><Left>
 
 " Copy till the end of the line
 nnoremap <silent> Y y$
