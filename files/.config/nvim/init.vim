@@ -248,7 +248,7 @@ endfunction
 inore jj <Esc>
 
 " Stop highlighting search
-noremap <leader><leader> :noh<CR>
+" noremap <leader><leader> :noh<CR>
 
 " Resize windows horizontally
 nnoremap <silent> <Leader>rl 10<C-W>>
