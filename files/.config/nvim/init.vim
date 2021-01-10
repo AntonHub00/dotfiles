@@ -248,7 +248,7 @@ endfunction
 inore jj <Esc>
 
 " Stop highlighting search
-" noremap <leader><leader> :noh<CR>
+noremap <leader><leader> :noh<CR>
 
 " Resize windows horizontally
 nnoremap <silent> <Leader>rl 10<C-W>>
@@ -257,7 +257,7 @@ nnoremap <silent> <Leader>rk 5<C-W>+
 nnoremap <silent> <Leader>rj 5<C-W>-
 
 " Mapping for easy exit of terminal mode
-tnoremap <Esc> <C-\><C-n>
+" tnoremap <Esc> <C-\><C-n>
 
 " Mapping for easy replace all ocurrences under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
