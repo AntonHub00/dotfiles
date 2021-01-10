@@ -273,8 +273,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " fzf plugin
-nmap <Leader>ff :Files<CR>
-nmap <Leader>fF :GFiles<CR>
+nmap <Leader>fF :Files<CR>
+nmap <Leader>ff :GFiles<CR>
 nmap <Leader>fb :Buffers<CR>
 nmap <Leader>fh :History<CR>
 nmap <Leader>fH :History:<CR>
