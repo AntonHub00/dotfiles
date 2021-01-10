@@ -1,13 +1,9 @@
 {
     "python.pythonPath": "~/.venvs/general/neovim/bin/python",
-    "python.venvPath": "~/.venvs/my_venvs/",
-
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "~/.venvs/general/neovim/bin/black",
-
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.linting.pylintPath": "~/.venvs/general/neovim/bin/pylint",
-
     "snippets.userSnippetsDirectory": "~/.config/nvim/my_snippets"
 }
