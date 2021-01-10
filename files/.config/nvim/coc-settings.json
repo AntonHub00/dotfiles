@@ -2,8 +2,8 @@
     "python.pythonPath": "~/.venvs/general/neovim/bin/python",
     "python.venvPath": "~/.venvs/my_venvs/",
 
-    "python.formatting.provider": "autopep8",
-    "python.formatting.autopep8Path": "~/.venvs/general/neovim/bin/autopep8",
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "~/.venvs/general/neovim/bin/black",
 
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
