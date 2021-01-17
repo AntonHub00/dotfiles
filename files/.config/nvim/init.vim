@@ -58,7 +58,7 @@ set nowrap " Long lines are scrollable
 
 " Visual related
 set number relativenumber " Enables both line numbers and relative numbers
-" set cursorline " Highlights the current line
+set cursorline " Highlights the current line
 set termguicolors " Enables true colors (Just with terminal emulator compatible)
 set colorcolumn=80 " Adds vertical line at line 80
 set ignorecase smartcase " Search case insensitive search unless type a capital letter
@@ -193,6 +193,11 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " colorscheme vividchalk
 " colorscheme jellybeans
 " colorscheme onedark
+
+let g:nord_bold = 1
+let g:nord_italic = 1
+let g:nord_underline = 1
+" let g:nord_italic_comments = 1
 colorscheme nord
 
 " let g:gruvbox_contrast_dark = 'hard'
@@ -201,7 +206,7 @@ colorscheme nord
 " let g:gruvbox_italic = 1
 " let g:gruvbox_underline = 1
 " let g:gruvbox_undercurl = 1
-" let g:gruvbox_italicize_comments = 1
+" " let g:gruvbox_italicize_comments = 1
 " let g:gruvbox_invert_selection = 0
 " colorscheme gruvbox
 
