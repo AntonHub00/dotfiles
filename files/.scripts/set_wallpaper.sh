@@ -1,2 +1,2 @@
 #!/bin/bash
-feh --bg-fill $HOME/.scripts/blue_purple.jpg
+feh --bg-fill $HOME/.scripts/gruvbox_wallpaper.png
