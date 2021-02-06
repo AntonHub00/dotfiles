@@ -14,5 +14,6 @@ fi
 # List all the required extensions (NodeJS and npm must be install and in
 # PATH).
 npm install coc-css coc-emmet coc-html coc-json coc-marketplace coc-python \
-    coc-sh coc-snippets coc-sql coc-texlab coc-vimlsp coc-yaml --global-style \
-    --ignore-scripts --no-bin-links --no-package-lock --only=prod
+    coc-sh coc-snippets coc-sql coc-texlab coc-vimlsp coc-yaml coc-tsserver \
+    --global-style --ignore-scripts --no-bin-links --no-package-lock \
+    --only=prod
