@@ -129,6 +129,11 @@ lua require'colorizer'.setup()
 
 " COC configuration:-----------------------------------------------------------
 
+let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-html', 'coc-json',
+            \'coc-marketplace', 'coc-python', 'coc-sh', 'coc-snippets',
+            \'coc-sql', 'coc-texlab', 'coc-vimlsp', 'coc-yaml',
+            \'coc-tsserver']
+
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
