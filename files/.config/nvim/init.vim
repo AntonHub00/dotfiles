@@ -9,6 +9,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-endwise'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'jiangmiao/auto-pairs'
 Plug 'norcalli/nvim-colorizer.lua'
@@ -78,6 +79,12 @@ set nowritebackup " Do not make a backup before overwriting a file (also CoC req
 set undofile " Persistent undo
 let g:python3_host_prog = expand('~/.venvs/general/neovim/bin/python3') " For python support in virtual environments
 
+augroup two_spaces
+    autocmd Filetype html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd Filetype javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
+
 " End of General settings-------------------------------------------------------
 
 
@@ -132,7 +139,7 @@ lua require'colorizer'.setup()
 let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-html', 'coc-json',
             \'coc-marketplace', 'coc-python', 'coc-sh', 'coc-snippets',
             \'coc-sql', 'coc-texlab', 'coc-vimlsp', 'coc-yaml',
-            \'coc-tsserver']
+            \'coc-tsserver', 'coc-solargraph']
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
