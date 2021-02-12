@@ -5,5 +5,8 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.linting.pylintPath": "~/.venvs/general/neovim/bin/pylint",
+    "solargraph.bundlerPath": "/home/antonhub/.rvm/rubies/ruby-2.7.2/bin/bundler",
+    "solargraph.diagnostics": true,
+    "solargraph.formatting": true,
     "snippets.userSnippetsDirectory": "~/.config/nvim/my_snippets"
 }
