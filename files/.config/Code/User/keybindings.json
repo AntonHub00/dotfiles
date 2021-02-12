@@ -1,11 +1,32 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "ctrl+shift+[Comma]",
-        "command": "workbench.action.terminal.toggleTerminal"
+        "key": "ctrl+f",
+        "command": "",
+        "when": "terminalFocus"
     },
     {
-        "key": "ctrl+shift+m",
-        "command": "workbench.action.toggleSidebarVisibility"
+        "key": "ctrl+r",
+        "command": "",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "workbench.action.terminal.toggleTerminal",
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarFocus"
     }
 ]
