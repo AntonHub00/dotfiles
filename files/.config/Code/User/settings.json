@@ -1,104 +1,88 @@
 {
-    "breadcrumbs.enabled": true,
-    "editor.fontSize": 15,
-    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+    "editor.renderWhitespace": "none",
     "editor.autoClosingBrackets": "always",
+    "editor.autoClosingOvertype": "always",
     "editor.autoClosingQuotes": "always",
-    "editor.cursorSmoothCaretAnimation": true,
-    "editor.fontLigatures": true,
-    "editor.renderLineHighlight": "gutter",
-    "editor.smoothScrolling": true,
-    "explorer.openEditors.visible": 1,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "path-intellisense.autoSlashAfterDirectory": true,
-    "path-intellisense.showHiddenFiles": true,
-    "terminal.integrated.cursorBlinking": true,
-    "window.zoomLevel": 0,
-    // "workbench.colorTheme": "Quiet Light",
-    "workbench.iconTheme": "vscode-icons",
-    "liveServer.settings.donotShowInfoMsg": true,
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "app/**": true,
-        "node_modules/**": true,
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true,
-        "**/.gitignore": true,
-        "**/requirements.txt": true,
-        "**/venv": true,
-    },
-    "files.watcherExclude": {
-        "**/venv/**": true
-    },
-    "extensions.ignoreRecommendations": false,
-    "editor.occurrencesHighlight": false,
-    "zenMode.hideLineNumbers": false,
-    "zenMode.hideStatusBar": false,
-    "editor.lineNumbers": "relative",
-    "editor.minimap.enabled": false,
-    "vim.highlightedyank.enable": true,
-    "vim.hlsearch": true,
-    "vim.incsearch": true,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<ESC>"
-            ]
-        }
-    ],
-    "vim.normalModeKeyBindings": [
-        {
-            "before": [
-                "<leader>",
-                "<leader>"
-            ],
-            "commands": [
-                ":noh"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "r"
-            ],
-            "commands": [
-                "editor.action.startFindReplaceAction"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "R"
-            ],
-            "commands": [
-                "workbench.action.replaceInFiles"
-            ]
-        }
-    ],
-    "vim.leader": "<SPACE>",
-    "workbench.colorCustomizations": {
-        "editorRuler.foreground": "#ffffff"
-    },
+    "editor.detectIndentation": false,
+    "editor.dragAndDrop": false,
+    "editor.emptySelectionClipboard": false,
+    "editor.linkedEditing": true,
+    "editor.renderLineHighlight": "none",
     "editor.rulers": [
         80
     ],
-    "editor.renderWhitespace": "none",
-    "editor.renderControlCharacters": false,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    // "editor.formatOnSave": true,
+    "editor.smoothScrolling": true,
+    "editor.tabCompletion": "on",
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.fontLigatures": true,
+    "editor.formatOnPaste": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.minimap.enabled": false,
+    "editor.quickSuggestions": true,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.wordBasedSuggestionsMode": "allDocuments",
+    "files.defaultLanguage": "markdown",
+    "files.enableTrash": false,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/.hg/store/**": true,
+        "**/venv/**": true,
+    },
+    "workbench.commandPalette.history": 100,
+    "workbench.list.smoothScrolling": true,
+    "workbench.panel.opensMaximized": "always",
+    "material-icon-theme.showWelcomeMessage": false,
+    "workbench.startupEditor": "none",
     "workbench.colorTheme": "Overflow Contrast (rainglow)",
-    "python.jediEnabled": false,
-    "java.errors.incompleteClasspath.severity": "ignore"
+    "workbench.tips.enabled": false,
+    "workbench.view.alwaysShowHeaderActions": true,
+    "workbench.tree.renderIndentGuides": "always",
+    "breadcrumbs.symbolPath": "off",
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "zenMode.centerLayout": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.hideTabs": false,
+    "zenMode.restore": false,
+    "window.customMenuBarAltFocus": false,
+    "window.enableMenuBarMnemonics": false,
+    "explorer.compactFolders": false,
+    "search.exclude": {
+        "**/venv": true
+    },
+    "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
+    "search.showLineNumbers": true,
+    "search.smartCase": true,
+    "search.useIgnoreFiles": false,
+    "debug.console.wordWrap": false,
+    "debug.inlineValues": true,
+    "extensions.closeExtensionDetailsOnViewChange": true,
+    "extensions.ignoreRecommendations": true,
+    "terminal.explorerKind": "external",
+    "terminal.external.linuxExec": "kitty",
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "terminal.integrated.showExitAlert": false,
+    "problems.showCurrentInStatus": true,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "css.lint.duplicateProperties": "warning",
+    "css.lint.important": "warning",
+    "emmet.triggerExpansionOnTab": true,
+    "git.untrackedChanges": "separate",
+    "html.format.templating": true,
+    "less.lint.duplicateProperties": "warning",
+    "less.lint.important": "warning",
+    "markdown.links.openLocation": "beside",
+    "scss.lint.duplicateProperties": "warning",
+    "scss.lint.important": "warning"
 }
