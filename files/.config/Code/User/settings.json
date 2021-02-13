@@ -62,6 +62,7 @@
     "telemetry.enableTelemetry": false,
     "terminal.explorerKind": "external",
     "terminal.external.linuxExec": "kitty",
+    "terminal.integrated.allowChords": false,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.showExitAlert": false,
     "vim.highlightedyank.duration": 500,
@@ -172,9 +173,10 @@
         }
     ],
     "vim.useSystemClipboard": true,
+    "vim.visualstar": true,
     "window.customMenuBarAltFocus": false,
     "window.enableMenuBarMnemonics": false,
-    "workbench.colorTheme": "Overflow Contrast (rainglow)",
+    "workbench.colorTheme": "FireFly Pro",
     "workbench.commandPalette.history": 100,
     "workbench.editor.closeOnFileDelete": true,
     "workbench.iconTheme": "material-icon-theme",
@@ -189,6 +191,4 @@
     "zenMode.hideStatusBar": false,
     "zenMode.hideTabs": false,
     "zenMode.restore": false,
-    "vim.visualstar": true,
-    "terminal.integrated.allowChords": false,
 }
