@@ -139,7 +139,7 @@ lua require'colorizer'.setup()
 let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-html', 'coc-json',
             \'coc-marketplace', 'coc-python', 'coc-sh', 'coc-snippets',
             \'coc-sql', 'coc-texlab', 'coc-vimlsp', 'coc-yaml',
-            \'coc-tsserver', 'coc-solargraph']
+            \'coc-tsserver', 'coc-solargraph', 'coc-vetur']
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -195,7 +195,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " colorscheme base16-grayscale-light
 " colorscheme base16-icy
 " colorscheme base16-spacemacs
-" colorscheme base16-solarflare
+colorscheme base16-solarflare
 " colorscheme base16-seti
 " colorscheme base16-darktooth
 " colorscheme base16-brewer
@@ -212,15 +212,15 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " " let g:nord_italic_comments = 1
 " colorscheme nord
 
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_contrast_light = 'hard'
-let g:gruvbox_bold = 1
-let g:gruvbox_italic = 1
-let g:gruvbox_underline = 1
-let g:gruvbox_undercurl = 1
-let g:gruvbox_italicize_comments = 0
-let g:gruvbox_invert_selection = 0
-colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'hard'
+" let g:gruvbox_contrast_light = 'hard'
+" let g:gruvbox_bold = 1
+" let g:gruvbox_italic = 1
+" let g:gruvbox_underline = 1
+" let g:gruvbox_undercurl = 1
+" let g:gruvbox_italicize_comments = 0
+" let g:gruvbox_invert_selection = 0
+" colorscheme gruvbox
 
 " colorscheme gotham
 " let g:gotham_airline_emphasised_insert = 0
