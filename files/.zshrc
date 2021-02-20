@@ -134,11 +134,15 @@ alias alacrittyconf='nvim ~/.config/alacritty/alacritty.yml'
 # Alias for kitty config file
 alias kittyconf='nvim ~/.config/kitty/kitty.conf'
 
-# Alias to set "home" screenlayout and wallpaper with "feh"
-# scripts inside "$HOME/.screenlayout/" are generated with "arandr"
-alias set_home='$HOME/.screenlayout/home.sh  && $HOME/.scripts/set_wallpaper.sh'
-alias set_laptop_only='$HOME/.screenlayout/laptop_only.sh  && $HOME/.scripts/set_wallpaper.sh'
+# Alias to set "home" screenlayout and wallpaper with "feh".
+# Scripts inside "$HOME/.screenlayout/" are generated with "arandr".
+alias set_layout_home='$HOME/.screenlayout/home.sh  && $HOME/.scripts/set_wallpaper.sh'
+alias set_layout_laptop='$HOME/.screenlayout/laptop_only.sh  && $HOME/.scripts/set_wallpaper.sh'
 
+# Alias to set "web2cam" (script to see monitor as webcam).
+#See: https://github.com/ShayBox/Mon2Cam
+alias set_mon2cam_other='mon2cam -m 1 -r 1280:720'
+alias set_mon2cam_primary='mon2cam -m 0'
 
 # PATH-------------------------------------------------------------------------
 
