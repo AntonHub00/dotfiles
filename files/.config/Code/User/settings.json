@@ -24,6 +24,7 @@
     "editor.rulers": [
         80
     ],
+    "editor.semanticHighlighting.enabled": false,
     "editor.smoothScrolling": true,
     "editor.suggestSelection": "recentlyUsedByPrefix",
     "editor.tabCompletion": "on",
@@ -50,6 +51,9 @@
     "markdown.links.openLocation": "beside",
     "material-icon-theme.showWelcomeMessage": false,
     "problems.showCurrentInStatus": true,
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.intellisense": "rubyLocate",
+    "ruby.useLanguageServer": true,
     "scss.lint.duplicateProperties": "warning",
     "scss.lint.important": "warning",
     "search.exclude": {
@@ -58,6 +62,7 @@
     "search.showLineNumbers": true,
     "search.smartCase": true,
     "search.useIgnoreFiles": false,
+    "tabnine.experimentalAutoImports": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.explorerKind": "external",
@@ -176,7 +181,7 @@
     "vim.visualstar": true,
     "window.customMenuBarAltFocus": false,
     "window.enableMenuBarMnemonics": false,
-    "workbench.colorTheme": "FireFly Pro",
+    "workbench.colorTheme": "Tokyo Night",
     "workbench.commandPalette.history": 100,
     "workbench.editor.closeOnFileDelete": true,
     "workbench.iconTheme": "material-icon-theme",
