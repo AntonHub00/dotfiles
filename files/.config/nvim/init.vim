@@ -34,6 +34,8 @@ Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'whatyouhide/vim-gotham'
 Plug 'mhartington/oceanic-next'
+Plug 'haishanh/night-owl.vim'
+
 
 call plug#end()
 
@@ -196,7 +198,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " colorscheme base16-grayscale-light
 " colorscheme base16-icy
 " colorscheme base16-spacemacs
-colorscheme base16-solarflare
+" colorscheme base16-solarflare
 " colorscheme base16-seti
 " colorscheme base16-darktooth
 " colorscheme base16-brewer
@@ -206,6 +208,7 @@ colorscheme base16-solarflare
 " colorscheme vividchalk
 " colorscheme jellybeans
 " colorscheme onedark
+colorscheme night-owl
 
 " let g:nord_bold = 1
 " let g:nord_italic = 1
