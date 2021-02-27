@@ -85,6 +85,7 @@ augroup two_spaces
     autocmd Filetype html setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd Filetype javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd Filetype vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 " End of General settings-------------------------------------------------------
