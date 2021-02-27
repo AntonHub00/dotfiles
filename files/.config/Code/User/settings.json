@@ -1,12 +1,28 @@
 {
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+    "editor.tabSize": 2
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+    "editor.tabSize": 2
   },
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+    "editor.tabSize": 2
   },
   "breadcrumbs.symbolPath": "off",
   "css.lint.duplicateProperties": "warning",
@@ -17,9 +33,6 @@
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingOvertype": "always",
   "editor.autoClosingQuotes": "always",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
   "editor.dragAndDrop": false,
   "editor.emptySelectionClipboard": false,
   "editor.fontFamily": "'JetBrainsMono Nerd Font'",
@@ -32,9 +45,7 @@
   "editor.quickSuggestions": true,
   "editor.renderLineHighlight": "none",
   "editor.renderWhitespace": "none",
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "editor.semanticHighlighting.enabled": false,
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.tabCompletion": "on",
@@ -69,10 +80,7 @@
   "ruby.useLanguageServer": true,
   "scss.lint.duplicateProperties": "warning",
   "scss.lint.important": "warning",
-  "search.exclude": {
-    "**/venv": true,
-    "**/node_modules/**": true
-  },
+  "search.exclude": { "**/venv": true, "**/node_modules/**": true },
   "search.showLineNumbers": true,
   "search.smartCase": true,
   "search.useIgnoreFiles": false,
@@ -88,114 +96,34 @@
   "vim.highlightedyank.enable": true,
   "vim.hlsearch": true,
   "vim.incsearch": true,
-  "vim.insertModeKeyBindings": [
-    {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<ESC>"
-      ]
-    }
-  ],
+  "vim.insertModeKeyBindings": [{ "before": ["j", "j"], "after": ["<ESC>"] }],
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>",
-        "f"
-      ],
-      "commands": [
-        "editor.action.formatDocument"
-      ]
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatDocument"]
     },
     {
-      "before": [
-        "<leader>",
-        "s"
-      ],
-      "commands": [
-        "workbench.action.findInFiles"
-      ]
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.findInFiles"]
     },
+    { "before": ["<leader>", "S"], "commands": ["search.action.openEditor"] },
     {
-      "before": [
-        "<leader>",
-        "S"
-      ],
-      "commands": [
-        "search.action.openEditor"
-      ]
+      "before": ["<c-n>"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
     },
-    {
-      "before": [
-        "<c-n>"
-      ],
-      "commands": [
-        "workbench.action.toggleSidebarVisibility"
-      ]
-    },
-    {
-      "before": [
-        "Y"
-      ],
-      "after": [
-        "y",
-        "$"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "<leader>"
-      ],
-      "commands": [
-        ":noh"
-      ]
-    },
-    {
-      "before": [
-        "<c-h>"
-      ],
-      "after": [
-        "<c-w>",
-        "h"
-      ]
-    },
-    {
-      "before": [
-        "<c-l>"
-      ],
-      "after": [
-        "<c-w>",
-        "l"
-      ]
-    },
-    {
-      "before": [
-        "<c-j>"
-      ],
-      "after": [
-        "<c-w>",
-        "j"
-      ]
-    },
-    {
-      "before": [
-        "<c-k>"
-      ],
-      "after": [
-        "<c-w>",
-        "k"
-      ]
-    }
+    { "before": ["Y"], "after": ["y", "$"] },
+    { "before": ["<leader>", "<leader>"], "commands": [":noh"] },
+    { "before": ["<c-h>"], "after": ["<c-w>", "h"] },
+    { "before": ["<c-l>"], "after": ["<c-w>", "l"] },
+    { "before": ["<c-j>"], "after": ["<c-w>", "j"] },
+    { "before": ["<c-k>"], "after": ["<c-w>", "k"] }
   ],
   "vim.useSystemClipboard": true,
   "vim.visualstar": true,
   "window.customMenuBarAltFocus": false,
   "window.enableMenuBarMnemonics": false,
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Night Owl (No Italics)",
   "workbench.commandPalette.history": 100,
   "workbench.editor.closeOnFileDelete": true,
   "workbench.iconTheme": "material-icon-theme",
@@ -208,5 +136,5 @@
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
   "zenMode.hideTabs": false,
-  "zenMode.restore": false,
+  "zenMode.restore": false
 }
