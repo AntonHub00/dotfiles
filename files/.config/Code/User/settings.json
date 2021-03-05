@@ -29,7 +29,6 @@
   "css.lint.important": "warning",
   "debug.console.wordWrap": false,
   "debug.inlineValues": true,
-  "diffEditor.ignoreTrimWhitespace": false,
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingOvertype": "always",
   "editor.autoClosingQuotes": "always",
@@ -136,5 +135,6 @@
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
   "zenMode.hideTabs": false,
-  "zenMode.restore": false
+  "zenMode.restore": false,
+  "diffEditor.ignoreTrimWhitespace": false
 }
