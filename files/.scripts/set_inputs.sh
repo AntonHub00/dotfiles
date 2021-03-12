@@ -29,7 +29,7 @@ xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Profile Enabled" 0, 1
 # Option: Shift keys (both) to toggle the keyboard layouts with their variants
 # (US "classic" and US international with dead keys).
 # See https://jlk.fjfi.cvut.cz/arch/manpages/man/xkeyboard-config.7
-setxkbmap -model pc105 -layout us,us -variant ,intl -option grp:shifts_toggle
+setxkbmap -model pc105 -layout us,us -variant ,intl -option grp:alt_space_toggle
 
 # Set key repeat rate
 # xset r rate DELAY CPS
