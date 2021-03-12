@@ -35,4 +35,5 @@ setxkbmap -model pc105 -layout us,us -variant ,intl -option grp:shifts_toggle
 # xset r rate DELAY CPS
 # DELAY is time in miliseconds to start to repeat key while holding down.
 # CPS (Click Per Second). I usually set the default value.
-xset r rate 200 25
+# xset r rate 200 25
+xset r rate 200 40
