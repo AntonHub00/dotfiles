@@ -82,6 +82,7 @@ set undofile " Persistent undo
 let g:python3_host_prog = expand('~/.venvs/general/neovim/bin/python3') " For python support in virtual environments
 
 augroup two_spaces
+    autocmd!
     autocmd Filetype html setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd Filetype javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
