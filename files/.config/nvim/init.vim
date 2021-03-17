@@ -174,6 +174,8 @@ nmap <silent> <leader>cgr <Plug>(coc-references)
 nmap <leader>cf :Format<cr>
 nmap <leader>co :OrganizeImports<cr>
 nmap <leader>cr <Plug>(coc-rename)
+nmap <leader>cs :CocSearch<space>
+nmap <leader>cS :CocSearch <C-r><C-w><cr>
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh() " Trigger completion
