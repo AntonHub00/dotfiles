@@ -27,7 +27,7 @@ Plug 'easymotion/vim-easymotion'
 
 " Themes:
 Plug 'chriskempson/base16-vim'
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-vividchalk'
 Plug 'https://github.com/joshdick/onedark.vim'
