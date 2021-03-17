@@ -1,14 +1,4 @@
 {
-  "python.pythonPath": "~/.venvs/general/neovim/bin/python",
-  "python.formatting.provider": "black",
-  "python.formatting.blackPath": "~/.venvs/general/neovim/bin/black",
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.linting.pylintPath": "~/.venvs/general/neovim/bin/pylint",
-  "solargraph.bundlerPath": "/home/antonhub/.rvm/rubies/ruby-2.7.2/bin/bundler",
-  /* "solargraph.diagnostics": true, */
-  "solargraph.formatting": true,
-  "snippets.userSnippetsDirectory": "~/.config/nvim/my_snippets",
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "vue",
@@ -17,5 +7,16 @@
     "jsonc",
     "python"
   ],
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "python.formatting.blackPath": "~/.venvs/general/neovim/bin/black",
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintPath": "~/.venvs/general/neovim/bin/pylint",
+  "python.pythonPath": "~/.venvs/general/neovim/bin/python",
+  "snippets.userSnippetsDirectory": "~/.config/nvim/my_snippets",
+  "solargraph.bundlerPath": "/home/antonhub/.rvm/rubies/ruby-2.7.2/bin/bundler",
+  /* "solargraph.diagnostics": true, */
+  "solargraph.formatting": true,
+  "vetur.ignoreProjectWarning": true
 }
