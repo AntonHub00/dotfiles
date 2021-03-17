@@ -23,7 +23,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 Plug 'ryanoasis/vim-devicons'
-Plug 'unblevable/quick-scope'
+Plug 'easymotion/vim-easymotion'
 
 " Themes:
 Plug 'chriskempson/base16-vim'
