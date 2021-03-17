@@ -271,20 +271,21 @@ endfunction
 inore jj <Esc>
 
 " Stop highlighting search
-noremap <leader><leader> :noh<CR>
+noremap <leader>n :noh<CR>
 
 " Resize windows horizontally
-nnoremap <silent> <Leader>rl 10<C-W>>
-nnoremap <silent> <Leader>rh 10<C-W><
-nnoremap <silent> <Leader>rk 5<C-W>+
-nnoremap <silent> <Leader>rj 5<C-W>-
+nnoremap <silent> <Leader>wl 10<C-W>>
+nnoremap <silent> <Leader>wh 10<C-W><
+nnoremap <silent> <Leader>wk 5<C-W>+
+nnoremap <silent> <Leader>wj 5<C-W>-
 
 " Mapping for easy exit of terminal mode
 " tnoremap <Esc> <C-\><C-n>
 
 " Mapping for easy replace all ocurrences under cursor
-nnoremap <Leader>s :%s///gc<Left><Left><Left><Left>
-xnoremap <Leader>s :s///gc<Left><Left><Left><Left>
+nnoremap <Leader>r :%s///gc<Left><Left><Left><Left>
+nnoremap <Leader>R :%s/<C-r><C-w>//gc<Left><Left><Left>
+xnoremap <Leader>r :s///gc<Left><Left><Left><Left>
 
 " Copy till the end of the line
 nnoremap <silent> Y y$
