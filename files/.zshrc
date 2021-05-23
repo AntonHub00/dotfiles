@@ -144,10 +144,16 @@ alias set_layout_laptop='$HOME/.screenlayout/laptop_only.sh  && $HOME/.scripts/s
 alias set_mon2cam_other='mon2cam -m 1 -r 1280:720'
 alias set_mon2cam_primary='mon2cam -m 0'
 
+# Alias for kitty config file
+alias bat='/usr/bin/batcat'
+
+
 # PATH-------------------------------------------------------------------------
 
 # Add my scripts to the path
 export PATH=$PATH:$HOME/.scripts
+
+export PATH=$PATH:$HOME/.local/bin
 
 # My settings------------------------------------------------------------------
 
@@ -155,3 +161,21 @@ export PATH=$PATH:$HOME/.scripts
 export EDITOR=nvim
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# Android
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools/28.0.3
+
+# Gradle
+export PATH=$PATH:$HOME/Software/other/gradle-7.0/bin
+
+# Golang
+export PATH=$PATH:/usr/local/go/bin
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
