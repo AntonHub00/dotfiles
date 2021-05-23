@@ -200,11 +200,12 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " colorscheme base16-brewer
 " colorscheme base16-cupertino
 " colorscheme base16-google-dark
+colorscheme base16-material-palenight
 
 " colorscheme vividchalk
 " colorscheme jellybeans
 " colorscheme onedark
-colorscheme night-owl
+" colorscheme night-owl
 
 " let g:nord_bold = 1
 " let g:nord_italic = 1
