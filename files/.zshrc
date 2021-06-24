@@ -174,3 +174,10 @@ export PATH=$PATH:/usr/local/go/bin
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Just needed in dwm (or another window manager) for the JVM (Java Virtual
+# Machine) to believe it is running a different window manager.
+# It is useful for IntelliJ IDEA, for example. This prevents a "blank screen"
+# when opening the IDE.
+# More info at https://tools.suckless.org/x/wmname/
+wmname compiz

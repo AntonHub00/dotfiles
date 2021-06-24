@@ -5,7 +5,6 @@ exec $HOME/.scripts/set_wallpaper.sh &
 exec $HOME/.scripts/set_inputs.sh &
 exec dunst &
 exec nm-applet &
-exec wmname compiz & #https://tools.suckless.org/x/wmname/
 # exec blueman-applet &
 
 # Packages needed for keyring (Arch Linux):
