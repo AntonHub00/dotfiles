@@ -15,9 +15,6 @@ dotfiles="
     .config/nvim/coc-settings.json \
     .config/nvim/init.vim"
 
-# .config/Code/User/keybindings.json \
-# .config/Code/User/settings.json \
-
 move_old_files()
 {
     echo "Moving current dotfiles to ~/.old_config_files...\n"
