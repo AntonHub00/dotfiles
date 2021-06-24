@@ -10,7 +10,7 @@
 # Encoding=UTF-8
 # Name=Dwm
 # Comment=Dynamic window manager
-# Exec=$HOME/.xinitrc
+# Exec=/home/MyUser/.xinitrc
 # Icon=dwm
 # Type=XSession
 
