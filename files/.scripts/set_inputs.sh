@@ -11,15 +11,16 @@
 # device name).
 
 # Set mouse config
-xinput --set-prop "Logitech USB Optical Mouse" "libinput Accel Profile Enabled" 0, 1
+# xinput --set-prop "Logitech USB Optical Mouse" "libinput Accel Profile Enabled" 0, 1
+xinput --set-prop "Logitech G203 LIGHTSYNC Gaming Mouse" "libinput Accel Profile Enabled" 0, 1
 
 # Set touchpad config
-xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Accel Profile Enabled" 0, 1
-xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
-xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
+# xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Accel Profile Enabled" 0, 1
+# xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+# xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
 
 # Set trackpoint config
-xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Profile Enabled" 0, 1
+# xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Profile Enabled" 0, 1
 
 # Set keyboard config
 # The command below means the following:
