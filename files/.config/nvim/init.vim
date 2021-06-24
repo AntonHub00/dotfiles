@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'suy/vim-context-commentstring'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
@@ -201,6 +202,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " colorscheme base16-cupertino
 " colorscheme base16-google-dark
 colorscheme base16-material-palenight
+" colorscheme base16-one-light
 
 " colorscheme vividchalk
 " colorscheme jellybeans
