@@ -134,11 +134,8 @@ alias alacrittyconf='nvim ~/.config/alacritty/alacritty.yml'
 # Alias for kitty config file
 alias kittyconf='nvim ~/.config/kitty/kitty.conf'
 
-# Alias to set "home" screenlayout and wallpaper with "feh".
-# Scripts inside "$HOME/.screenlayout/" are generated with "arandr".
-alias set_layout_home='$HOME/.screenlayout/home.sh  && $HOME/.scripts/set_wallpaper.sh'
-alias set_layout_laptop='$HOME/.screenlayout/laptop_only.sh  && $HOME/.scripts/set_wallpaper.sh'
-
+# Alias for current monitor setup
+alias set_monitors='$HOME/.screenlayout/two_monitors.sh'
 
 # Alias for kitty config file
 alias bat='/usr/bin/batcat'
