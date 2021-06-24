@@ -139,10 +139,6 @@ alias kittyconf='nvim ~/.config/kitty/kitty.conf'
 alias set_layout_home='$HOME/.screenlayout/home.sh  && $HOME/.scripts/set_wallpaper.sh'
 alias set_layout_laptop='$HOME/.screenlayout/laptop_only.sh  && $HOME/.scripts/set_wallpaper.sh'
 
-# Alias to set "web2cam" (script to see monitor as webcam).
-#See: https://github.com/ShayBox/Mon2Cam
-alias set_mon2cam_other='mon2cam -m 1 -r 1280:720'
-alias set_mon2cam_primary='mon2cam -m 0'
 
 # Alias for kitty config file
 alias bat='/usr/bin/batcat'
