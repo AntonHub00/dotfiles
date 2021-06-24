@@ -162,7 +162,6 @@ export EDITOR=nvim
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
 # Android
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
@@ -172,7 +171,10 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools/28.0.3
 
 # Gradle
-export PATH=$PATH:$HOME/Software/other/gradle-7.0/bin
+export PATH=$PATH:$HOME/Software/other/gradle-7.0.2/bin
+
+# Java JRE from Android Studio
+export PATH=$PATH:$HOME/Software/other/android-studio/jre/bin
 
 # Golang
 export PATH=$PATH:/usr/local/go/bin
