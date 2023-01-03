@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/antonhub/.oh-my-zsh"
+  export ZSH="/home/raven/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -14,7 +14,7 @@
 # ZSH_THEME="avit" #option
 # ZSH_THEME="agnoster" #option
 # ZSH_THEME="robbyrussell" #option
-ZSH_THEME="spaceship" #option
+# ZSH_THEME="spaceship" #option
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -109,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Aliases-----------------------------------------------------------------------
-export EDITOR_BARE="code"
+export EDITOR_BARE="nvim"
 
 # Alias for ping
 alias pin='ping -c 3 8.8.8.8'
@@ -124,7 +124,7 @@ alias mysql_xampp='/opt/lampp/bin/mysql'
 alias zshconf="$EDITOR_BARE ~/.zshrc"
 
 # Alias for neovim config file
-alias nvimconf="$EDITOR_BARE ~/.config/nvim/init.vim"
+alias nvimconf="$EDITOR_BARE ~/.config/nvim/init.lua"
 
 # Alias for tmux config file
 alias tmuxconf="$EDITOR_BARE ~/.tmux.conf"
@@ -142,7 +142,7 @@ alias set_monitors="$HOME/.screenlayout/two_monitors.sh"
 alias bat='/usr/bin/batcat'
 
 # Open directory in the current VSCode instance
-alias c.="$EDITOR_BARE -r ."
+alias c.="code -r ."
 
 # Kubectl
 alias k="kubectl"
@@ -157,7 +157,7 @@ export PATH=$PATH:$HOME/.local/bin
 # My settings------------------------------------------------------------------
 
 # Default editor
-export EDITOR="$EDITOR_BARE --wait"
+export EDITOR="$EDITOR_BARE"
 export VISUAL=$EDITOR
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -188,6 +188,11 @@ export PATH="$PATH:$HOME/Software/others/direnv"
 # Add kubectx and kubens bins
 export PATH="$PATH:$HOME/Software/repos/kubectx"
 
+# Add neovim bin
+export PATH="$PATH:$HOME/Software/others/nvim/bin"
+
+# Add postman bin
+export PATH="$PATH:$HOME/Software/others/postman/Postman"
 
 # Just needed in dwm (or another window manager) for the JVM (Java Virtual
 # Machine) to believe it is running a different window manager.
@@ -212,3 +217,5 @@ source <(kubectl completion zsh)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(starship init zsh)"
