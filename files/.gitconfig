@@ -11,14 +11,14 @@
 [core]
 	editor = nvim
 [diff]
-    tool = vimdiff
+  tool = vimdiff
 [difftool "vimdiff"]
-    cmd = nvim -d -u ~/.config/nvim/init.vim $LOCAL $REMOTE
+  cmd = nvim -d -u ~/.config/nvim/init.lua $LOCAL $REMOTE
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
 [mergetool "vimdiff"]
-    cmd = nvim -d -u ~/.config/nvim/init.vim $MERGED
+  cmd = nvim -d -u ~/.config/nvim/init.lua $MERGED
     ; cmd = nvim -d -u ~/.config/nvim/init.vim $LOCAL $MERGED $REMOTE
 
 
