@@ -5,16 +5,14 @@ dotfiles="
     .ssh/config \
     .gitconfig \
     .tmux.conf \
-    .xinitrc \
-    .zprofile \
+    #.xinitrc \
+    #.zprofile \
     .zshrc \
     .scripts/ \
-    .config/alacritty/alacritty.yml \
-    .config/dunst/dunstrc
+    #.config/alacritty/alacritty.yml \
+    #.config/dunst/dunstrc \
     .config/kitty/kitty.conf \
-    .config/nvim/my_snippets/ \
-    .config/nvim/coc-settings.json \
-    .config/nvim/init.vim"
+    .config/nvim/"
 
 move_old_files()
 {
