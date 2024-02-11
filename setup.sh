@@ -2,7 +2,7 @@
 
 old_files_dir="$HOME/.old_config_files/"
 dotfiles="
-    .ssh/config \
+    #.ssh/config \
     .gitconfig \
     .tmux.conf \
     #.xinitrc \
