@@ -209,7 +209,7 @@ export NODE_VERSION_PREFIX=v
 
 eval "$(direnv hook zsh)"
 
-eval "$(ssh-agent)"
+# eval "$(ssh-agent)"
 
 # Kubectl autocompletion
 source <(kubectl completion zsh)
