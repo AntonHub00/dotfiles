@@ -9,20 +9,19 @@
 
 ; Neovim as editor
 [core]
-	editor = nvim
-[diff]
-  tool = vimdiff
+  editor = nvim
 [difftool "vimdiff"]
   cmd = nvim -d -u ~/.config/nvim/init.lua $LOCAL $REMOTE
-[merge]
-	tool = vimdiff
-	conflictstyle = diff3
+[diff]
+  tool = vimdiff
 [mergetool "vimdiff"]
   cmd = nvim -d -u ~/.config/nvim/init.lua $MERGED
     ; cmd = nvim -d -u ~/.config/nvim/init.vim $LOCAL $MERGED $REMOTE
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
 
-
-; ; VSCode as editor
+; VSCode as editor
 ; [core]
 ; 	editor = code --wait
 ; [diff]
