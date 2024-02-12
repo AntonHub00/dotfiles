@@ -31,6 +31,11 @@ return {
             },
             path_display = { 'truncate' }
         },
+        pickers = {
+          find_files = {
+            follow = true,
+          },
+        },
         extensions = {
           fzf = {
             fuzzy = true,                    -- false will only do exact matching
