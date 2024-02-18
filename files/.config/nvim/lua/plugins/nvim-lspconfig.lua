@@ -81,6 +81,8 @@ return {
       -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},
+      jsonls = {},
+      clangd = {},
       tsserver = {},
       eslint = {},
       html = { filetypes = { 'html', 'twig', 'hbs'} },
