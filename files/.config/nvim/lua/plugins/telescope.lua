@@ -68,8 +68,8 @@ return {
       vim.keymap.set('n', '<leader>fm', telescope.extensions.node_modules.list, { desc = '[f]iles node [m]odules' })
 
       -- Filer explorer
-      vim.keymap.set('n', '<leader>fe', ':Telescope file_browser path=%:p:h select_buffer=true<CR>', { desc = '[f]iles node [m]odules' })
-      vim.keymap.set('n', '<leader>fE', telescope.extensions.file_browser.file_browser, { desc = '[f]iles node [m]odules' })
+      vim.keymap.set('n', '<leader>fe', ':Telescope file_browser path=%:p:h select_buffer=true<CR>', { desc = '[f]ile [e]xplorer (relative to files path)' })
+      vim.keymap.set('n', '<leader>fE', telescope.extensions.file_browser.file_browser, { desc = '[f]ile [e]xplorer (relative to dir)' })
       
       -- Files
       vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[f]iles [f]iles' })
@@ -111,7 +111,7 @@ return {
       vim.keymap.set('n', '<leader>flt', builtin.lsp_type_definitions, { desc = '[f]ind [l]sp [t]ype definitions' })
       
       vim.keymap.set('n', '<leader>fls', builtin.lsp_document_symbols, { desc = '[f]ind [l]sp [s]symbols (document)' })
-      vim.keymap.set('n', '<leader>flS', builtin.lsp_workspace_symbols, { desc = '[f]ind [l]sp [s]symbols (workspace)' })
+      vim.keymap.set('n', '<leader>flS', builtin.lsp_dynamic_workspace_symbols, { desc = '[f]ind [l]sp [s]symbols (workspace dynamically)' })
       
       vim.keymap.set('n', '<leader>fla', function () builtin.diagnostics({ bufnr=0 }) end, { desc = '[f]ind [l]sp di[a]gnostics (buffer)' })
       vim.keymap.set('n', '<leader>flA', builtin.diagnostics, { desc = '[f]ind [l]sp di[A]gnostics (workspace)' })
