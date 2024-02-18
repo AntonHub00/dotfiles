@@ -18,11 +18,11 @@
 # menu to be selectable.
 ###############################################################################
 
-exec $HOME/.scripts/dwm_xsetroot.sh &
-exec $HOME/.scripts/set_wallpaper.sh &
-exec $HOME/.scripts/set_inputs.sh &
-exec dunst &
-exec nm-applet &
+# exec $HOME/.scripts/dwm_xsetroot.sh &
+# exec $HOME/.scripts/set_wallpaper.sh &
+# exec $HOME/.scripts/set_inputs.sh &
+# exec dunst &
+# exec nm-applet &
 # exec blueman-applet &
 
 # Packages needed for keyring (Arch Linux):
@@ -38,4 +38,4 @@ exec nm-applet &
 # Gets rid of the error that denies to create a new keyring with seahorse.
 # source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh &
 
-exec dwm
+# exec dwm
