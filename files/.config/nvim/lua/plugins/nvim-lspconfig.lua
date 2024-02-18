@@ -8,7 +8,7 @@ return {
 
     -- Useful status updates for LSP
     -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-    { 'j-hui/fidget.nvim', opts = {} },
+    { 'j-hui/fidget.nvim',       opts = {} },
 
     -- Additional lua configuration, makes nvim stuff amazing!
     'folke/neodev.nvim',
@@ -36,8 +36,8 @@ return {
 
       nmap('gr', vim.lsp.buf.references, '[g]o to [r]eferences')
       nmap('gi', vim.lsp.buf.implementation, '[g]o to [i]mplementation')
-      nmap('gd', vim.lsp.buf.definition,  '[g]o to [d]efinition')
-      nmap('gD', vim.lsp.buf.declaration,   '[g]o to [D]declaration')
+      nmap('gd', vim.lsp.buf.definition, '[g]o to [d]efinition')
+      nmap('gD', vim.lsp.buf.declaration, '[g]o to [D]declaration')
       nmap('<leader>rn', vim.lsp.buf.rename, '[r]e[n]ame')
       -- nmap('<leader>ca', function()
       --   vim.lsp.buf.code_action { context = { only = { 'quickfix', 'refactor', 'source' } } }
@@ -85,7 +85,7 @@ return {
       clangd = {},
       tsserver = {},
       eslint = {},
-      html = { filetypes = { 'html', 'twig', 'hbs'} },
+      html = { filetypes = { 'html', 'twig', 'hbs' } },
       lua_ls = {
         Lua = {
           workspace = { checkThirdParty = false },

@@ -1,6 +1,6 @@
 return {
   'sindrets/diffview.nvim',
-  config = function ()
+  config = function()
     local openedDiffView = false
 
     local toggleDiffview = function()
