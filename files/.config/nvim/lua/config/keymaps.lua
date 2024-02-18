@@ -1,7 +1,7 @@
 -- Easier exit from insert mode
 vim.api.nvim_set_keymap('i', 'jj', '<esc>', { noremap = true, silent = true })
 
--- Easier turn off for search highlight 
+-- Easier turn off for search highlight
 vim.api.nvim_set_keymap('n', '<leader>n', ':noh<cr>', { silent = true })
 
 -- Nop for space
@@ -29,9 +29,9 @@ vim.api.nvim_set_keymap('n', '<leader>wj', '10<C-w>-', { silent = true })
 vim.api.nvim_set_keymap('x', '<leader>p', '"_dP', { silent = true })
 
 -- Easier replacements
-vim.api.nvim_set_keymap('n', '<leader>ra', ':%s///gc<Left><Left><Left><Left>', {}) -- [r]eplace [a]ll in normal mode
+vim.api.nvim_set_keymap('n', '<leader>ra', ':%s///gc<Left><Left><Left><Left>', {})     -- [r]eplace [a]ll in normal mode
 vim.api.nvim_set_keymap('n', '<leader>rc', ':%s/<C-r><C-w>//gc<Left><Left><Left>', {}) -- [r]eplace [c]urrent word in cursor
-vim.api.nvim_set_keymap('x', '<leader>ra', ':s///gc<Left><Left><Left><Left>', {}) -- [r]eplace [a]ll in selection
+vim.api.nvim_set_keymap('x', '<leader>ra', ':s///gc<Left><Left><Left><Left>', {})      -- [r]eplace [a]ll in selection
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
@@ -41,17 +41,3 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 
 -- Open netrw in the left
 -- vim.keymap.set('n', '<leader>n', ':Lexplore<CR>', { desc = 'Left netrw toggle' })
-
--- [[ Highlight on yank ]]
--- See `:help vim.highlight.on_yank()`
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank({
-      timeout = 500
-    })
-  end,
-  group = highlight_group,
-  pattern = '*',
-})
-

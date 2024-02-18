@@ -1,5 +1,6 @@
 require 'config.options'
 require 'config.keymaps'
+require 'config.autocommands'
 
 -- NOTE: leader and local leader must be set before plugins are required (otherwise wrong leader will be used)
 -- https://github.com/folke/lazy.nvim
