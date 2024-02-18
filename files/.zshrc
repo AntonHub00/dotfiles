@@ -192,7 +192,7 @@ export PATH="$PATH:$HOME/Software/repos/kubectx"
 export PATH="$PATH:$HOME/Software/others/nvim/bin"
 
 # Add postman bin
-export PATH="$PATH:$HOME/Software/others/postman/Postman"
+export PATH="$PATH:$HOME/Software/others/Postman"
 
 # Just needed in dwm (or another window manager) for the JVM (Java Virtual
 # Machine) to believe it is running a different window manager.
