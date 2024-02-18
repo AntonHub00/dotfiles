@@ -70,4 +70,6 @@ vim.o.termguicolors = true
 vim.o.listchars = 'tab:→ ,trail:•,eol:↲'
 vim.o.list = true
 
+vim.o.wrap = true
+
 -- vim: ts=2 sts=2 sw=2 et
