@@ -47,7 +47,8 @@ return {
 
       nmap('<leader>d', vim.diagnostic.open_float, 'Open floating diagnostic message')
 
-      vim.keymap.set('x', '<leader>F', function() vim.lsp.buf.format { async = true } end, { '[F]ormat selection' })
+      vim.keymap.set({ 'n', 'x' }, '<leader>F', vim.lsp.buf.format, { buffer = bufnr, desc = '[F]ormat selection' })
+
       -- Lesser used LSP functionality
       -- nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
       -- nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
