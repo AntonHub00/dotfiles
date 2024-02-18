@@ -115,5 +115,9 @@ return {
       
       vim.keymap.set('n', '<leader>fla', function () builtin.diagnostics({ bufnr=0 }) end, { desc = '[f]ind [l]sp di[a]gnostics (buffer)' })
       vim.keymap.set('n', '<leader>flA', builtin.diagnostics, { desc = '[f]ind [l]sp di[A]gnostics (workspace)' })
+
+      -- Quickfix
+      vim.keymap.set('n', '<leader>fqq', builtin.quickfix, { desc = '[f]ind [q]uickfix' })
+      vim.keymap.set('n', '<leader>fqh', builtin.quickfixhistory, { desc = '[f]ind [q]uickfix [h]istory' })
     end,
 }
