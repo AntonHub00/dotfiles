@@ -78,7 +78,7 @@ return {
     vim.keymap.set('n', '<leader>fF', function() builtin.find_files({ hidden = true, no_ignore = true }) end,
       { desc = '[f]ind [F]iles (hidden and ignored)' })
     vim.keymap.set('n', '<leader>fn',
-      function() builtin.find_files({ hidden = true, no_ignore = true, cwd = '~/.config/nvim/' }) end,
+      function() builtin.find_files({ hidden = true, no_ignore = true, cwd = '~/.dotfiles/nvim/.config/nvim' }) end,
       { desc = '[f]ind [n]eovim config files' })
 
     -- Grep
