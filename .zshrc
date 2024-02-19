@@ -147,6 +147,9 @@ alias c.="code -r ."
 # Kubectl
 alias k="kubectl"
 
+# Alias for dotfiles git config
+alias gitdf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 # PATH-------------------------------------------------------------------------
 
 # Add my scripts to the path
