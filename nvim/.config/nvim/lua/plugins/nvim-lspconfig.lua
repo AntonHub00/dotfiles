@@ -81,6 +81,7 @@ return {
       -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},
+      bashls = {},
       jsonls = {},
       clangd = {},
       tsserver = {},
