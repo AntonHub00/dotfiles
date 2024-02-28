@@ -191,9 +191,6 @@ export PATH="$PATH:$HOME/Software/others/direnv"
 # Add kubectx and kubens bins
 export PATH="$PATH:$HOME/Software/repos/kubectx"
 
-# Add neovim bin
-export PATH="$PATH:$HOME/Software/others/nvim/bin"
-
 # Add postman bin
 export PATH="$PATH:$HOME/Software/others/Postman"
 
