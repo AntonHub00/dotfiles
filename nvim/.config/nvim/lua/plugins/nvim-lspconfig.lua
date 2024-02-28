@@ -33,6 +33,7 @@ return {
       -- See `:help K` for why this keymap
       nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
       nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+      vim.keymap.set({ 'i' }, '<C-k>', vim.lsp.buf.signature_help, { buffer = bufnr, desc = 'Signature Documentation' })
 
       nmap('gr', vim.lsp.buf.references, '[g]o to [r]eferences')
       nmap('gi', vim.lsp.buf.implementation, '[g]o to [i]mplementation')
