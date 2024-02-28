@@ -109,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Aliases-----------------------------------------------------------------------
-export EDITOR_BARE="nvim"
+EDITOR_BARE="nvim"
 
 # Alias for ping
 alias pin='ping -c 3 8.8.8.8'
