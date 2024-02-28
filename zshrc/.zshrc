@@ -136,7 +136,9 @@ alias alacrittyconf="$EDITOR_BARE ~/.config/alacritty/alacritty.yml"
 alias kittyconf="$EDITOR_BARE ~/.config/kitty/kitty.conf"
 
 # Alias for current monitor setup
-alias set_monitors="$HOME/.screenlayout/two_monitors.sh"
+alias sm_home="$HOME/.scripts/monitors/home.sh"
+alias sm_single="$HOME/.scripts/monitors/single.sh"
+alias sm_office="$HOME/.scripts/monitors/office.sh"
 
 # Alias for kitty config file
 alias bat='/usr/bin/batcat'
