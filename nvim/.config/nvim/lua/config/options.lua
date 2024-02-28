@@ -73,4 +73,7 @@ vim.o.list = true
 
 vim.o.wrap = true
 
+vim.o.foldmethod = 'indent'
+vim.o.foldlevelstart = 99
+
 -- vim: ts=2 sts=2 sw=2 et
