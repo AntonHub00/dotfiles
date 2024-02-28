@@ -39,10 +39,10 @@ vim.o.clipboard = 'unnamedplus'
 vim.o.breakindent = true
 
 -- Split window below
-vim.o.splitbelow = true
+-- vim.o.splitbelow = true
 
 -- Split window to the right
-vim.o.splitright = true
+-- vim.o.splitright = true
 
 -- Save undo history
 vim.o.undofile = true
