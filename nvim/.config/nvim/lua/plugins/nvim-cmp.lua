@@ -63,13 +63,13 @@ return {
 
     -- <c-l> is selecting within a list of options.
     -- This is useful for choice nodes (introduced in the forthcoming episode 2)
-    vim.keymap.set("i", "<c-l>", function()
-      if luasnip.choice_active() then
-        luasnip.change_choice(1)
-      end
-    end)
+    -- vim.keymap.set("i", "<c-l>", function()
+    --   if luasnip.choice_active() then
+    --     luasnip.change_choice(1)
+    --   end
+    -- end)
 
-    vim.keymap.set("i", "<c-u>", require "luasnip.extras.select_choice")
+    -- vim.keymap.set("i", "<c-u>", require "luasnip.extras.select_choice")
 
     -- Completion --------------------------------------------------------------------
     cmp.setup {
