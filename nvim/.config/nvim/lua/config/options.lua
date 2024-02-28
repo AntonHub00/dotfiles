@@ -67,7 +67,8 @@ vim.o.termguicolors = true
 -- List of chars for "set list!"
 -- vim.o.listchars = 'tab:→ ,space:·,nbsp:␣,trail:•,eol:↲,precedes:«,extends:»'
 -- vim.o.listchars = 'tab:→ ,trail:•,eol:↲'
-vim.o.listchars = 'tab:→ ,trail:•,eol:↲'
+-- vim.o.listchars = 'tab:→ ,trail:•,eol:↲'
+vim.o.listchars = 'tab:→ ,trail:•'
 vim.o.list = true
 
 vim.o.wrap = true
