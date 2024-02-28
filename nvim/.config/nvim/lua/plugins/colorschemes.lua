@@ -99,6 +99,17 @@ return {
     end
   },
   {
+    'sainnhe/everforest',
+    -- priority = 1000,
+    lazy = true,
+    config = function()
+      vim.g.everforest_background = 'hard'
+      vim.g.everforest_diagnostic_virtual_text = 'colored'
+      vim.g.everforest_better_performance = 1
+      vim.cmd.colorscheme 'everforest'
+    end
+  },
+  {
     'nyoom-engineering/oxocarbon.nvim',
     -- priority = 1000,
     lazy = true,
