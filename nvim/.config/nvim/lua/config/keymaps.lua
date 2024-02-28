@@ -18,20 +18,20 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- vim.api.nvim_set_keymap('n', '<c-l>', '<c-w>l', { silent = true })
 
 -- Resize window horizontally
-vim.api.nvim_set_keymap('n', '<leader>wl', '10<C-w>>', { silent = true })
-vim.api.nvim_set_keymap('n', '<leader>wh', '10<C-w><', { silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>wl', '10<C-w>>', { silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>wh', '10<C-w><', { silent = true })
 
 -- Resize window vertically
-vim.api.nvim_set_keymap('n', '<leader>wk', '10<C-w>+', { silent = true })
-vim.api.nvim_set_keymap('n', '<leader>wj', '10<C-w>-', { silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>wk', '10<C-w>+', { silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>wj', '10<C-w>-', { silent = true })
 
 -- Paste in visual mode without clearing yank buffer
 vim.api.nvim_set_keymap('x', '<leader>p', '"_dP', { silent = true })
 
 -- Easier replacements
-vim.api.nvim_set_keymap('n', '<leader>ra', ':%s///gc<Left><Left><Left><Left>', {})     -- [r]eplace [a]ll in normal mode
-vim.api.nvim_set_keymap('n', '<leader>rc', ':%s/<C-r><C-w>//gc<Left><Left><Left>', {}) -- [r]eplace [c]urrent word in cursor
-vim.api.nvim_set_keymap('x', '<leader>ra', ':s///gc<Left><Left><Left><Left>', {})      -- [r]eplace [a]ll in selection
+-- vim.api.nvim_set_keymap('n', '<leader>ra', ':%s///gc<Left><Left><Left><Left>', {})     -- [r]eplace [a]ll in normal mode
+-- vim.api.nvim_set_keymap('n', '<leader>rc', ':%s/<C-r><C-w>//gc<Left><Left><Left>', {}) -- [r]eplace [c]urrent word in cursor
+-- vim.api.nvim_set_keymap('x', '<leader>ra', ':s///gc<Left><Left><Left><Left>', {})      -- [r]eplace [a]ll in selection
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
