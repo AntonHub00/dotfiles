@@ -54,14 +54,6 @@ return {
     end
   },
   {
-    'sainnhe/sonokai',
-    -- priority = 1000,
-    lazy = true,
-    config = function()
-      vim.cmd.colorscheme 'sonokai'
-    end
-  },
-  {
     'mcchrish/zenbones.nvim',
     priority = 1000,
     -- lazy = true,
@@ -88,6 +80,14 @@ return {
     lazy = true,
     config = function()
       vim.cmd.colorscheme 'nordic'
+    end
+  },
+  {
+    'sainnhe/sonokai',
+    -- priority = 1000,
+    lazy = true,
+    config = function()
+      vim.cmd.colorscheme 'sonokai'
     end
   },
   {
