@@ -25,7 +25,7 @@ while true; do
 
     battery_capacity=$(cat /sys/class/power_supply/BAT0/capacity)"% "
 
-    date=$(date +"%m-%d-%Y  ")
+    date=$(date +"%a %m-%d-%Y  ")
     time=$(date +"%l:%M %p ")
 
     keyboard=$(print_current_keyboard_layout)
