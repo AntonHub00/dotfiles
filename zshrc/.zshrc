@@ -160,8 +160,9 @@ export PATH=$PATH:$HOME/.local/bin
 # My settings------------------------------------------------------------------
 
 # Default editor
-export EDITOR="$EDITOR_BARE"
+export EDITOR=$EDITOR_BARE
 export VISUAL=$EDITOR
+export SUDO_EDITOR=$EDITOR
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
