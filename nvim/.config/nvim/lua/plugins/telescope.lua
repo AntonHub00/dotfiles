@@ -22,6 +22,7 @@ return {
   config = function()
     local telescope = require('telescope')
     local builtin = require('telescope.builtin')
+    local layout = require('telescope.actions.layout')
 
     telescope.setup {
       defaults = {
@@ -29,7 +30,14 @@ return {
         layout_config = {
           prompt_position = 'top'
         },
-        path_display = { 'truncate' }
+        mappings = {
+          n = {
+            ["<C-j>"] = layout.toggle_preview,
+          },
+          i = {
+            ["<C-j>"] = layout.toggle_preview,
+          },
+        }
       },
       pickers = {
         find_files = {
@@ -86,8 +94,8 @@ return {
     vim.keymap.set('n', '<leader>fgs', builtin.grep_string, { desc = '[f]ind [g]rep [s]tring' })
 
     -- Buffers
-    vim.keymap.set('n', '<leader>fb', builtin.current_buffer_fuzzy_find, { desc = '[f]ind [b]uffer fuzzy' })
-    vim.keymap.set('n', '<leader>fB', builtin.buffers, { desc = '[f]ind [B]uffers' })
+    vim.keymap.set('n', '<leader>fB', builtin.current_buffer_fuzzy_find, { desc = '[f]ind [b]uffer fuzzy' })
+    vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = '[f]ind [B]uffers' })
 
     -- Commands
     vim.keymap.set('n', '<leader>fcc', builtin.commands, { desc = '[f]ind [c]ommands' })
