@@ -12,10 +12,10 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Better window movement
-vim.api.nvim_set_keymap('n', '<c-h>', '<c-w>h', { silent = true })
-vim.api.nvim_set_keymap('n', '<c-j>', '<c-w>j', { silent = true })
-vim.api.nvim_set_keymap('n', '<c-k>', '<c-w>k', { silent = true })
-vim.api.nvim_set_keymap('n', '<c-l>', '<c-w>l', { silent = true })
+-- vim.api.nvim_set_keymap('n', '<c-h>', '<c-w>h', { silent = true })
+-- vim.api.nvim_set_keymap('n', '<c-j>', '<c-w>j', { silent = true })
+-- vim.api.nvim_set_keymap('n', '<c-k>', '<c-w>k', { silent = true })
+-- vim.api.nvim_set_keymap('n', '<c-l>', '<c-w>l', { silent = true })
 
 -- Resize window horizontally
 vim.api.nvim_set_keymap('n', '<leader>wl', '10<C-w>>', { silent = true })
