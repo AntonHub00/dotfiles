@@ -2,7 +2,7 @@
 
 choices="single\nhome\noffice\nmanual"
 
-chosen=$(echo "$choices" | dmenu -i)
+chosen=$(echo "$choices" | dmenu -i -l 10 -c)
 
 case "$chosen" in
   single) exec $HOME/.scripts/monitors/single.sh;;
