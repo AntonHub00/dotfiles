@@ -40,6 +40,9 @@ return {
 
     local luasnip = require "luasnip"
 
+    luasnip.filetype_extend("typescript", { "javascript" })
+    luasnip.filetype_extend("typescriptreact", { "javascript" })
+    luasnip.filetype_extend("javascriptreact", { "javascript" })
     require("luasnip.loaders.from_vscode").lazy_load()
 
     luasnip.config.setup {}
