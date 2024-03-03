@@ -83,11 +83,29 @@ return {
 
     -- Files
     vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[f]iles [f]iles' })
-    vim.keymap.set('n', '<leader>fF', function() builtin.find_files({ hidden = true, no_ignore = true }) end,
-      { desc = '[f]ind [F]iles (hidden and ignored)' })
-    vim.keymap.set('n', '<leader>fn',
-      function() builtin.find_files({ hidden = true, no_ignore = true, cwd = '~/.dotfiles/nvim/.config/nvim' }) end,
-      { desc = '[f]ind [n]eovim config files' })
+    vim.keymap.set(
+      'n',
+      '<leader>fF',
+      function()
+        builtin.find_files({
+          hidden = true,
+          no_ignore = true
+        })
+      end,
+      { desc = '[f]ind [F]iles (hidden and ignored)' }
+    )
+    vim.keymap.set(
+      'n',
+      '<leader>fn',
+      function()
+        builtin.find_files({
+          hidden = true,
+          no_ignore = true,
+          cwd = '~/.dotfiles/nvim/.config/nvim'
+        })
+      end,
+      { desc = '[f]ind [n]eovim config files' }
+    )
 
     -- Grep
     vim.keymap.set('n', '<leader>fgl', builtin.live_grep, { desc = '[f]ind [g]rep [l]ive' })
