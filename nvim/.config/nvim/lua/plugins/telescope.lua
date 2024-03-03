@@ -106,6 +106,18 @@ return {
       end,
       { desc = '[f]ind [n]eovim config files' }
     )
+    vim.keymap.set(
+      'n',
+      '<leader>fw',
+      function()
+        builtin.find_files({
+          hidden = true,
+          no_ignore = true,
+          cwd = '~/.dotfiles/wezterm/.config/wezterm'
+        })
+      end,
+      { desc = '[f]ind [w]ezterm config files' }
+    )
 
     -- Grep
     vim.keymap.set('n', '<leader>fgl', builtin.live_grep, { desc = '[f]ind [g]rep [l]ive' })
