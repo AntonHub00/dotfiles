@@ -14,6 +14,8 @@
 # xinput --set-prop "Logitech USB Optical Mouse" "libinput Accel Profile Enabled" 0, 1
 xinput --set-prop "Logitech G203 LIGHTSYNC Gaming Mouse" "libinput Accel Profile Enabled" 0, 1
 xinput --set-prop "Mi Silent Mouse" "libinput Accel Profile Enabled" 0, 1
+xinput --set-prop "UGREEN BLE Mouse" "libinput Accel Profile Enabled" 0, 1
+xinput --set-prop "pointer:UGREEN Mouse UGREEN Mouse" "libinput Accel Profile Enabled" 0, 1
 
 # Set touchpad config
 xinput --set-prop "Elan Touchpad" "libinput Natural Scrolling Enabled" 1
