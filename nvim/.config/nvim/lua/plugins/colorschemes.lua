@@ -1,16 +1,27 @@
 return {
   {
-    'shaunsingh/nord.nvim',
-    -- priority = 1000,
+    'gbprod/nord.nvim',
+    -- enabled = false,
     lazy = true,
+    -- priority = 1000,
     config = function()
-      vim.g.nord_contrast = true
-      vim.g.nord_borders = true
-
-      require('nord').set()
-      -- vim.cmd.colorscheme = 'nord'
+      require('nord').setup({})
+      vim.cmd.colorscheme 'nord'
     end,
   },
+  -- {
+  --   'shaunsingh/nord.nvim',
+  --   priority = 1000,
+  --   -- lazy = true,
+  --   -- enable = false,
+  --   config = function()
+  --     -- vim.g.nord_contrast = true
+  --     -- vim.g.nord_borders = true
+  --
+  --     require('nord').set()
+  --     -- vim.cmd.colorscheme 'nord'
+  --   end,
+  -- },
   {
     'navarasu/onedark.nvim',
     -- priority = 1000,
