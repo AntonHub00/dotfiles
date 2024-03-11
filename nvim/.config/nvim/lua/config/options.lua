@@ -23,13 +23,13 @@ vim.opt.linebreak = true
 vim.opt.showbreak = string.rep(" ", 3)
 
 -- Make line numbers default
-vim.wo.number = true
+vim.opt.number = true
 
 -- Make line relative numbers
-vim.wo.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode
-vim.o.mouse = 'a'
+vim.opt.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option make the OS clipboard to remain independent.
@@ -42,35 +42,32 @@ vim.opt.clipboard = 'unnamedplus'
 -- vim.o.splitright = true
 
 -- Save undo history
-vim.o.undofile = true
+vim.opt.undofile = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
-vim.wo.signcolumn = 'yes'
+vim.opt.signcolumn = 'yes'
 
 -- Decrease update time
-vim.o.updatetime = 250
-vim.o.timeoutlen = 300
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
+vim.opt.completeopt = 'menu,menuone,noinsert'
 
--- NOTE: You should make sure your terminal supports this
-vim.o.termguicolors = true
+vim.opt.termguicolors = true
 
--- List of chars for "set list!"
--- vim.o.listchars = 'tab:→ ,space:·,nbsp:␣,trail:•,eol:↲,precedes:«,extends:»'
--- vim.o.listchars = 'tab:→ ,trail:•,eol:↲'
--- vim.o.listchars = 'tab:→ ,trail:•,eol:↲'
-vim.o.listchars = 'tab:→ ,trail:•'
-vim.o.list = true
+vim.opt.listchars = { tab = '→ ', trail = '•', nbsp = '␣' }
+vim.opt.list = true
 
-vim.o.wrap = true
+vim.opt.wrap = true
 
-vim.o.foldmethod = 'indent'
-vim.o.foldlevelstart = 99
+vim.opt.foldmethod = 'indent'
+vim.opt.foldlevelstart = 99
+
+vim.opt.cursorline = true
 
 -- vim: ts=2 sts=2 sw=2 et
