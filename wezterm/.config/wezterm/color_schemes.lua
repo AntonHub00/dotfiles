@@ -13,9 +13,12 @@ function module.apply_to_config(config)
   -- config.color_scheme = 'Gruvbox Dark (Gogh)'
   -- config.color_scheme = 'Gruvbox (Gogh)'
   -- config.color_scheme = 'Gruvbox Material (Gogh)'
+  -- config.color_scheme = 'Gruvbox dark, hard (base16)'
   -- config.color_scheme = 'EverforestDark (Gogh)'
   -- config.color_scheme = 'EverforestLight (Gogh)'
   -- config.color_scheme = 'Oxocarbon Dark (Gogh)'
+  -- config.color_scheme = 'Kanagawa (Gogh)'
+  -- config.color_scheme = 'Catppuccin Macchiato'
 end
 
 return module
