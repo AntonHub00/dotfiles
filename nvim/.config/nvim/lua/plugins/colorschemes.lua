@@ -37,8 +37,8 @@ return {
   },
   {
     'catppuccin/nvim',
-    priority = 1000,
-    -- lazy = true,
+    -- priority = 1000,
+    lazy = true,
     name = 'catppuccin',
     config = function()
       vim.cmd.colorscheme 'catppuccin-macchiato'
@@ -58,16 +58,16 @@ return {
     lazy = true,
     config = function()
       -- vim.cmd.colorscheme 'tokyonight'
-      -- vim.cmd.colorscheme 'tokyonight-night'
-      vim.cmd.colorscheme 'tokyonight-storm'
+      vim.cmd.colorscheme 'tokyonight-night'
+      -- vim.cmd.colorscheme 'tokyonight-storm'
       -- vim.cmd.colorscheme 'tokyonight-day'
       -- vim.cmd.colorscheme 'tokyonight-moon'
     end
   },
   {
     'mcchrish/zenbones.nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = 1000,
+    -- lazy = true,
     dependencies = { 'rktjmp/lush.nvim' },
     config = function()
       vim.cmd.colorscheme 'zenbones'
