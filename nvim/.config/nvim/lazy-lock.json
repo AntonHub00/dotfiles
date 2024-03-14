@@ -20,6 +20,7 @@
   "lspkind.nvim": { "branch": "master", "commit": "1735dd5a5054c1fb7feaf8e8658dbab925f4f0cf" },
   "lualine.nvim": { "branch": "master", "commit": "8b56462bfb746760465264de41b4907310f113ec" },
   "lush.nvim": { "branch": "main", "commit": "2e8d34e748642621d761a65e3c2a198154b914e8" },
+  "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "55716a879568a498fa236593c8119789054a3b8e" },
   "mason-tool-installer.nvim": { "branch": "main", "commit": "1212fb6082b7177dde17ea65e429e027835aeb40" },
   "mason.nvim": { "branch": "main", "commit": "3b5068f0fc565f337d67a2d315d935f574848ee7" },
@@ -51,5 +52,6 @@
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
   "vim-rhubarb": { "branch": "master", "commit": "ee69335de176d9325267b0fd2597a22901d927b1" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
+  "vscode.nvim": { "branch": "main", "commit": "ea9ff6da3756ab229bcb59aad1ea7749eb15b065" },
   "zenbones.nvim": { "branch": "main", "commit": "33672310aac6b823c88cf16d5d99472439111f9c" }
 }
