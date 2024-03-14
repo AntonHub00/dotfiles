@@ -65,6 +65,7 @@ return {
       -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},
+      marksman = {},
       bashls = {},
       jsonls = {},
       clangd = {},
