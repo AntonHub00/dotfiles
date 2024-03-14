@@ -176,4 +176,12 @@ return {
       vim.cmd.colorscheme 'mellifluous'
     end
   },
+  {
+    'Mofiqul/vscode.nvim',
+    -- priority = 1000,
+    lazy = true,
+    config = function()
+      vim.cmd.colorscheme 'vscode'
+    end
+  },
 }
