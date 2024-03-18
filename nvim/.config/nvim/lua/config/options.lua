@@ -68,6 +68,6 @@ vim.opt.wrap = true
 vim.opt.foldmethod = 'indent'
 vim.opt.foldlevelstart = 99
 
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 
 -- vim: ts=2 sts=2 sw=2 et
