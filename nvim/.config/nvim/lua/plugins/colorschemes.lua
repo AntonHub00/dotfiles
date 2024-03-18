@@ -24,12 +24,12 @@ return {
   -- },
   {
     'navarasu/onedark.nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = 1000,
+    -- lazy = true,
     config = function()
       require('onedark').setup {
-        -- Set a style preset. 'dark' is default.
-        style = 'warmer', -- dark, darker, cool, deep, warm, warmer, light
+        -- Set a style preset. 'dark' is default. Options: dark, darker, cool, deep, warm, warmer, light
+        style = 'darker',
       }
 
       require('onedark').load()
@@ -66,8 +66,8 @@ return {
   },
   {
     'mcchrish/zenbones.nvim',
-    priority = 1000,
-    -- lazy = true,
+    -- priority = 1000,
+    lazy = true,
     dependencies = { 'rktjmp/lush.nvim' },
     config = function()
       vim.cmd.colorscheme 'zenbones'
@@ -98,6 +98,8 @@ return {
     -- priority = 1000,
     lazy = true,
     config = function()
+      vim.g.sonokai_style = 'default'
+      vim.g.sonokai_better_performance = 1
       vim.cmd.colorscheme 'sonokai'
     end
   },
