@@ -17,7 +17,11 @@ while true; do
 
     # temperature=$(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)" "
 
-    volume=$(amixer get Master | awk -F '[][]' 'END{ print $2 }')" "
+    sink_volume_icon=$(pactl get-sink-mute @DEFAULT_SINK@ | awk -F ' ' '$2 == "yes" { print "󰝟" } $2 != "yes" { print "" }')""
+    sink_volume=$(pactl get-sink-volume @DEFAULT_SINK@ |  awk -F ' / ' '(NR==1){ print $2 }' | sed 's/ *//')" $sink_volume_icon"
+
+    source_volume_icon=$(pactl get-source-mute @DEFAULT_SOURCE@ | awk -F ' ' '$2 == "yes" { print "󰍭" } $2 != "yes" { print "󰍬" }')""
+    source_volume=$(pactl get-source-volume @DEFAULT_SOURCE@ |  awk -F ' / ' '(NR==1){ print $2 }' | sed 's/ *//')" $source_volume_icon"
 
     memory=$(free -h | awk '(NR==2){ print $3"/"$2 }')" 󰍛"
 
@@ -30,7 +34,7 @@ while true; do
 
     keyboard=$(print_current_keyboard_layout)
 
-    output=$(printf "[ %s ] [ %s ] [ %s ] [ %s %s ] [ %s | %s ]" "$keyboard" "$memory" "$volume" "$battery_status" "$battery_capacity" "$date" "$time")
+    output=$(printf "[ %s ] [ %s ] [ %s ] [ %s ] [ %s %s ] [ %s | %s ]" "$keyboard" "$memory" "$sink_volume" "$source_volume" "$battery_status" "$battery_capacity" "$date" "$time")
 
     xsetroot -name "$output"
     # echo $output
