@@ -41,4 +41,4 @@ setxkbmap -model pc105 -layout us,us -variant ,intl -option grp:alt_space_toggle
 # CPS (Click Per Second). I usually set the default value.
 # xset r rate 200 25
 # xset r rate 200 40
-xset r rate 300 25
+xset r rate 400 25
