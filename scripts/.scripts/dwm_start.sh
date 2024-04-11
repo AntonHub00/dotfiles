@@ -26,6 +26,7 @@ exec blueman-applet &
 exec pasystray &
 exec cbatticon -i symbolic -x "notify-send 'Battery Info' '[$(cat /sys/class/power_supply/BAT0/capacity)%] [$(cat /sys/class/power_supply/BAT0/status)]'" &
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh) &
+exec xss-lock -- slock &
 export SSH_AUTH_SOCK &
 
 exec dwm
