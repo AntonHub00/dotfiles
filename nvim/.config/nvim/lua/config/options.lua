@@ -70,4 +70,6 @@ vim.opt.foldlevelstart = 99
 
 vim.opt.cursorline = true
 
+vim.opt.colorcolumn = "80"
+
 -- vim: ts=2 sts=2 sw=2 et
