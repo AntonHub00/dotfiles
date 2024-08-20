@@ -1,6 +1,9 @@
 -- Easier exit from insert mode
 vim.api.nvim_set_keymap('i', 'jj', '<esc>', { noremap = true, silent = true })
 
+-- Easier exit from terminal mode
+vim.api.nvim_set_keymap('t', '<Esc><Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+
 -- Easier turn off for search highlight
 vim.api.nvim_set_keymap('n', '<leader>n', ':noh<cr>', { silent = true })
 
@@ -44,6 +47,6 @@ vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set(
   'n',
   '<leader>r',
-  function() vim.opt.relativenumber = not vim.opt.relativenumber:get() end,
+  function() vim.o.relativenumber = not vim.o.relativenumber end,
   { desc = 'Toggle relative numbers' }
 )
