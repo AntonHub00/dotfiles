@@ -3,7 +3,7 @@ local module = {}
 function module.apply_to_config(config)
   -- config.color_scheme = 'zenbones'
   -- config.color_scheme = 'zenbones_dark'
-  config.color_scheme = 'One Dark (Gogh)'
+  -- config.color_scheme = 'One Dark (Gogh)'
   -- config.color_scheme = 'One Light (Gogh)'
   -- config.color_scheme = 'Tokyo Night'
   -- config.color_scheme = 'Tokyo Night Day'
@@ -19,6 +19,8 @@ function module.apply_to_config(config)
   -- config.color_scheme = 'Oxocarbon Dark (Gogh)'
   -- config.color_scheme = 'Kanagawa (Gogh)'
   -- config.color_scheme = 'Catppuccin Macchiato'
+  config.color_scheme = 'Catppuccin Latte'
+  -- config.color_scheme = 'Poimandres'
 end
 
 return module
