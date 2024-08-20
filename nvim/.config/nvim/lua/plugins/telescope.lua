@@ -1,5 +1,6 @@
 return {
   'nvim-telescope/telescope.nvim',
+  enabled = true,
   branch = '0.1.x',
   dependencies = {
     'nvim-lua/plenary.nvim',
@@ -26,16 +27,19 @@ return {
 
     telescope.setup {
       defaults = {
+        dynamic_preview_title = true,
         sorting_strategy = 'ascending',
         layout_config = {
           prompt_position = 'top'
         },
         mappings = {
           n = {
-            ["<C-j>"] = layout.toggle_preview,
+            -- ["<C-j>"] = layout.toggle_preview,
+            ["<C-j>"] = layout.cycle_layout_next,
           },
           i = {
-            ["<C-j>"] = layout.toggle_preview,
+            -- ["<C-j>"] = layout.toggle_preview,
+            ["<C-j>"] = layout.cycle_layout_next,
           },
         }
       },
@@ -54,7 +58,7 @@ return {
         file_browser = {
           theme = "ivy",
           -- disables netrw and use telescope-file-browser in its place
-          hijack_netrw = true,
+          -- hijack_netrw = true,
           mappings = {
             ["i"] = {
               -- your custom insert mode mappings
