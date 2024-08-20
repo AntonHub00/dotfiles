@@ -1,7 +1,7 @@
 return {
   {
     'gbprod/nord.nvim',
-    -- enabled = false,
+    enabled = false,
     lazy = true,
     -- priority = 1000,
     config = function()
@@ -24,8 +24,8 @@ return {
   -- },
   {
     'navarasu/onedark.nvim',
-    priority = 1000,
-    -- lazy = true,
+    -- priority = 1000,
+    lazy = true,
     config = function()
       require('onedark').setup {
         -- Set a style preset. 'dark' is default. Options: dark, darker, cool, deep, warm, warmer, light
@@ -37,11 +37,12 @@ return {
   },
   {
     'catppuccin/nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = 1000,
+    -- lazy = true,
     name = 'catppuccin',
     config = function()
-      vim.cmd.colorscheme 'catppuccin-macchiato'
+      -- vim.cmd.colorscheme 'catppuccin-macchiato'
+      vim.cmd.colorscheme 'catppuccin-latte'
     end
   },
   {
@@ -184,6 +185,17 @@ return {
     lazy = true,
     config = function()
       vim.cmd.colorscheme 'vscode'
+    end
+  },
+  {
+    'olivercederborg/poimandres.nvim',
+    -- priority = 1000,
+    lazy = true,
+    config = function()
+      require('poimandres').setup {}
+    end,
+    init = function ()
+      vim.cmd.colorscheme 'poimandres'
     end
   },
 }
