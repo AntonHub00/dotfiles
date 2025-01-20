@@ -20,3 +20,14 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     vim.api.nvim_buf_set_option(opts.buf, 'filetype', 'bash')
   end,
 })
+
+
+-- [[ filetype for ghostty config files ]]
+local ghostty_filetype_group = vim.api.nvim_create_augroup('GhosttyFiletypeGroup', { clear = true })
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+  group = ghostty_filetype_group,
+  pattern = '*/ghostty/config',
+  callback = function(opts)
+    vim.api.nvim_buf_set_option(opts.buf, 'filetype', 'config')
+  end,
+})
