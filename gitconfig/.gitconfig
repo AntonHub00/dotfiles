@@ -1,10 +1,10 @@
 [user]
-	email = antonhub00@gmail.com
-	name = Antonio Ochoa
+  email = antonhub00@gmail.com
+  name = Antonio Ochoa
 [difftool]
-	prompt = false
+  prompt = false
 [mergetool]
-	prompt = false
+  prompt = false
 
 
 ; Neovim as editor
@@ -16,19 +16,6 @@
   tool = vimdiff
 [mergetool "vimdiff"]
   cmd = nvim -d -u ~/.config/nvim/init.lua $MERGED
-    ; cmd = nvim -d -u ~/.config/nvim/init.vim $LOCAL $MERGED $REMOTE
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
-
-; VSCode as editor
-; [core]
-; 	editor = code --wait
-; [diff]
-;     tool = vscode
-; [difftool "vscode"]
-;     cmd = code --wait --diff $LOCAL $REMOTE
-; [merge]
-; 	tool = vscode
-; [mergetool "vscode"]
-;     cmd = code --wait $MERGED
+  tool = vimdiff
+  conflictstyle = diff3
