@@ -16,12 +16,6 @@ EDITOR_BARE="nvim"
 # Alias for ping
 alias pin='ping -c 3 8.8.8.8'
 
-# Alias for XAMPP service
-alias xampp='sudo /opt/lampp/xampp'
-
-# Alias for mysql (XAMPP)
-alias mysql_xampp='/opt/lampp/bin/mysql'
-
 # Alias for zsh config file
 alias zshconf="$EDITOR_BARE ~/.zshrc"
 
@@ -30,20 +24,6 @@ alias nvimconf="$EDITOR_BARE ~/.config/nvim/init.lua"
 
 # Alias for tmux config file
 alias tmuxconf="$EDITOR_BARE ~/.tmux.conf"
-
-# Alias for alacritty config file
-alias alacrittyconf="$EDITOR_BARE ~/.config/alacritty/alacritty.yml"
-
-# Alias for kitty config file
-alias kittyconf="$EDITOR_BARE ~/.config/kitty/kitty.conf"
-
-# Alias for current monitor setup
-alias sm_home="$HOME/.scripts/monitors/home.sh"
-alias sm_single="$HOME/.scripts/monitors/single.sh"
-alias sm_office="$HOME/.scripts/monitors/office.sh"
-
-# Alias for kitty config file
-alias bat='/usr/bin/batcat'
 
 # Open directory in the current VSCode instance
 alias c.="code -r ."
@@ -61,6 +41,8 @@ alias tmuxconfig="wezterm cli spawn -- nvim ~/.dotfiles/tmux/.tmux.conf"
 export PATH=$PATH:$HOME/.scripts
 
 export PATH=$PATH:$HOME/.local/bin
+
+export PATH=$PATH:/Applications/WebStorm.app/Contents/MacOS
 
 # My settings------------------------------------------------------------------
 
