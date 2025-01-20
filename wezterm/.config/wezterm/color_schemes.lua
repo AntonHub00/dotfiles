@@ -18,10 +18,11 @@ function module.apply_to_config(config)
   -- config.color_scheme = 'EverforestLight (Gogh)'
   -- config.color_scheme = 'Oxocarbon Dark (Gogh)'
   -- config.color_scheme = 'Kanagawa (Gogh)'
-  config.color_scheme = 'Catppuccin Mocha'
+  -- config.color_scheme = 'Catppuccin Mocha'
   -- config.color_scheme = 'Catppuccin Macchiato'
   -- config.color_scheme = 'Catppuccin Latte'
   -- config.color_scheme = 'Poimandres'
+  config.color_scheme = 'dawnfox'
 end
 
 return module
