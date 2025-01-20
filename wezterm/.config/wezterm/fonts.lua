@@ -22,7 +22,7 @@ local function set_font(config)
 end
 
 local function set_font_size(config)
-  config.font_size = 11.0
+  config.font_size = 15.0
 end
 
 function M.apply_to_config(config)
