@@ -51,44 +51,6 @@ export EDITOR=$EDITOR_BARE
 export VISUAL=$EDITOR
 export SUDO_EDITOR=$EDITOR
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Android
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools
-export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools/28.0.3
-
-# Gradle
-export PATH=$PATH:$HOME/Software/other/gradle-7.0.2/bin
-
-# Java JRE from Android Studio
-export PATH=$PATH:$HOME/Software/other/android-studio/jre/bin
-
-# Golang
-export PATH=$PATH:/usr/local/go/bin
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Add direnv bin
-export PATH="$PATH:$HOME/Software/others/direnv"
-
-# Add kubectx and kubens bins
-export PATH="$PATH:$HOME/Software/repos/kubectx"
-
-# Add postman bin
-export PATH="$PATH:$HOME/Software/others/Postman"
-
-# Just needed in dwm (or another window manager) for the JVM (Java Virtual
-# Machine) to believe it is running a different window manager.
-# It is useful for IntelliJ IDEA, for example. This prevents a "blank screen"
-# when opening the IDE.
-# More info at https://tools.suckless.org/x/wmname/
-# wmname compiz
-
 # Fix invisible commments in the terminal
 export ZSH_HIGHLIGHT_STYLES[comment]='none'
 
