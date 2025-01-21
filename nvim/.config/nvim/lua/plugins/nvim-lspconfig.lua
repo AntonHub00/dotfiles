@@ -62,9 +62,9 @@ return {
 
     local servers = {
       -- clangd = {},
-      -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},
+      gopls = {},
       marksman = {},
       bashls = {},
       jsonls = {},
