@@ -1,0 +1,26 @@
+# theme = catppuccin-latte
+# theme = zenbones
+# theme = kanagawa Wave
+theme = dawnfox
+
+cursor-style = block
+cursor-style-blink = true
+adjust-cursor-thickness = 1
+shell-integration-features = no-cursor
+
+font-size = 15
+font-family = Berkeley Mono
+# font-family = JetBrains Mono
+# font-family = Comic Code
+# font-family = Intel One Mono
+# font-family = Mononoki
+# font-feature = -calt
+# font-feature = -liga
+# font-feature = -dlig
+
+window-save-state = always
+
+mouse-scroll-multiplier = 0.1
+
+adjust-cell-height = 4
+adjust-cursor-height = 4
