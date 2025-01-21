@@ -173,15 +173,4 @@ return {
       vim.cmd.colorscheme 'vscode'
     end
   },
-  {
-    'olivercederborg/poimandres.nvim',
-    -- priority = 1000,
-    lazy = true,
-    config = function()
-      require('poimandres').setup {}
-    end,
-    init = function ()
-      vim.cmd.colorscheme 'poimandres'
-    end
-  },
 }
