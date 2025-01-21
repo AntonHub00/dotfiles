@@ -57,6 +57,8 @@ export ZSH_HIGHLIGHT_STYLES[comment]='none'
 export NODE_VERSIONS="$NVM_DIR/versions/node"
 export NODE_VERSION_PREFIX=v
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 eval "$(direnv hook zsh)"
 
 # Kubectl autocompletion
@@ -67,3 +69,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(starship init zsh)"
+
+source <(fzf --zsh)
