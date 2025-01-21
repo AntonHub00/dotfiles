@@ -81,14 +81,6 @@ return {
     end
   },
   {
-    'AlexvZyl/nordic.nvim',
-    -- priority = 1000,
-    lazy = true,
-    config = function()
-      vim.cmd.colorscheme 'nordic'
-    end
-  },
-  {
     'sainnhe/sonokai',
     -- priority = 1000,
     lazy = true,
