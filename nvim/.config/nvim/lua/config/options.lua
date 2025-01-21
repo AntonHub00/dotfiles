@@ -36,10 +36,10 @@ vim.opt.mouse = 'a'
 vim.opt.clipboard = 'unnamedplus'
 
 -- Split window below
--- vim.o.splitbelow = true
+vim.o.splitbelow = true
 
 -- Split window to the right
--- vim.o.splitright = true
+vim.o.splitright = true
 
 -- Save undo history
 vim.opt.undofile = true
@@ -68,7 +68,7 @@ vim.opt.wrap = true
 vim.opt.foldmethod = 'indent'
 vim.opt.foldlevelstart = 99
 
-vim.opt.cursorline = true
+-- vim.opt.cursorline = true
 
 vim.opt.colorcolumn = "80"
 
