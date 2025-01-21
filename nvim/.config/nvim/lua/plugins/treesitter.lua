@@ -3,6 +3,7 @@ return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
+    'nvim-treesitter/nvim-treesitter-context',
   },
   build = ':TSUpdate',
   config = function()
@@ -92,6 +93,18 @@ return {
           },
         },
       }
+
+      local t_ctx = require('treesitter-context')
+      t_ctx.setup {
+        multiline_threshold = 2
+      }
+
+      vim.keymap.set(
+        'n',
+        '<leader>c',
+        function() t_ctx.go_to_context(vim.v.count1) end,
+        { desc = 'go to [c]context' }
+      )
     end, 0)
   end,
 }
