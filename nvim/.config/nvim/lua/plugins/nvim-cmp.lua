@@ -2,19 +2,7 @@ return {
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
   dependencies = {
-    {
-      'L3MON4D3/LuaSnip',
-      build = (function()
-        -- Build Step is needed for regex support in snippets
-        -- This step is not supported in many windows environments
-        -- Remove the below condition to re-enable on windows
-        if vim.fn.has 'win32' == 1 then
-          return
-        end
-        return 'make install_jsregexp'
-      end)(),
-    },
-    'rafamadriz/friendly-snippets',
+    'L3MON4D3/LuaSnip',
 
     -- vscode-like pictograms for built-in lsp
     'onsails/lspkind.nvim',
@@ -31,13 +19,6 @@ return {
   config = function()
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
-
-    require('luasnip.loaders.from_vscode').lazy_load()
-
-    luasnip.filetype_extend('typescript', { 'javascript' })
-    luasnip.filetype_extend('typescriptreact', { 'javascript' })
-    luasnip.filetype_extend('javascriptreact', { 'javascript' })
-    luasnip.config.setup {}
 
     cmp.setup {
       snippet = {
