@@ -30,13 +30,13 @@ return {
   },
   {
     'catppuccin/nvim',
-    priority = 1000,
-    -- lazy = true,
+    -- priority = 1000,
+    lazy = true,
     name = 'catppuccin',
     config = function()
-      vim.cmd.colorscheme 'catppuccin-mocha'
+      -- vim.cmd.colorscheme 'catppuccin-mocha'
       -- vim.cmd.colorscheme 'catppuccin-macchiato'
-      -- vim.cmd.colorscheme 'catppuccin-latte'
+      vim.cmd.colorscheme 'catppuccin-latte'
     end
   },
   {
@@ -44,7 +44,9 @@ return {
     -- priority = 1000,
     lazy = true,
     config = function()
-      vim.cmd.colorscheme 'kanagawa'
+      vim.o.background = 'dark'
+      -- vim.cmd.colorscheme 'kanagawa'
+      vim.cmd.colorscheme 'kanagawa-wave'
     end
   },
   {
@@ -126,10 +128,11 @@ return {
   },
   {
     'EdenEast/nightfox.nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = 1000,
+    -- lazy = true,
     config = function()
-      vim.cmd.colorscheme 'nightfox'
+      -- vim.cmd.colorscheme 'nightfox'
+      vim.cmd.colorscheme 'dawnfox'
     end
   },
   {
