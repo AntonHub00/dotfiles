@@ -71,7 +71,8 @@ return {
       clangd = {},
       ts_ls = {},
       eslint = {},
-      html = { filetypes = { 'html', 'twig', 'hbs' } },
+      html = {},
+      cssls = {},
       lua_ls = {
         -- cmd = {...},
         -- filetypes { ...},
