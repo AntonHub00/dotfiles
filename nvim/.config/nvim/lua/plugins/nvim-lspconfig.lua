@@ -69,7 +69,7 @@ return {
       bashls = {},
       jsonls = {},
       clangd = {},
-      tsserver = {},
+      ts_ls = {},
       eslint = {},
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       lua_ls = {
