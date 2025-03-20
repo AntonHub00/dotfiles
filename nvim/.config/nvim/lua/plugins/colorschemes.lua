@@ -1,20 +1,30 @@
 return {
   {
-    'shaunsingh/nord.nvim',
+    "gbprod/nord.nvim",
     -- priority = 1000,
     lazy = true,
-    -- enable = false,
     config = function()
-      vim.g.nord_contrast = true
-      vim.g.nord_borders = true
-
-      vim.o.background = 'dark'
-
-      require('nord').set()
-
-      -- vim.cmd.colorscheme 'nord'
+      -- require("nord").setup({})
+      vim.cmd.colorscheme("nord")
     end,
   },
+  -- {
+  --   'shaunsingh/nord.nvim',
+  --   -- priority = 1000,
+  --   lazy = true,
+  --   -- enable = false,
+  --   config = function()
+  --     -- vim.g.nord_contrast = true
+  --     -- vim.g.nord_borders = true
+  --     -- vim.g.nord_bold = true
+  --
+  --     vim.o.background = 'dark'
+  --
+  --     require('nord').set()
+  --
+  --     -- vim.cmd.colorscheme 'nord'
+  --   end,
+  -- },
   {
     'navarasu/onedark.nvim',
     -- priority = 1000,
@@ -22,21 +32,27 @@ return {
     config = function()
       require('onedark').setup {
         -- Set a style preset. 'dark' is default. Options: dark, darker, cool, deep, warm, warmer, light
-        style = 'darker',
+        -- style = 'darker',
       }
+
+      vim.o.background = "light"
 
       require('onedark').load()
     end,
   },
   {
     'catppuccin/nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = 1000,
+    -- lazy = true,
     name = 'catppuccin',
     config = function()
+      vim.o.background = 'light'
+
       -- vim.cmd.colorscheme 'catppuccin-mocha'
       -- vim.cmd.colorscheme 'catppuccin-macchiato'
       vim.cmd.colorscheme 'catppuccin-latte'
+      -- vim.cmd.colorscheme 'catppuccin-frappe'
+      -- vim.cmd.colorscheme 'catppuccin'
     end
   },
   {
@@ -55,10 +71,12 @@ return {
     lazy = true,
     config = function()
       -- vim.cmd.colorscheme 'tokyonight'
-      vim.cmd.colorscheme 'tokyonight-night'
+      -- vim.cmd.colorscheme 'tokyonight-night'
       -- vim.cmd.colorscheme 'tokyonight-storm'
       -- vim.cmd.colorscheme 'tokyonight-day'
-      -- vim.cmd.colorscheme 'tokyonight-moon'
+      vim.cmd.colorscheme 'tokyonight-moon'
+
+      vim.o.background = 'dark'
     end
   },
   {
@@ -67,6 +85,8 @@ return {
     lazy = true,
     dependencies = { 'rktjmp/lush.nvim' },
     config = function()
+      vim.o.background = 'light'
+
       vim.cmd.colorscheme 'zenbones'
       -- vim.cmd.colorscheme 'zenwritten'
       -- vim.cmd.colorscheme 'nordbones'
@@ -79,6 +99,7 @@ return {
     -- priority = 1000,
     lazy = true,
     config = function()
+      vim.o.background = 'dark'
       vim.cmd.colorscheme 'gruvbox'
     end
   },
@@ -128,8 +149,8 @@ return {
   },
   {
     'EdenEast/nightfox.nvim',
-    priority = 1000,
-    -- lazy = true,
+    -- priority = 1000,
+    lazy = true,
     config = function()
       -- vim.cmd.colorscheme 'nightfox'
       vim.cmd.colorscheme 'dawnfox'
@@ -176,4 +197,85 @@ return {
       vim.cmd.colorscheme 'vscode'
     end
   },
+  {
+    "vague2k/vague.nvim",
+    -- priority = 1000,
+    lazy = true,
+    config = function()
+      require("vague").setup({
+        -- optional configuration here
+      })
+      vim.cmd.colorscheme "vague"
+    end
+  },
+  {
+    "slugbyte/lackluster.nvim",
+    -- priority = 1000,
+    lazy = true,
+    init = function()
+      vim.cmd.colorscheme "lackluster"
+      -- vim.cmd.colorscheme("lackluster-hack") -- my favorite
+      -- vim.cmd.colorscheme("lackluster-mint")
+    end,
+  },
+  {
+    "wnkz/monoglow.nvim",
+    -- priority = 1000,
+    lazy = true,
+    opts = {},
+    config = function()
+      vim.cmd.colorscheme "monoglow"
+    end
+  },
+  {
+    "ficcdaf/ashen.nvim",
+    -- priority = 1000,
+    lazy = true,
+    -- tag = "*",
+    config = function()
+      vim.cmd.colorscheme "ashen"
+    end
+  },
+  {
+    "p00f/alabaster.nvim",
+    -- priority = 1000,
+    lazy = true,
+    config = function()
+      vim.cmd.colorscheme "alabaster"
+    end
+  },
+  {
+    "dgox16/oldworld.nvim",
+    -- priority = 1000,
+    lazy = true,
+    config = function()
+      vim.cmd.colorscheme "oldworld"
+    end
+  },
+  {
+    "oonamo/ef-themes.nvim",
+    -- priority = 1000,
+    lazy = true,
+    config = function()
+      vim.cmd.colorscheme "ef-theme"
+    end
+  },
+  {
+    "projekt0n/github-nvim-theme",
+    -- priority = 1000,
+    lazy = true,
+    name = "github-theme",
+    config = function()
+      require('github-theme').setup({})
+      vim.cmd.colorscheme("github_light_default")
+    end
+  },
+  -- {
+  --   "wincent/base16-nvim",
+  --   -- priority = 1000,
+  --   lazy = true,
+  --   config = function()
+  --     -- config?
+  --   end
+  -- },
 }
