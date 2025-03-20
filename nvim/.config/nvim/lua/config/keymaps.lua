@@ -44,9 +44,9 @@ vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open float
 -- Open netrw in the left
 -- vim.keymap.set('n', '<leader>n', ':Lexplore<CR>', { desc = 'Left netrw toggle' })
 
-vim.keymap.set(
-  'n',
-  '<leader>r',
-  function() vim.o.relativenumber = not vim.o.relativenumber end,
-  { desc = 'Toggle relative numbers' }
-)
+-- vim.keymap.set(
+--   'n',
+--   '<leader>r',
+--   function() vim.o.relativenumber = not vim.o.relativenumber end,
+--   { desc = 'Toggle relative numbers' }
+-- )
