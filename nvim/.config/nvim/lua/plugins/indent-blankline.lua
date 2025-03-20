@@ -3,7 +3,9 @@ return {
   enabled = true,
   main = 'ibl',
   config = function()
-    require("ibl").setup {
+    local ibl = require("ibl")
+    ibl.setup {
+      enabled = false,
       scope = {
         enabled = false
       }
