@@ -70,9 +70,11 @@ return {
       jsonls = {},
       clangd = {},
       ts_ls = {},
+      -- vtsls = {},
       eslint = {},
       html = {},
       cssls = {},
+      angularls = {},
       lua_ls = {
         -- cmd = {...},
         -- filetypes { ...},
