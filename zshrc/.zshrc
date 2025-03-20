@@ -77,3 +77,8 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(starship init zsh)"
 
 source <(fzf --zsh)
+
+# searchProjects(){
+#     cd $(fd -t d -d 3 -E node_modules -E hooks -E info -E logs -E objects -E refs -E worktrees . $HOME/Documents/foo/bar | fzf)
+# }
+# alias sp="searchProjects"
