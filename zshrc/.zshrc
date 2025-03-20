@@ -48,7 +48,7 @@ export PATH=$PATH:$HOME/.scripts
 
 export PATH=$PATH:$HOME/.local/bin
 
-export PATH=$PATH:/Applications/WebStorm.app/Contents/MacOS
+export PATH=$PATH:$HOME/go/bin
 
 # My settings------------------------------------------------------------------
 
