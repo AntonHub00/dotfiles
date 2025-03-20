@@ -1,6 +1,6 @@
 return {
   'sindrets/diffview.nvim',
-  enabled = false,
+  enabled = true,
   config = function()
     vim.keymap.set(
       "n",
