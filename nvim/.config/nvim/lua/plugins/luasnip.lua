@@ -76,6 +76,14 @@ return {
       }
     end
 
+    local function lua_snipps()
+      return {
+        s("ins", {
+          t "print(vim.inspect(", i(1), t "))"
+        }),
+      }
+    end
+
     ls.add_snippets("typescriptreact", js_snipps())
 
     ls.add_snippets("typescript", js_snipps())
@@ -83,5 +91,7 @@ return {
     ls.add_snippets("javascript", js_snipps())
 
     ls.add_snippets("javascriptreact", js_snipps())
+
+    ls.add_snippets("lua", lua_snipps())
   end
 }
