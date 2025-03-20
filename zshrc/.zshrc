@@ -25,6 +25,12 @@ alias nvimconf="$EDITOR_BARE ~/.config/nvim/init.lua"
 # Alias for tmux config file
 alias tmuxconf="$EDITOR_BARE ~/.tmux.conf"
 
+# Alias for ghostty config file
+alias ghosttyconf="$EDITOR_BARE ~/.config/ghostty/config"
+
+# Alias for wezterm config directory
+alias weztermconf="$EDITOR_BARE ~/.dotfiles/wezterm/.config/wezterm"
+
 # Open directory in the current VSCode instance
 alias c.="code -r ."
 
