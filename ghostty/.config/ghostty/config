@@ -1,19 +1,42 @@
-# theme = catppuccin-latte
+# theme = catppuccin-frappe
+# theme = catppuccin-mocha
+theme = catppuccin-latte
 # theme = zenbones
+# theme = zenbones_dark
 # theme = kanagawa Wave
-theme = dawnfox
+# theme = dawnfox
+# theme = nord
+# theme = tokyonight
+# theme = tokyonight_moon
+# theme = OneHalfDark
+# theme = OneHalfLight
+# theme = Jellybeans
+# theme = GitHub-Light-Default
+# theme = GruvboxDark
 
 cursor-style = block
-cursor-style-blink = true
+# cursor-style-blink = true
 adjust-cursor-thickness = 1
 shell-integration-features = no-cursor
 
 font-size = 15
 font-family = Berkeley Mono
+# font-family = CommitMono
+# font-family = Geist Mono
 # font-family = JetBrains Mono
-# font-family = Comic Code
+# font-family = Maple Mono
+# font-family = Fira Code
+# font-family = FiraCode Nerd Font
 # font-family = Intel One Mono
 # font-family = Mononoki
+# font-family = Monaspace Argon
+# font-family = Monaspace Krypton
+# font-family = Monaspace Neon
+# font-family = Monaspace Radon
+
+# font-size = 14
+# font-family = Comic Code
+
 # font-feature = -calt
 # font-feature = -liga
 # font-feature = -dlig
@@ -22,5 +45,15 @@ window-save-state = always
 
 mouse-scroll-multiplier = 0.1
 
-adjust-cell-height = 4
+# ( 30% 1.30)
+adjust-cell-height = 30%
+
 adjust-cursor-height = 4
+
+# font-thicken = true
+
+confirm-close-surface = true
+
+# toggle_quick_terminal
+# keybind = global:cmd+grave_accent=toggle_quick_terminal
+keybind = cmd+grave_accent=toggle_quick_terminal
