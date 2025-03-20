@@ -72,4 +72,6 @@ vim.opt.foldlevelstart = 99
 
 vim.opt.colorcolumn = "80"
 
+vim.opt.diffopt:append({ "algorithm:histogram" })
+
 -- vim: ts=2 sts=2 sw=2 et
