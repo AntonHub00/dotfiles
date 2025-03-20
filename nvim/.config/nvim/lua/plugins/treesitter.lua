@@ -26,7 +26,10 @@ return {
           'bash',
           'json',
           'markdown',
-          'html'
+          'html',
+          'http',
+          'regex',
+          'markdown_inline',
         },
 
         -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
