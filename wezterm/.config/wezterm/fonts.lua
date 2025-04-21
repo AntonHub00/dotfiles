@@ -3,6 +3,7 @@ local M = {}
 
 local function set_font(config)
   config.font = wezterm.font('Berkeley Mono')
+  -- config.font = wezterm.font('CommitMono')
   -- config.font = wezterm.font('Maple Mono')
   -- config.font = wezterm.font('CaskaydiaCove Nerd Font')
   -- config.font = wezterm.font('FiraCode Nerd Font')
@@ -23,11 +24,12 @@ local function set_font(config)
 end
 
 local function set_font_size(config)
-  config.font_size = 15.0
+  config.font_size = 16.0
 end
 
 local function set_font_line_height(config)
-  config.line_height = 1.3
+  -- using other than "1.0" causes font rendering issues (baseline?)
+  config.line_height = 1.0
 end
 
 
