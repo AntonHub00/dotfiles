@@ -1,8 +1,14 @@
+local default_colorscheme = "zenbones"
+
+local function is_default(name)
+  return name == default_colorscheme
+end
+
 return {
   {
     "gbprod/nord.nvim",
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("nord") and 1000 or nil,
+    lazy = not is_default("nord"),
     config = function()
       -- require("nord").setup({})
       vim.cmd.colorscheme("nord")
@@ -27,8 +33,8 @@ return {
   -- },
   {
     'navarasu/onedark.nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("onedark") and 1000 or nil,
+    lazy = not is_default("onedark"),
     config = function()
       require('onedark').setup {
         -- Set a style preset. 'dark' is default. Options: dark, darker, cool, deep, warm, warmer, light
@@ -42,8 +48,8 @@ return {
   },
   {
     'catppuccin/nvim',
-    priority = 1000,
-    -- lazy = true,
+    priority = is_default("catppuccin") and 1000 or nil,
+    lazy = not is_default("catppuccin"),
     name = 'catppuccin',
     config = function()
       require("catppuccin").setup({
@@ -61,8 +67,8 @@ return {
   },
   {
     'rebelot/kanagawa.nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("kanagawa") and 1000 or nil,
+    lazy = not is_default("kanagawa"),
     config = function()
       vim.o.background = 'dark'
       -- vim.cmd.colorscheme 'kanagawa'
@@ -71,8 +77,8 @@ return {
   },
   {
     'folke/tokyonight.nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("tokyonight") and 1000 or nil,
+    lazy = not is_default("tokyonight"),
     config = function()
       -- vim.cmd.colorscheme 'tokyonight'
       -- vim.cmd.colorscheme 'tokyonight-night'
@@ -85,8 +91,8 @@ return {
   },
   {
     'mcchrish/zenbones.nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("zenbones") and 1000 or nil,
+    lazy = not is_default("zenbones"),
     dependencies = { 'rktjmp/lush.nvim' },
     config = function()
       vim.o.background = 'light'
@@ -100,8 +106,8 @@ return {
   },
   {
     "ellisonleao/gruvbox.nvim",
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("gruvbox") and 1000 or nil,
+    lazy = not is_default("gruvbox"),
     config = function()
       require("gruvbox").setup({
         italic = {
@@ -126,8 +132,8 @@ return {
   },
   {
     'sainnhe/sonokai',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("sonokai") and 1000 or nil,
+    lazy = not is_default("sonokai"),
     config = function()
       vim.g.sonokai_style = 'default'
       vim.g.sonokai_better_performance = 1
@@ -136,8 +142,8 @@ return {
   },
   {
     'sainnhe/gruvbox-material',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("gruvbox-material") and 1000 or nil,
+    lazy = not is_default("gruvbox-material"),
     config = function()
       vim.g.gruvbox_material_background = 'hard'
       -- vim.g.gruvbox_material_background = 'medium'
@@ -151,8 +157,8 @@ return {
   },
   {
     'sainnhe/everforest',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("everforest") and 1000 or nil,
+    lazy = not is_default("everforest"),
     config = function()
       vim.g.everforest_background = 'hard'
       vim.g.everforest_diagnostic_virtual_text = 'colored'
@@ -162,16 +168,16 @@ return {
   },
   {
     'nyoom-engineering/oxocarbon.nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("oxocarbon") and 1000 or nil,
+    lazy = not is_default("oxocarbon"),
     config = function()
       vim.cmd.colorscheme 'oxocarbon'
     end
   },
   {
     'EdenEast/nightfox.nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("nightfox") and 1000 or nil,
+    lazy = not is_default("nightfox"),
     config = function()
       -- vim.cmd.colorscheme 'nightfox'
       vim.cmd.colorscheme 'dawnfox'
@@ -179,16 +185,16 @@ return {
   },
   {
     'savq/melange-nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("melange") and 1000 or nil,
+    lazy = not is_default("melange"),
     config = function()
       vim.cmd.colorscheme 'melange'
     end
   },
   {
     'rose-pine/neovim',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("rose-pine") and 1000 or nil,
+    lazy = not is_default("rose-pine"),
     name = 'rose-pine',
     config = function()
       vim.cmd.colorscheme 'rose-pine'
@@ -196,32 +202,32 @@ return {
   },
   {
     'aktersnurra/no-clown-fiesta.nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("no-clown-fiesta") and 1000 or nil,
+    lazy = not is_default("no-clown-fiesta"),
     config = function()
       vim.cmd.colorscheme 'no-clown-fiesta'
     end
   },
   {
     'ramojus/mellifluous.nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("mellifluous") and 1000 or nil,
+    lazy = not is_default("mellifluous"),
     config = function()
       vim.cmd.colorscheme 'mellifluous'
     end
   },
   {
     'Mofiqul/vscode.nvim',
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("vscode") and 1000 or nil,
+    lazy = not is_default("vscode"),
     config = function()
       vim.cmd.colorscheme 'vscode'
     end
   },
   {
     "vague2k/vague.nvim",
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("vague") and 1000 or nil,
+    lazy = not is_default("vague"),
     config = function()
       require("vague").setup({
         -- optional configuration here
@@ -231,8 +237,8 @@ return {
   },
   {
     "slugbyte/lackluster.nvim",
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("lackluster") and 1000 or nil,
+    lazy = not is_default("lackluster"),
     init = function()
       vim.cmd.colorscheme "lackluster"
       -- vim.cmd.colorscheme("lackluster-hack") -- my favorite
@@ -241,8 +247,8 @@ return {
   },
   {
     "wnkz/monoglow.nvim",
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("monoglow") and 1000 or nil,
+    lazy = not is_default("monoglow"),
     opts = {},
     config = function()
       vim.cmd.colorscheme "monoglow"
@@ -250,8 +256,8 @@ return {
   },
   {
     "ficcdaf/ashen.nvim",
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("ashen") and 1000 or nil,
+    lazy = not is_default("ashen"),
     -- tag = "*",
     config = function()
       vim.cmd.colorscheme "ashen"
@@ -259,32 +265,32 @@ return {
   },
   {
     "p00f/alabaster.nvim",
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("alabaster") and 1000 or nil,
+    lazy = not is_default("alabaster"),
     config = function()
       vim.cmd.colorscheme "alabaster"
     end
   },
   {
     "dgox16/oldworld.nvim",
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("oldworld") and 1000 or nil,
+    lazy = not is_default("oldworld"),
     config = function()
       vim.cmd.colorscheme "oldworld"
     end
   },
   {
     "oonamo/ef-themes.nvim",
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("ef-theme") and 1000 or nil,
+    lazy = not is_default("ef-theme"),
     config = function()
       vim.cmd.colorscheme "ef-theme"
     end
   },
   {
     "projekt0n/github-nvim-theme",
-    -- priority = 1000,
-    lazy = true,
+    priority = is_default("github-theme") and 1000 or nil,
+    lazy = not is_default("github-theme"),
     name = "github-theme",
     config = function()
       require('github-theme').setup({})
