@@ -76,4 +76,7 @@ vim.opt.diffopt:append({ "algorithm:histogram" })
 
 vim.opt.endofline = true
 
+-- Recommended for Avante: "views can only be fully collapsed with the global statusline"
+vim.opt.laststatus = 3
+
 -- vim: ts=2 sts=2 sw=2 et
