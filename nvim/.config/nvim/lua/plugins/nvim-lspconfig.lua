@@ -74,6 +74,9 @@ return {
       html = {},
       cssls = {},
       angularls = {},
+      yamlls = {},
+      golangci_lint_ls = {},
+      harper_ls = {},
       lua_ls = {
         -- cmd = {...},
         -- filetypes { ...},
