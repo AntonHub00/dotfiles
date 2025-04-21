@@ -6,6 +6,7 @@ return {
     { "folke/neodev.nvim",       opts = {} },
 
     { 'j-hui/fidget.nvim',       opts = {} },
+    'saghen/blink.cmp',
   },
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
@@ -18,8 +19,8 @@ return {
         -- See `:help K` for why this keymap
         map('K', vim.lsp.buf.hover, 'Hover Documentation')
         map('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
-        vim.keymap.set({ 'i' }, '<C-k>', vim.lsp.buf.signature_help,
-          { buffer = event.buf, desc = 'LSP: Signature Documentation' })
+        -- vim.keymap.set({ 'i' }, '<C-k>', vim.lsp.buf.signature_help,
+        --   { buffer = event.buf, desc = 'LSP: Signature Documentation' })
 
         map('gr', vim.lsp.buf.references, '[g]o to [r]eferences')
         map('gi', vim.lsp.buf.implementation, '[g]o to [i]mplementation')
@@ -57,7 +58,7 @@ return {
     })
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+    capabilities = vim.tbl_deep_extend('force', capabilities, require('blink-cmp').get_lsp_capabilities({}, false))
 
     local servers = {
       -- clangd = {},
