@@ -74,4 +74,6 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.diffopt:append({ "algorithm:histogram" })
 
+vim.opt.endofline = true
+
 -- vim: ts=2 sts=2 sw=2 et
