@@ -46,6 +46,10 @@ return {
     -- lazy = true,
     name = 'catppuccin',
     config = function()
+      require("catppuccin").setup({
+        no_italic = true,
+      })
+
       vim.o.background = 'light'
 
       -- vim.cmd.colorscheme 'catppuccin-mocha'
