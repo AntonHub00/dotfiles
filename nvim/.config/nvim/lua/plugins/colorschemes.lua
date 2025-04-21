@@ -287,12 +287,4 @@ return {
       vim.cmd.colorscheme("github_light_default")
     end
   },
-  -- {
-  --   "wincent/base16-nvim",
-  --   -- priority = 1000,
-  --   lazy = true,
-  --   config = function()
-  --     -- config?
-  --   end
-  -- },
 }
