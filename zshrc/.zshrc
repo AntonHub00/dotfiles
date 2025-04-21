@@ -2,6 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 plugins=(
   git
+  docker
   zsh-autosuggestions
   zsh-syntax-highlighting
   colored-man-pages
