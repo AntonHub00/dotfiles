@@ -30,6 +30,8 @@ return {
           'http',
           'regex',
           'markdown_inline',
+          'yaml',
+          'ini',
         },
 
         -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
