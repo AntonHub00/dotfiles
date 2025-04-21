@@ -1,6 +1,7 @@
 # theme = catppuccin-frappe
-# theme = catppuccin-mocha
 theme = catppuccin-latte
+# theme = catppuccin-mocha
+# theme = catppuccin-macchiato
 # theme = zenbones
 # theme = zenbones_dark
 # theme = kanagawa Wave
@@ -57,3 +58,14 @@ confirm-close-surface = true
 # toggle_quick_terminal
 # keybind = global:cmd+grave_accent=toggle_quick_terminal
 keybind = cmd+grave_accent=toggle_quick_terminal
+
+# For lighte backgrounds
+cursor-color = 000000
+cursor-text = ffffff
+
+# For dark backgrounds
+# cursor-color =  ffffff
+# cursor-text = 000000
+
+# cursor-opacity = 0.5
+# cursor-invert-fg-bg = true
