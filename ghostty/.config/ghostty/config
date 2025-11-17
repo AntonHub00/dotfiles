@@ -44,7 +44,7 @@ font-family = Berkeley Mono
 
 window-save-state = always
 
-mouse-scroll-multiplier = 0.1
+# mouse-scroll-multiplier = 0.1
 
 # ( 30% 1.30)
 adjust-cell-height = 30%
@@ -57,9 +57,9 @@ confirm-close-surface = true
 
 # toggle_quick_terminal
 # keybind = global:cmd+grave_accent=toggle_quick_terminal
-keybind = cmd+grave_accent=toggle_quick_terminal
+# keybind = cmd+grave_accent=toggle_quick_terminal
 
-# For lighte backgrounds
+# For light backgrounds
 cursor-color = 000000
 cursor-text = ffffff
 
