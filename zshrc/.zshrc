@@ -35,6 +35,9 @@ alias weztermconf="$EDITOR_BARE ~/.dotfiles/wezterm/.config/wezterm"
 # Open directory in the current VSCode instance
 alias c.="code -r ."
 
+# Open directory in the current Zed instance
+alias z.="zed -r ."
+
 # Kubectl
 alias k="kubectl"
 
@@ -49,7 +52,10 @@ export PATH=$PATH:$HOME/.scripts
 
 export PATH=$PATH:$HOME/.local/bin
 
-export PATH=$PATH:$HOME/go/bin
+export DOTNET_ROOT="/usr/local/share/dotnet"
+
+export GOPATH=$HOME/go
+export PATH="$PATH:$GOPATH/bin"
 
 # My settings------------------------------------------------------------------
 
