@@ -36,18 +36,6 @@ vim.api.nvim_set_keymap('x', '<leader>p', '"_dP', { silent = true })
 -- vim.api.nvim_set_keymap('n', '<leader>rc', ':%s/<C-r><C-w>//gc<Left><Left><Left>', {}) -- [r]eplace [c]urrent word in cursor
 -- vim.api.nvim_set_keymap('x', '<leader>ra', ':s///gc<Left><Left><Left><Left>', {})      -- [r]eplace [a]ll in selection
 
-vim.keymap.set(
-  'n',
-  '[d',
-  function() vim.diagnostic.jump({ count = 1, float = true }) end,
-  { desc = 'Go to previous diagnostic message' }
-)
-vim.keymap.set(
-  'n',
-  ']d',
-  function() vim.diagnostic.jump({ count = 1, float = true }) end,
-  { desc = 'Go to next diagnostic message' }
-)
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
