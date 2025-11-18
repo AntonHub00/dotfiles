@@ -49,13 +49,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('<leader>ca', vim.lsp.buf.code_action, '[c]ode [a]ction')
     map('<leader>t', vim.lsp.buf.type_definition, '[t]ype definition')
 
-    vim.keymap.set({ 'n', 'x' }, '<leader>F', vim.lsp.buf.format,
-      { buffer = event.buf, desc = 'LSP: [F]ormat selection' })
-
-    vim.api.nvim_buf_create_user_command(event.buf, 'Format', function(_)
-      vim.lsp.buf.format()
-    end, { desc = 'LSP: Format current buffer with LSP' })
-
     -- The following two autocommands are used to highlight references of the
     -- word under your cursor when your cursor rests there for a little while.
     --    See `:help CursorHold` for information about when this is executed
