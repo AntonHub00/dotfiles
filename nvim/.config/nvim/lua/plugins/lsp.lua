@@ -22,6 +22,7 @@ return {
       -- "golangci_lint_ls",
       "harper_ls",
       "lua_ls",
+      "omnisharp",
     },
     -- This enables the LSPs for me (calls "vim.lsp.config" for each server)
     automatic_enable = true,
@@ -41,4 +42,8 @@ return {
     },
     'neovim/nvim-lspconfig',
   },
+  config = function ()
+		-- vim.lsp.enable("roslyn_ls")
+		vim.lsp.enable("omnisharp")
+  end
 }
