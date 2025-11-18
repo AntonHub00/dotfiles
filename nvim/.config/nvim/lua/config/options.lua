@@ -81,4 +81,12 @@ vim.opt.winborder = "rounded"
 -- Recommended for Avante: "views can only be fully collapsed with the global statusline"
 vim.opt.laststatus = 3
 
+vim.diagnostic.config({
+  -- virtual_lines = true,
+  virtual_text = true
+  -- virtual_text = {
+  --   current_line = true
+  -- }
+})
+
 -- vim: ts=2 sts=2 sw=2 et
