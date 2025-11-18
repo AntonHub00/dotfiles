@@ -39,7 +39,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
     end
 
-    map('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+    -- map('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
     map('gr', vim.lsp.buf.references, '[g]o to [r]eferences')
     map('gi', vim.lsp.buf.implementation, '[g]o to [i]mplementation')
