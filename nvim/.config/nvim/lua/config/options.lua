@@ -61,7 +61,7 @@ vim.opt.completeopt = 'menu,menuone,noinsert'
 vim.opt.termguicolors = true
 
 vim.opt.listchars = { tab = '→ ', trail = '•', nbsp = '␣' }
-vim.opt.list = true
+vim.opt.list = false
 
 vim.opt.wrap = true
 
