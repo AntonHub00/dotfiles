@@ -54,7 +54,11 @@ return {
 		{
 			"<leader>fb",
 			function()
-				require("fzf-lua").buffers()
+				require("fzf-lua").buffers({
+					winopts = {
+						preview = { hidden = true },
+					},
+				})
 			end,
 			desc = "[f]ind [B]uffers",
 		},
