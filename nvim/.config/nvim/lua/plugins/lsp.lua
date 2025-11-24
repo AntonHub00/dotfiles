@@ -58,7 +58,7 @@ return {
 		vim.lsp.enable("eslint")
 		vim.lsp.enable("html")
 		vim.lsp.enable("cssls")
-		vim.lsp.enable("angularls")
+		-- vim.lsp.enable("angularls")
 		vim.lsp.enable("yamlls")
 		vim.lsp.enable("harper_ls")
 		vim.lsp.enable("lua_ls")
