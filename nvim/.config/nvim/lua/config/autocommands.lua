@@ -17,7 +17,7 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 	group = envrc_filetype_group,
 	pattern = ".envrc*",
 	callback = function(opts)
-		vim.api.nvim_buf_set_option(opts.buf, "filetype", "bash")
+		vim.api.nvim_set_option_value("filetype", "bash", { buf = opts.buf })
 	end,
 })
 
@@ -27,7 +27,7 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 	group = ghostty_filetype_group,
 	pattern = "*/ghostty/config",
 	callback = function(opts)
-		vim.api.nvim_buf_set_option(opts.buf, "filetype", "config")
+		vim.api.nvim_set_option_value("filetype", "config", { buf = opts.buf })
 	end,
 })
 
