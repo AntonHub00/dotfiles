@@ -1,4 +1,5 @@
 return {
+	"JoosepAlviste/nvim-ts-context-commentstring",
 	"tpope/vim-surround",
 	"tpope/vim-repeat",
 	"nvim-tree/nvim-web-devicons",
