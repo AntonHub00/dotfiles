@@ -38,6 +38,7 @@ return {
 					"gosum",
 					"gowork",
 					"gotmpl",
+					"sql",
 				},
 
 				-- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
