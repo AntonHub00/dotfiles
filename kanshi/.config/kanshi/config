@@ -1,0 +1,32 @@
+output "LG Electronics LG ULTRAFINE 509NTNHMH239" {
+  mode 3840x2160@60
+  scale 1.5
+  alias $Main
+}
+
+output "AOC 24G1WG3- PIBM8JA005908" {
+  mode 1920x1080@60
+  scale 1
+  alias $Secondary
+}
+
+output "Chimei Innolux Corporation 0x14D4 Unknown" {
+  mode 1920x1080@60
+  scale 1
+  alias $Laptop
+}
+
+profile home_2_external {
+  output $Secondary position 0,0
+  output $Main position 1920,0
+  # output $Laptop position 4480,0
+  output $Laptop disable
+}
+
+profile laptop {
+  output $Laptop position 0,0 enable
+}
+
+profile {
+  output * enable
+}
