@@ -38,6 +38,18 @@ return {
 			desc = "[f]ind [x] [n]eovim config files",
 		},
 		{
+			"<leader>fll",
+			function()
+				require("fzf-lua").files({
+					cwd = ".local",
+					winopts = {
+						preview = { hidden = true },
+					},
+				})
+			end,
+			desc = "[f]ind [l]ocal (.local helper files)",
+		},
+		{
 			"<leader>fgl",
 			function()
 				require("fzf-lua").live_grep()
