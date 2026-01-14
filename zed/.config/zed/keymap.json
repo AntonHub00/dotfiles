@@ -1,0 +1,89 @@
+[
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j j": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "space n": "buffer_search::Dismiss"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "space shift-f": "editor::Format"
+    }
+  },
+  {
+    "context": "vim_mode == insert && showing_completions",
+    "bindings": {
+      "ctrl-y": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "shift-y": ["workspace::SendKeystrokes", "y $"]
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": "vim::PushAddSurrounds"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-g": [
+        "task::Spawn",
+        { "task_name": "Lazygit", "reveal_target": "center" }
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-d": [
+        "task::Spawn",
+        { "task_name": "Delta current file", "reveal_target": "center" }
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-cmd-shift-d": [
+        "task::Spawn",
+        { "task_name": "Delta all", "reveal_target": "center" }
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-d": [
+        "task::Spawn",
+        { "task_name": "Lazydocker", "reveal_target": "center" }
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-f12": "workspace::ToggleAllDocks"
+    }
+  }
+]
