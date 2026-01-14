@@ -1,11 +1,12 @@
 # theme = catppuccin-frappe
-theme = catppuccin-latte
+theme = Catppuccin Latte
 # theme = catppuccin-mocha
 # theme = catppuccin-macchiato
 # theme = zenbones
 # theme = zenbones_dark
 # theme = kanagawa Wave
 # theme = dawnfox
+# theme = Dayfox
 # theme = nord
 # theme = tokyonight
 # theme = tokyonight_moon
@@ -14,6 +15,7 @@ theme = catppuccin-latte
 # theme = Jellybeans
 # theme = GitHub-Light-Default
 # theme = GruvboxDark
+# theme = Sonokai
 
 cursor-style = block
 # cursor-style-blink = true
@@ -21,6 +23,7 @@ adjust-cursor-thickness = 1
 shell-integration-features = no-cursor
 
 font-size = 15
+# font-family = Comic Code Ligatures
 font-family = Berkeley Mono
 # font-family = CommitMono
 # font-family = Geist Mono
@@ -35,9 +38,6 @@ font-family = Berkeley Mono
 # font-family = Monaspace Neon
 # font-family = Monaspace Radon
 
-# font-size = 14
-# font-family = Comic Code
-
 # font-feature = -calt
 # font-feature = -liga
 # font-feature = -dlig
@@ -45,6 +45,7 @@ font-family = Berkeley Mono
 window-save-state = always
 
 # mouse-scroll-multiplier = 0.1
+mouse-scroll-multiplier = 0.5
 
 # ( 30% 1.30)
 adjust-cell-height = 30%
