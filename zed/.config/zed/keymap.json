@@ -101,7 +101,26 @@
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-shift-f12": "workspace::ToggleAllDocks"
+      // "cmd-shift-f12": "workspace::ToggleAllDocks"
+      "ctrl-shift-f12": "workspace::ToggleAllDocks"
+    }
+  },
+  {
+    "context": "!ContextEditor > (Editor && mode == full)",
+    "bindings": {
+      "ctrl-enter": "editor::NewlineBelow"
+    }
+  },
+  {
+    "context": "!ContextEditor > (Editor && mode == full)",
+    "bindings": {
+      "ctrl-shift-enter": "editor::NewlineAbove"
+    }
+  },
+  {
+    "context": "!ContextEditor > (Editor && mode == full)",
+    "bindings": {
+      "ctrl-i": "assistant::InlineAssist"
     }
   }
 ]
