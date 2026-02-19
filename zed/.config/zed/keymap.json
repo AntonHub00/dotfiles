@@ -35,6 +35,12 @@
   {
     "context": "vim_mode == normal && !menu",
     "bindings": {
+      "space c a": "editor::ToggleCodeActions"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
       "space shift-f": "editor::Format"
     }
   },
