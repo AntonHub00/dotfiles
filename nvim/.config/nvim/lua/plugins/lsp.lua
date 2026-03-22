@@ -62,7 +62,8 @@ return {
 		vim.lsp.enable("yamlls")
 		vim.lsp.enable("harper_ls")
 		vim.lsp.enable("lua_ls")
-		vim.lsp.enable("omnisharp")
-		-- vim.lsp.enable("roslyn_ls")
+
+		-- vim.lsp.enable("omnisharp")
+		vim.lsp.enable("roslyn_ls")
 	end,
 }
