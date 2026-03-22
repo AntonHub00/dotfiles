@@ -9,7 +9,7 @@ return {
 	config = function()
 		local treesitter = require("nvim-treesitter")
 
-		local langs = {
+		treesitter.install({
 			"c",
 			"cpp",
 			"go",
@@ -37,9 +37,7 @@ return {
 			"gowork",
 			"gotmpl",
 			"sql",
-		}
-
-		treesitter.install(langs)
+		})
 
 		local ignore_filetypes = {
 			"blink-cmp-menu",
@@ -52,7 +50,11 @@ return {
 			"fidget",
 		}
 
+		local missing_parsers = {}
+
+		vim.api.nvim_create_augroup("TreesitterFileType", { clear = true })
 		vim.api.nvim_create_autocmd("FileType", {
+			group = "TreesitterFileType",
 			pattern = { "*" },
 			callback = function(event)
 				if vim.tbl_contains(ignore_filetypes, event.match) then
@@ -60,15 +62,21 @@ return {
 				end
 
 				local lang = vim.treesitter.language.get_lang(event.match)
-				local buf = event.buf
 
-				if not pcall(vim.treesitter.language.inspect, lang) then
-					vim.notify("Treesitter parser not installed: " .. lang, vim.log.levels.WARN)
+				if not lang then
 					return
 				end
 
-				vim.treesitter.start(buf, lang)
-				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" -- Experimental. Does this work OK?
+				if not pcall(vim.treesitter.language.inspect, lang) then
+					if not missing_parsers[lang] then
+						missing_parsers[lang] = true
+						vim.notify("Treesitter parser not installed: " .. lang, vim.log.levels.WARN)
+					end
+					return
+				end
+
+				vim.treesitter.start(event.buf, lang)
+				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 				-- vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
 				-- vim.wo[0][0].foldmethod = "expr"
 				-- vim.wo.foldlevel = 4
