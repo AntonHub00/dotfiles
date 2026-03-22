@@ -53,8 +53,10 @@ return {
 		vim.lsp.enable("bashls")
 		vim.lsp.enable("jsonls")
 		vim.lsp.enable("clangd")
-		vim.lsp.enable("ts_ls")
-		-- vim.lsp.enable("vtsls")
+
+		-- vim.lsp.enable("ts_ls")
+		vim.lsp.enable("vtsls")
+
 		vim.lsp.enable("eslint")
 		vim.lsp.enable("html")
 		vim.lsp.enable("cssls")
