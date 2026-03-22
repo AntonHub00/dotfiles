@@ -68,7 +68,7 @@ vim.opt.wrap = true
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevelstart = 99
 
--- vim.opt.cursorline = true
+vim.opt.cursorline = true
 
 vim.opt.diffopt:append({ "algorithm:histogram" })
 
