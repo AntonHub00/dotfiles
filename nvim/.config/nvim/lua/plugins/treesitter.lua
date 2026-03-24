@@ -48,6 +48,9 @@ return {
 			"mason_backdrop",
 			"fzf",
 			"fidget",
+			"minifiles",
+			"oil",
+			"oil_preview",
 		}
 
 		local missing_parsers = {}
