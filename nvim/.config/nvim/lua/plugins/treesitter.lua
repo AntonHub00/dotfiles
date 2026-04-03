@@ -53,6 +53,8 @@ return {
 			"oil_preview",
 		}
 
+		local noIndentFileTypes = { "cs" }
+
 		local missing_parsers = {}
 
 		vim.api.nvim_create_augroup("TreesitterFileType", { clear = true })
@@ -79,7 +81,9 @@ return {
 				end
 
 				vim.treesitter.start(event.buf, lang)
-				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+				if not vim.list_contains(noIndentFileTypes, event.match) then
+					vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+				end
 				-- vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
 				-- vim.wo[0][0].foldmethod = "expr"
 				-- vim.wo.foldlevel = 4
