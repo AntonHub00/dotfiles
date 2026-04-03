@@ -82,7 +82,7 @@ vim.opt.foldlevelstart = 99
 
 vim.opt.cursorline = true
 
-vim.opt.diffopt:append({ "algorithm:histogram" })
+-- vim.opt.diffopt:append({ "algorithm:histogram" })
 
 vim.opt.endofline = true
 
