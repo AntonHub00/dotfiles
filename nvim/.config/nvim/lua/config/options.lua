@@ -31,9 +31,21 @@ vim.opt.relativenumber = true
 -- Enable mouse mode
 vim.opt.mouse = "a"
 
--- Sync clipboard between OS and Neovim.
---  Remove this option make the OS clipboard to remain independent.
 vim.opt.clipboard = "unnamedplus"
+if vim.env.WSL_DISTRO_NAME then
+	vim.g.clipboard = {
+		name = "win32yank-wsl",
+		copy = {
+			["+"] = "win32yank.exe -i --crlf",
+			["*"] = "win32yank.exe -i --crlf",
+		},
+		paste = {
+			["+"] = "win32yank.exe -o --lf",
+			["*"] = "win32yank.exe -o --lf",
+		},
+		cache_enabled = true, -- Can be set to false if needed
+	}
+end
 
 -- Split window below
 vim.o.splitbelow = true
