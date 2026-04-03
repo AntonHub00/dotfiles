@@ -1,7 +1,10 @@
 return {
 	"ibhagwan/fzf-lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
-	opts = {},
+	opts = {
+		"hide",
+		fzf_colors = true,
+	},
 	keys = {
 		{
 			"<leader>ca",
@@ -205,10 +208,4 @@ return {
 			desc = "[f]ind [l]sp di[A]gnostics (workspace)",
 		},
 	},
-	config = function()
-		require("fzf-lua").setup({
-			"hide",
-			fzf_colors = true,
-		})
-	end,
 }
