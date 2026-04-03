@@ -87,10 +87,4 @@ vim.diagnostic.config({
 	-- }
 })
 
-vim.filetype.add({
-	extension = {
-		gotmpl = "gotmpl",
-	},
-})
-
 -- vim: ts=2 sts=2 sw=2 et
