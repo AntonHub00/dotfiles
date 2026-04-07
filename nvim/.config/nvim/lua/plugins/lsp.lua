@@ -38,6 +38,13 @@ return {
 				"harper_ls",
 				"lua_ls",
 				"omnisharp",
+
+				-- These are not LSPs. Install manually for now
+				-- "goimports",
+				-- "prettier",
+				-- "prettierd",
+				-- "stylua",
+				-- netcoredbg,
 			},
 			-- This enables the LSPs for me (calls "vim.lsp.config" for each server)
 			automatic_enable = false,
