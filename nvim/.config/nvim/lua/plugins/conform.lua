@@ -17,6 +17,7 @@ return {
 				markdown = { "prettierd" },
 				lua = { "stylua" },
 				go = { "goimports", "gofmt" },
+				sql = { "sleek" },
 			},
 			format_on_save = function(bufnr)
 				-- Disable with a global or buffer-local variable
