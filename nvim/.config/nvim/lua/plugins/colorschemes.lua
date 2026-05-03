@@ -1,4 +1,4 @@
-local default_colorscheme = "catppuccin"
+local default_colorscheme = ""
 
 local function is_default(name)
 	return name == default_colorscheme
