@@ -51,6 +51,9 @@ return {
 			"minifiles",
 			"oil",
 			"oil_preview",
+			"harpoon",
+			"lazygit",
+			"fugitive",
 		}
 
 		local noIndentFileTypes = { "cs" }
