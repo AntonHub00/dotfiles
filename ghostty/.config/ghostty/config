@@ -1,5 +1,5 @@
 # theme = catppuccin-frappe
-theme = Catppuccin Latte
+# theme = Catppuccin Latte
 # theme = catppuccin-mocha
 # theme = catppuccin-macchiato
 # theme = zenbones
@@ -61,8 +61,8 @@ confirm-close-surface = true
 # keybind = cmd+grave_accent=toggle_quick_terminal
 
 # For light backgrounds
-cursor-color = 000000
-cursor-text = ffffff
+# cursor-color = 000000
+# cursor-text = ffffff
 
 # For dark backgrounds
 # cursor-color =  ffffff
