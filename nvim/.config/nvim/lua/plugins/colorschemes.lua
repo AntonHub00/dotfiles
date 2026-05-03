@@ -239,7 +239,7 @@ return {
 		"slugbyte/lackluster.nvim",
 		priority = is_default("lackluster") and 1000 or nil,
 		lazy = not is_default("lackluster"),
-		init = function()
+		config = function()
 			vim.cmd.colorscheme("lackluster")
 			-- vim.cmd.colorscheme("lackluster-hack") -- my favorite
 			-- vim.cmd.colorscheme("lackluster-mint")
