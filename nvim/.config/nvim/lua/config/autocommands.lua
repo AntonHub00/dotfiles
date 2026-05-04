@@ -66,3 +66,38 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
+
+vim.api.nvim_create_autocmd({ "TermRequest" }, {
+	desc = "Handles OSC 7 dir change requests",
+	callback = function(ev)
+		local val, n = string.gsub(ev.data.sequence, "\027]7;file://[^/]*", "")
+		if n > 0 then
+			-- OSC 7: dir-change
+			local dir = val
+			if vim.fn.isdirectory(dir) == 0 then
+				vim.notify("invalid dir: " .. dir)
+				return
+			end
+			vim.b[ev.buf].osc7_dir = dir
+			if vim.api.nvim_get_current_buf() == ev.buf then
+				vim.cmd.lcd(dir)
+			end
+		end
+	end,
+})
+
+vim.api.nvim_create_autocmd("TermOpen", {
+	command = "setlocal signcolumn=auto",
+})
+local ns = vim.api.nvim_create_namespace("my.terminal.prompt")
+vim.api.nvim_create_autocmd("TermRequest", {
+	callback = function(ev)
+		if string.match(ev.data.sequence, "^\027]133;A") then
+			local lnum = ev.data.cursor[1]
+			vim.api.nvim_buf_set_extmark(ev.buf, ns, lnum - 1, 0, {
+				sign_text = "▶",
+				sign_hl_group = "SpecialChar",
+			})
+		end
+	end,
+})
