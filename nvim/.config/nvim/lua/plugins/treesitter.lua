@@ -37,6 +37,7 @@ return {
 			"gowork",
 			"gotmpl",
 			"sql",
+			"zsh",
 		})
 
 		local ignore_filetypes = {
@@ -54,6 +55,10 @@ return {
 			"harpoon",
 			"lazygit",
 			"fugitive",
+			"cmd",
+			"dialog",
+			"msg",
+			"pager",
 		}
 
 		local noIndentFileTypes = { "cs" }
