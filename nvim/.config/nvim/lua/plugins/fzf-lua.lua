@@ -207,5 +207,17 @@ return {
 			end,
 			desc = "[f]ind [l]sp di[A]gnostics (workspace)",
 		},
+		{
+			"<leader>ft",
+			function()
+				require("fzf-lua").buffers({
+					query = "term:",
+					winopts = {
+						preview = { hidden = false },
+					},
+				})
+			end,
+			desc = "[f]ind [T]erminals",
+		},
 	},
 }
