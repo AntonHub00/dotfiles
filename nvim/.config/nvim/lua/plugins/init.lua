@@ -11,5 +11,8 @@ return {
 			"tpope/vim-rhubarb",
 			"cedarbaum/fugitive-azure-devops.vim",
 		},
+		keys = {
+			{ "<leader>gg", "<cmd>G<cr>", desc = "git status (vim-fugitive)" },
+		},
 	},
 }
