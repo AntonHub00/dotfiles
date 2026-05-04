@@ -16,6 +16,8 @@
 # theme = GitHub-Light-Default
 # theme = GruvboxDark
 # theme = Sonokai
+# theme = Nvim Light
+theme = Nvim Dark
 
 cursor-style = block
 # cursor-style-blink = true
