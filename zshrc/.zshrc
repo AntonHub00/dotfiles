@@ -85,6 +85,14 @@ eval "$(starship init zsh)"
 
 source <(fzf --zsh)
 
+function print_osc7() {
+  printf '\033]7;file://%s\033\\' "$PWD"
+}
+function print_osc133() {
+  printf "\033]133;A\007"
+}
+PROMPT_COMMAND='print_osc7;print_osc133'
+
 # searchProjects(){
 #     cd $(fd -t d -d 3 -E node_modules -E hooks -E info -E logs -E objects -E refs -E worktrees . $HOME/Documents/foo/bar | fzf)
 # }
