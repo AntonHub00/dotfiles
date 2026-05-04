@@ -99,4 +99,6 @@ vim.diagnostic.config({
 	-- }
 })
 
+require("vim._core.ui2").enable()
+
 -- vim: ts=2 sts=2 sw=2 et
