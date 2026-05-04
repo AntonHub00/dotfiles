@@ -2,13 +2,13 @@
 vim.api.nvim_set_keymap("i", "jj", "<esc>", { noremap = true, silent = true })
 
 -- Easier exit from terminal mode
-vim.api.nvim_set_keymap("t", "<leader><Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<Esc><Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 
--- Easier turn off for search highlight
-vim.api.nvim_set_keymap("n", "<leader>n", ":noh<cr>", { silent = true })
+-- Easier turn off for search highlight (can be do with ctrl + l)
+-- vim.api.nvim_set_keymap("n", "<leader>n", ":noh<cr>", { silent = true })
 
 -- Nop for space
-vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+-- vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
 -- Remap for dealing with word wrap
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
