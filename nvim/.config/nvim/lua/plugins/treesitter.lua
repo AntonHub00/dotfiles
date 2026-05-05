@@ -59,6 +59,7 @@ return {
 			"dialog",
 			"msg",
 			"pager",
+			"git",
 		}
 
 		local noIndentFileTypes = { "cs" }
