@@ -211,7 +211,7 @@ return {
 			"<leader>ft",
 			function()
 				require("fzf-lua").buffers({
-					query = "term:",
+					query = "term://",
 					winopts = {
 						preview = { hidden = false },
 					},
