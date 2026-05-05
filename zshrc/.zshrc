@@ -97,3 +97,5 @@ PROMPT_COMMAND='print_osc7;print_osc133'
 #     cd $(fd -t d -d 3 -E node_modules -E hooks -E info -E logs -E objects -E refs -E worktrees . $HOME/Documents/foo/bar | fzf)
 # }
 # alias sp="searchProjects"
+
+export XDG_CONFIG_HOME="$HOME/.config"
