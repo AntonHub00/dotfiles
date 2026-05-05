@@ -11,8 +11,13 @@ return {
 			"tpope/vim-rhubarb",
 			"cedarbaum/fugitive-azure-devops.vim",
 		},
-		keys = {
-			{ "<leader>gg", "<cmd>G<cr>", desc = "git status (vim-fugitive)" },
-		},
+		config = function()
+			vim.api.nvim_set_keymap(
+				"n",
+				"<leader>gg",
+				"<cmd>G<cr>",
+				{ noremap = true, silent = true, desc = "git status (vim-fugitive)" }
+			)
+		end,
 	},
 }
