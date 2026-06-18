@@ -1,4 +1,4 @@
-local default_colorscheme = ""
+local default_colorscheme = "github-theme"
 
 local function is_default(name)
 	return name == default_colorscheme
@@ -294,7 +294,8 @@ return {
 		name = "github-theme",
 		config = function()
 			require("github-theme").setup({})
-			vim.cmd.colorscheme("github_light_default")
+			-- vim.cmd.colorscheme("github_light_default")
+			vim.cmd.colorscheme("github_dark_default")
 		end,
 	},
 }
