@@ -44,6 +44,7 @@ return {
 				-- "prettier",
 				-- "prettierd",
 				-- "stylua",
+				-- "sleek",
 				-- netcoredbg,
 			},
 			-- This enables the LSPs for me (calls "vim.lsp.config" for each server)
