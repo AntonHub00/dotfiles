@@ -2,10 +2,11 @@ local home = vim.uv.os_homedir()
 local is_mac = vim.uv.os_uname().sysname == "Darwin"
 local arch = is_mac and "osx-arm64" or "linux-x64"
 
+-- Install with: dotnet tool install -g roslyn-language-server --prerelease
+
 return {
 	cmd = {
-		"dotnet",
-		vim.fs.joinpath(home, "lsps/roslyn/content/LanguageServer", arch, "Microsoft.CodeAnalysis.LanguageServer.dll"),
+		"roslyn-language-server",
 		"--logLevel", -- this property is required by the server
 		"Information",
 		"--extensionLogDirectory", -- this property is required by the server
