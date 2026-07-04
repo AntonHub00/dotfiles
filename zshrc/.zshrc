@@ -70,12 +70,12 @@ export ZSH_HIGHLIGHT_STYLES[comment]='none'
 export NODE_VERSIONS="$NVM_DIR/versions/node"
 export NODE_VERSION_PREFIX=v
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
 
 eval "$(direnv hook zsh)"
 
 # Kubectl autocompletion
-source <(kubectl completion zsh)
+# source <(kubectl completion zsh)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
