@@ -10,7 +10,7 @@
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "hide": "on_success",
-    "reveal_target": "dock"
+    "reveal_target": "center",
   },
   {
     "label": "Delta current file",
@@ -20,7 +20,7 @@
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "hide": "on_success",
-    "reveal_target": "dock"
+    "reveal_target": "center",
   },
   {
     "label": "Delta all",
@@ -30,7 +30,7 @@
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "hide": "on_success",
-    "reveal_target": "dock"
+    "reveal_target": "center",
   },
   {
     "label": "Lazydocker",
@@ -40,6 +40,6 @@
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
     "hide": "on_success",
-    "reveal_target": "dock"
-  }
+    "reveal_target": "center",
+  },
 ]
