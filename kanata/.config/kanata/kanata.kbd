@@ -24,6 +24,38 @@
 ;; # 5. Clean up the temp zip
 ;; rm /tmp/kanata-linux.zip
 
+
+;; -----------------------------------------------------------------------------
+
+;; Start kanata service (found in this repo):
+;;
+;; Start it now (doesn't survive reboot on its own):
+;; systemctl --user start kanata.service
+;;
+;; Stop it:
+;; systemctl --user stop kanata.service
+;;
+;; Restart it (useful after editing the .kbd config file):
+;; systemctl --user restart kanata.service
+;;
+;; Enable it (makes it launch automatically on every login, but doesn't start it immediately):
+;; systemctl --user enable kanata.service
+;;
+;; Enable + start in one shot (what you ran originally):
+;; systemctl --user enable --now kanata.service
+;;
+;; Disable it (stops it from auto-launching on future logins; doesn't stop it if it's currently running):
+;; systemctl --user disable kanata.service
+;;
+;; Check current status (running/stopped, recent log lines, PID):
+;; systemctl --user status kanata.service
+;;
+;; Reload systemd's config (only needed after editing the .service file itself, not the .kbd config — always run this before restarting if the service file changed):
+;; systemctl --user daemon-reload
+;;
+;; Watch live logs:
+;; journalctl --user -u kanata.service -f
+
 ;; -----------------------------------------------------------------------------
 
 ;; (See platform notes at the bottom of the chat message.)
