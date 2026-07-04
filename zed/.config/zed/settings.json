@@ -1,13 +1,26 @@
 {
   "vim_mode": false,
   "relative_line_numbers": "disabled",
+  "icon_theme": "Material Icon Theme",
+  "theme": {
+    "light": "Catppuccin Latte - No Italics",
+    "dark": "Catppuccin Mocha - No Italics",
+  },
+  "wrap_guides": [80],
+  "show_edit_predictions": true,
+  "edit_predictions": {
+    "mode": "subtle",
+    "allow_data_collection": "no",
+  },
   "ui_font_size": 16,
   "buffer_font_size": 15,
   // "buffer_font_family": "CommitMono",
-  // "buffer_font_family": "Berkeley Mono",
-  "buffer_font_family": "Comic Code Ligatures",
+  "buffer_font_family": "Berkeley Mono",
+  // "buffer_font_family": "Comic Code Ligatures",
   // "buffer_font_family": "Fira Code",
   // "buffer_font_family": "JetBrains Mono",
+  // "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_fallbacks": ["JetBrainsMono Nerd Font"],
   "buffer_line_height": "comfortable",
   "diff_view_style": "unified",
   "agent_servers": {
@@ -29,6 +42,7 @@
     "dock": "left",
   },
   "git_panel": {
+    "group_by": "status",
     "dock": "left",
     "tree_view": true,
   },
@@ -52,15 +66,9 @@
       "function": false,
     },
   },
-  "icon_theme": "Material Icon Theme",
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
-  },
-  "theme": {
-    "mode": "dark",
-    "light": "GitHub Light",
-    "dark": "GitHub Dark",
   },
   "git": {
     "inline_blame": {
@@ -85,7 +93,7 @@
         "ui_font_size": 18,
         "theme": "One Dark",
         "relative_line_numbers": "disabled",
-        "buffer_font_family": "JetBrains Mono",
+        "buffer_font_family": ".ZedMono",
       },
     },
   },
@@ -107,6 +115,7 @@
   "auto_update_extensions": {
     "csharp": false,
   },
+  "cli_default_open_behavior": "existing_window",
   // "current_line_highlight": "gutter",
   // "sticky_scroll": {
   //   "enabled": true,
