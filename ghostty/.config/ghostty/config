@@ -1,6 +1,6 @@
 # theme = catppuccin-frappe
-# theme = Catppuccin Latte
-# theme = catppuccin-mocha
+theme = Catppuccin Latte
+# theme = Catppuccin Mocha
 # theme = catppuccin-macchiato
 # theme = zenbones
 # theme = zenbones_dark
@@ -14,7 +14,7 @@
 # theme = OneHalfLight
 # theme = Jellybeans
 # theme = GitHub Light Default
-theme = GitHub Dark Default
+# theme = GitHub Dark Default
 # theme = GruvboxDark
 # theme = Sonokai
 # theme = Nvim Light
@@ -25,7 +25,11 @@ cursor-style = block
 adjust-cursor-thickness = 1
 shell-integration-features = no-cursor
 
-font-size = 15
+# Laptop
+# font-size = 11
+# 4k monitor scaled 150%
+font-size = 12
+
 # font-family = Comic Code Ligatures
 font-family = Berkeley Mono
 # font-family = CommitMono
@@ -73,3 +77,7 @@ confirm-close-surface = true
 
 # cursor-opacity = 0.5
 # cursor-invert-fg-bg = true
+
+maximize = true
+
+window-decoration = none
