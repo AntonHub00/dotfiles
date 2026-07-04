@@ -1,6 +1,6 @@
 git:
   pagers:
-    - pager: delta --paging=never
+    - pager: delta --light --paging=never
 gui:
   theme:
     selectedLineBgColor:
