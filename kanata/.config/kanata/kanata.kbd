@@ -97,7 +97,7 @@
 (deflayer fn
   grv  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
   lrld _    _    _    _    mute C-y  C-v  C-c  C-o  C-z  _    _    prtsc
-  _    prev vold volu next pp   fwd  left down up   rght _    _
+  grv  prev vold volu next pp   fwd  left down up   rght _    _
   _    _    _    _    _    _    bck  home pgdn pgup end  _
   _    _    _              _              _    _
 )
