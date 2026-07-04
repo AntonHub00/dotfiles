@@ -1,4 +1,4 @@
-local default_colorscheme = "github-theme"
+local default_colorscheme = "catppuccin"
 
 local function is_default(name)
 	return name == default_colorscheme
