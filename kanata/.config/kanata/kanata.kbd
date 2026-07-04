@@ -2,9 +2,30 @@
 ;; hold = fn layer with arrows/F-keys/nav/media keys). Caps Lock is
 ;; back to being a regular Caps Lock. Works on any keyboard (built-in
 ;; laptop keyboard included) on Windows, macOS, and Linux.
+
+;; -----------------------------------------------------------------------------
+
+;; Get kanata:
+;; # 1. Get the download URL for the latest Linux release zip
+;; URL=$(curl -s https://api.github.com/repos/jtroo/kanata/releases/latest \
+;;   | grep "browser_download_url.*linux-binaries-x64.zip" \
+;;   | cut -d '"' -f 4)
 ;;
-;; Get kanata: https://github.com/jtroo/kanata/releases
-;; Run:        kanata --cfg capslock_fn_layer.kbd
+;; # 2. Download it into a temp location
+;; curl -L -o /tmp/kanata-linux.zip "$URL"
+;;
+;; # 3. Unzip just the binary we need into ~/.local/bin
+;; mkdir -p ~/.local/bin
+;; unzip -p /tmp/kanata-linux.zip kanata_linux_x64 > ~/.local/bin/kanata
+;;
+;; # 4. Make it executable
+;; chmod +x ~/.local/bin/kanata
+;;
+;; # 5. Clean up the temp zip
+;; rm /tmp/kanata-linux.zip
+
+;; -----------------------------------------------------------------------------
+
 ;; (See platform notes at the bottom of the chat message.)
 ;; Setup linux
 ;; sudo groupadd -f input
