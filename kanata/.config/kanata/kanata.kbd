@@ -120,11 +120,13 @@
 )
 
 ;; This is the layer that's active only WHILE Space is held down.
-;; Release it and everything goes back to normal typing.
+;; Release it and everything goes back to normal typing. Space+Enter
+;; sends Caps Lock, since Caps is otherwise hard to reach without
+;; disrupting the home row.
 (deflayer fn
   grv  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
   lrld _    _    _    _    mute C-y  C-v  C-c  C-o  C-z  _    _    prtsc
-  grv  prev vold volu next pp   fwd  left down up   rght _    _
+  grv  prev vold volu next pp   fwd  left down up   rght _    caps
   _    _    _    _    _    _    bck  home pgdn pgup end  _
   _    _    _              _              _    _
 )
