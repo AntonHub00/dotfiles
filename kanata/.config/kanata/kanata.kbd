@@ -139,11 +139,12 @@
 ;; below them, scroll. s d f, on your free left hand, click. y u i o p
 ;; mirror the redo/paste/copy/open/undo shortcuts from the fn layer.
 ;; w e r hold speed presets (25%/100%/300%) for the movement keys.
+;; h and n are forward/back, matching the fn layer.
 (deflayer mouse
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    @macc0 @macc1 @macc2 _    C-y  C-v  C-c  C-o  C-z  _    _    _
-  _    _    mmid mrgt mlft _    _    @msl @msd @msu @msr _    _
-  _    _    _    _    _    _    _    @mwl @mwd @mwu @mwr _
+  _    _    mmid mrgt mlft _    fwd  @msl @msd @msu @msr _    _
+  _    _    _    _    _    _    bck  @mwl @mwd @mwu @mwr _
   _    _    _              _              _    _
 )
 
