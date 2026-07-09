@@ -12,7 +12,9 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Aliases-----------------------------------------------------------------------
-EDITOR_BARE="nvim"
+# EDITOR_BARE="nvim"
+# EDITOR_BARE="/opt/nvim-linux-x86_64/bin/nvim"
+EDITOR_BARE="zed --wait"
 
 # Alias for ping
 alias pin='ping -c 3 8.8.8.8'
@@ -83,7 +85,8 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(starship init zsh)"
 
-source <(fzf --zsh)
+# source <(fzf --zsh)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 function print_osc7() {
   printf '\033]7;file://%s\033\\' "$PWD"
@@ -99,3 +102,19 @@ PROMPT_COMMAND='print_osc7;print_osc133'
 # alias sp="searchProjects"
 
 export XDG_CONFIG_HOME="$HOME/.config"
+
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+export GOPATH=$HOME/go
+export PATH="$PATH:$GOPATH/bin"
+
+export PATH=$PATH:/usr/local/go/bin
+
+export PATH="$PATH:/home/raven/.dotnet/tools"
+
+# opencode
+export PATH=/home/raven/.opencode/bin:$PATH
+
+export PATH="$PATH:/opt/mssql-tools18/bin"
+
+[[ -f ~/.config/secrets/env.sh ]] && source ~/.config/secrets/env.sh

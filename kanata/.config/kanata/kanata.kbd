@@ -1,7 +1,9 @@
 ;; Kanata config — Space acts as a tap-hold layer key (tap = space,
-;; hold = fn layer with arrows/F-keys/nav/media keys). Caps Lock is
-;; back to being a regular Caps Lock. Works on any keyboard (built-in
-;; laptop keyboard included) on Windows, macOS, and Linux.
+;; hold = fn layer with arrows/F-keys/nav/media keys). Right Alt acts
+;; as a tap-hold layer key (tap = AltGr, hold = mouse layer with
+;; cursor movement, clicks, and scroll). Caps Lock is back to being a
+;; regular Caps Lock. Works on any keyboard (built-in laptop keyboard
+;; included) on Windows, macOS, and Linux.
 
 ;; -----------------------------------------------------------------------------
 
@@ -72,8 +74,33 @@
 )
 
 (defvar
-  tap-time 200
-  hold-time 200
+  tap-time 150
+  hold-time 150
+
+  ;; mouse cursor: ramps from min to max speed while held.
+  ;; Note: QMK's MOUSEKEY_MAX_SPEED isn't pixels-per-report — it runs
+  ;; through QMK's own curve — so a literal "6" is far too slow here.
+  ;; These are tuned to feel similar in practice: quick ramp, brisk max.
+  mouse-accel-interval 16
+  mouse-accel-time 600
+  mouse-min-speed 4
+  mouse-max-speed 30
+
+  ;; QMK-style mouse acceleration presets: hold one alongside a
+  ;; movement key to override the ramp with a fixed percentage of it,
+  ;; for precision work (0) or covering distance fast (2). 1 is a
+  ;; no-op included for symmetry with QMK's three-tier ACCEL0/1/2.
+  mouse-speed-0 25
+  mouse-speed-1 100
+  mouse-speed-2 300
+
+  ;; scroll wheel — accelerates while held, decelerates on release.
+  ;; Starts faster than a bare tap would feel, but capped well below
+  ;; what it was ramping up to before.
+  wheel-initial-v 15
+  wheel-max-v 90
+  wheel-accel 1.08
+  wheel-decel 0.9
 )
 
 (defsrc
@@ -89,7 +116,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           @spc           ralt rctl
+  lctl lmet lalt           @spc           @ralt rctl
 )
 
 ;; This is the layer that's active only WHILE Space is held down.
@@ -102,6 +129,22 @@
   _    _    _              _              _    _
 )
 
+;; This is the layer that's active only WHILE Right Alt is held down.
+;; Release it and everything goes back to normal typing (tapping Right
+;; Alt still sends a normal AltGr/Right Alt press).
+;; j k l ; move the cursor (same positions as left/down/up/right in
+;; the fn layer, so the muscle memory carries over). m , . /, directly
+;; below them, scroll. s d f, on your free left hand, click. y u i o p
+;; mirror the redo/paste/copy/open/undo shortcuts from the fn layer.
+;; w e r hold speed presets (25%/100%/300%) for the movement keys.
+(deflayer mouse
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    @macc0 @macc1 @macc2 _    C-y  C-v  C-c  C-o  C-z  _    _    _
+  _    _    mmid mrgt mlft _    _    @msl @msd @msu @msr _    _
+  _    _    _    _    _    _    _    @mwl @mwd @mwu @mwr _
+  _    _    _              _              _    _
+)
+
 (defalias
   fn (layer-while-held fn)
   ;; Space: tap sends a normal space; hold activates the fn layer.
@@ -109,4 +152,36 @@
   ;; or HOLD_ON_OTHER_KEY_PRESS): it waits out the full tap-time/hold-time
   ;; window rather than resolving early on release or on an interrupting key.
   spc (tap-hold $tap-time $hold-time spc @fn)
+
+  mouse (layer-while-held mouse)
+  ;; Right Alt: tap sends a normal Right Alt (AltGr); hold activates the
+  ;; mouse layer.
+  ralt (tap-hold $tap-time $hold-time ralt @mouse)
+
+  ;; Cursor movement — accelerates from mouse-min-speed to mouse-max-speed
+  ;; the longer the key is held, so small taps give fine control and a
+  ;; long hold still gets you across the screen quickly.
+  msl (movemouse-accel-left  $mouse-accel-interval $mouse-accel-time $mouse-min-speed $mouse-max-speed)
+  msd (movemouse-accel-down  $mouse-accel-interval $mouse-accel-time $mouse-min-speed $mouse-max-speed)
+  msu (movemouse-accel-up    $mouse-accel-interval $mouse-accel-time $mouse-min-speed $mouse-max-speed)
+  msr (movemouse-accel-right $mouse-accel-interval $mouse-accel-time $mouse-min-speed $mouse-max-speed)
+
+  ;; QMK-style mouse acceleration presets. Hold one of these together
+  ;; with a movement key to temporarily override its speed.
+  macc0 (movemouse-speed $mouse-speed-0)
+  macc1 (movemouse-speed $mouse-speed-1)
+  macc2 (movemouse-speed $mouse-speed-2)
+
+  ;; Scroll wheel
+  ;; Horizontal is sent as Shift+vertical-wheel rather than a raw
+  ;; horizontal wheel event. Many Linux apps/toolkits only give smooth,
+  ;; accelerated scrolling to the vertical wheel and treat raw
+  ;; horizontal wheel events as blunt, unaccelerated steps — Shift+
+  ;; vertical rides the same smooth code path as normal scrolling.
+  ;; If left/right come out backwards for you, just swap up <-> down
+  ;; in the two lines below.
+  mwl (multi lsft (mwheel-accel-up   $wheel-initial-v $wheel-max-v $wheel-accel $wheel-decel))
+  mwd (mwheel-accel-down $wheel-initial-v $wheel-max-v $wheel-accel $wheel-decel)
+  mwu (mwheel-accel-up   $wheel-initial-v $wheel-max-v $wheel-accel $wheel-decel)
+  mwr (multi lsft (mwheel-accel-down $wheel-initial-v $wheel-max-v $wheel-accel $wheel-decel))
 )
