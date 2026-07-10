@@ -100,7 +100,7 @@
   wheel-initial-v 15
   wheel-max-v 90
   wheel-accel 1.08
-  wheel-decel 0.9
+  wheel-decel 0
 )
 
 (defsrc
